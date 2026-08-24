@@ -1,7 +1,7 @@
 # AI-ML-RedTeam Radar — Trend ledger
 
 Single source of truth. The README and reports are derived from this file.
-Last updated: (no run yet)
+Last updated: 2026-08-24 (first daily run)
 
 Trend stages: `seed` → `emerging` → `accelerating` → `mainstreaming` → `dormant`.
 Evidence line format: `date — primary URL — one line of context`. Max 10 per trend.
@@ -33,7 +33,11 @@ Unverified or sub-bar items. Format:
 Hard cap ~25 live items.
 -->
 
-(none yet)
+- [queued 2026-08-24] MCP tool poisoning / agentic prompt-injection cluster — arXiv 2603.22489 verified (1 source, below trend bar); corroborating leads not yet opened: Microsoft "State of MCP Security 2026" (techcommunity.microsoft.com), OWASP MCP Tool Poisoning page, Aptible writeup citing an April 2026 Johns Hopkins PR-title injection hijack of Claude Code/Gemini CLI/Copilot — missing: open ≥2 more primaries to promote to seed.
+- [queued 2026-08-24] Malicious models on Hugging Face as malware distribution — lead: hivesecurity.gitlab.io writeup on fake `Open-OSS/privacy-filter` repo (#1 trending, 244k downloads in 18h, May 2026) + CVE-2026-6859 (InstructLab hardcoded trust_remote_code=True) — missing: open the writeup and the CVE advisory to verify.
+- [queued 2026-08-24] Cyera "Bleeding Llama" research blog (cyera.com) claims ~300k exposed Ollama servers — advisory verified via GHSA, exposure count unverified — missing: open Cyera post.
+- [queued 2026-08-24] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page.
+- [queued 2026-08-24] NVIDIA Triton Inference Server auth bypass CVE-2026-24207/-24209/-24210/-24215 (fixed 26.03) — surfaced via secondary briefing — missing: open NVIDIA PSIRT/NVD records; likely belongs to local-inference-001.
 
 ## study_shelf
 
