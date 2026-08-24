@@ -56,6 +56,11 @@ Dated notes from the curator or radar-adopted scope amendments.
 -->
 
 - 2026-08-24 — repo initialized by curator; scope seeded per AGENTS.md (local-model stack first).
+- 2026-08-24 — CURATOR directive: add scope axis 1b (AI-driven solution engineering stack).
+  Track practical build-stack news (fine-tuning frameworks, consumer-GPU inference,
+  quantization, RAG/agent tooling, ≤8B model releases), not only bleeding-edge security.
+  Hardware relevance filter: curator workstation = RTX 4070 Ti, 12GB VRAM — prioritize
+  what fits that envelope; flag datacenter-only items instead of dropping them.
 
 ## blockers
 

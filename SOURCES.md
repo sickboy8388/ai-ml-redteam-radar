@@ -44,6 +44,9 @@ Tool repos & releases (check `<repo>/releases`):
 - mcp server security ; agentic ai attack ; tool-use injection
 - malicious huggingface model ; pickle deserialization ml
 - awesome-llm-security / awesome-ai-security lists
+- 12gb vram llm ; 4070 local llm ; consumer gpu inference
+- qlora fine-tune 8b ; gguf quantization release ; speculative decoding llama.cpp
+- local ai agent framework ; local rag stack
 
 ## Community pulse — intake only (never evidence, never name individuals)
 - r/LocalLLaMA ; r/netsec (top/new)

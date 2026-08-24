@@ -21,6 +21,17 @@ never force-push.
    vLLM, LocalAI, LM Studio, transformers), quantization formats, fine-tuning/LoRA tooling,
    RAG stacks, agent frameworks runnable on-prem; notable releases, benchmarks, and security
    issues of this stack.
+1b. **AI-driven solution engineering stack (curator priority, 2026-08-24)** — beyond the
+   bleeding edge, track the practical stack for BUILDING local AI-driven solutions:
+   fine-tuning frameworks (Unsloth, Axolotl), efficient inference for consumer GPUs
+   (ExLlama, TabbyAPI, koboldcpp), quantization advances (GGUF/AWQ/GPTQ formats), model
+   releases that fit consumer hardware, embedding/vector tooling, RAG frameworks, agent
+   scaffolding, evaluation tooling, and real-world build guides/benchmarks.
+   **Hardware relevance filter**: the curator runs a desktop with an RTX 4070 Ti (12GB
+   VRAM). Prioritize what is feasible in that envelope — typically ≤~8B dense models at
+   Q4–Q8, larger MoE models via CPU/RAM offload, LoRA/QLoRA fine-tunes of ≤8B bases, and
+   techniques that stretch VRAM (KV-cache quantization, speculative decoding, offload).
+   Flag items that require datacenter GPUs as such instead of dropping them silently.
 2. **LLM red teaming & offensive research** — jailbreak techniques, prompt/direct+indirect
    injection, agentic/tool-use abuse (MCP servers, function calling, code execution),
    multi-turn and multimodal attacks, red-team tooling (garak, PyRIT, promptfoo).
