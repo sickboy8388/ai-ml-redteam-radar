@@ -2,15 +2,21 @@
 
 ![trends](https://img.shields.io/badge/trends-2-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-0-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--08--25-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-7-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--04-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-08-25)
+## Since last scan (2026-10-04, weekly recalibration)
+
+- **Both trends moved to DORMANT** by the 21-day rule (41 days quiet). Cause: the daily routine has not run since 2026-08-25 — a coverage gap, not a quiet field. See `TRENDS.md#blockers`.
+- **NVIDIA Triton auth bypass** (CVE-2026-24207, CVSS 9.8) verified on NVD and added as evidence to the inference-server trend.
+- **Ollama** now at v0.35.1 (2026-10-02).
+
+### Previous scan (2026-08-25)
 
 - **New SEED trend**: [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)](#trends) — promoted from the observation queue after 4 new independent primaries in one day: InjecMEM (agent memory injection), SkillBloat (malicious coding-agent skills, token amplification), plus two defensive frameworks (AgentFlow flow policies, AEGIS latent-manifold IPI detection).
 - **llama.cpp v0.3.0** released today: first v0.3.x tag — dots3-note multimodal, MTP for GLM-4.5-Air, DeepSeek 4 tensor-split fixes, ggml v0.22.0.
@@ -19,17 +25,17 @@ standards — curated for a red team operator working with local models. Derived
 
 ## Trends
 
-seed 2 · emerging 0 · accelerating 0 · mainstreaming 0 · dormant 0
+seed 0 · emerging 0 · accelerating 0 · mainstreaming 0 · dormant 2
 
 | Trend | Stage | Latest signal |
 |---|---|---|
-| [Self-hosted inference server attack surface (GGUF parsing & unauth model-management APIs)](TRENDS.md#trends) | seed | [2026-08-21](https://github.com/advisories/GHSA-x2rj-828p-hx9m) — Xinference CVE-2026-61539, CVSS 10.0 |
-| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)](TRENDS.md#trends) | seed | [2026-08-24](https://arxiv.org/abs/2608.23471) — InjecMEM: one-interaction agent memory injection |
+| [Self-hosted inference server attack surface (GGUF parsing & unauth model-management APIs)](TRENDS.md#trends) | dormant | [2026-08-21](https://github.com/advisories/GHSA-x2rj-828p-hx9m) — Xinference CVE-2026-61539, CVSS 10.0 |
+| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)](TRENDS.md#trends) | dormant | [2026-08-24](https://arxiv.org/abs/2608.23471) — InjecMEM: one-interaction agent memory injection |
 
 ## Tools & releases
 
 - **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — v0.3.0 (2026-08-25, first v0.3.x tag); security floor: ≥b8146 (CVE-2026-27940)
-- **[Ollama](https://github.com/ollama/ollama)** — v0.32.15 (2026-08-19), v0.33.0-rc3 (2026-08-21); security floor: ≥0.17.1 (CVE-2026-7482)
+- **[Ollama](https://github.com/ollama/ollama)** — v0.35.1 (2026-10-02); security floor: ≥0.17.1 (CVE-2026-7482)
 - **[vLLM](https://github.com/vllm-project/vllm)** — v0.27.1 (2026-08-11)
 - **[LocalAI](https://github.com/mudler/LocalAI)** — v4.9.0 (2026-08-20)
 - **[garak](https://github.com/NVIDIA/garak)** — v0.16.0 (2026-08-04): technique/intent annotation, first Context Aware Scanning iteration (breaking config changes)
@@ -57,4 +63,4 @@ their significance. It tracks artifacts — it is not a runbook and stores no op
 payloads or jailbreak strings.
 
 ---
-[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-08-25.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
+[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-08-25.md) · [Latest weekly](reports/weekly/2026-W40.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)

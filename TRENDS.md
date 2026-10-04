@@ -1,7 +1,7 @@
 # AI-ML-RedTeam Radar — Trend ledger
 
 Single source of truth. The README and reports are derived from this file.
-Last updated: 2026-08-25 (second daily run)
+Last updated: 2026-10-04 (weekly recalibration 2026-W40)
 
 Trend stages: `seed` → `emerging` → `accelerating` → `mainstreaming` → `dormant`.
 Evidence line format: `date — primary URL — one line of context`. Max 10 per trend.
@@ -24,22 +24,23 @@ Seed the ledger by running the daily routine. Each trend block looks like:
 -->
 
 ### id: local-inference-001 — Self-hosted inference server attack surface (GGUF parsing & unauth model-management APIs)
-- stage: seed
+- stage: dormant
 - confidence: medium
-- last_evidence: 2026-08-21
+- last_evidence: 2026-08-24
 - aliases: [Bleeding Llama]
-- notes: CVE cluster across the local/self-hosted serving stack (Ollama, llama.cpp, Xinference); model output and model files as attacker-controlled input to the server.
+- notes: CVE cluster across the local/self-hosted serving stack (Ollama, llama.cpp, Xinference); model output and model files as attacker-controlled input to the server. W40: dormant (41 days since last evidence; no daily runs since 2026-08-25 — dormancy reflects a coverage gap, not a quiet field). Triton auth-bypass CVE added from the queue (verified via NVD), making 4 independent orgs.
 - evidence:
   - 2026-08-21 — https://github.com/advisories/GHSA-x2rj-828p-hx9m — Xinference CVE-2026-61539: unsafe eval() on Llama3 tool-call parser output → unauth RCE, CVSS 10.0, fixed v2.7.0.
   - 2026-08-24 — https://github.com/advisories/GHSA-x8qc-fggm-mpqg — Ollama CVE-2026-7482 "Bleeding Llama": crafted GGUF → heap OOB read → memory (env vars, API keys, system prompts) exfiltrated via /api/push. Floor 0.17.1.
   - 2026-08-24 — https://github.com/advisories/GHSA-3p4r-fq3f-q74v — llama.cpp CVE-2026-27940: GGUF heap overflow, bypass of the CVE-2025-53630 fix, public RCE PoC. Floor b8146.
+  - 2026-05-20 — https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-24207 — NVIDIA Triton Inference Server auth bypass (CVE-2026-24207, CVSS 9.8, <r26.03): code exec / privilege escalation / data tampering; sibling CVEs -24209/-24210/-24215 unverified.
 
 ### id: agentic-injection-001 — Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)
-- stage: seed
+- stage: dormant
 - confidence: medium
 - last_evidence: 2026-08-24
 - aliases: [tool poisoning, skill injection, memory injection, indirect prompt injection, IPI]
-- notes: attack surface is shifting from single-prompt injection to agent subsystems — MCP tool descriptions, coding-agent "skills", persistent agent memory — plus a growing defensive literature (flow policies, latent-manifold detectors). Promoted from observation_queue on 2026-08-25 (≥3 independent groups + concrete artifacts).
+- notes: attack surface is shifting from single-prompt injection to agent subsystems — MCP tool descriptions, coding-agent "skills", persistent agent memory — plus a growing defensive literature (flow policies, latent-manifold detectors). Promoted from observation_queue on 2026-08-25 (≥3 independent groups + concrete artifacts). W40: dormant by the 21-day rule (41 days) — artifact of the daily-run gap, not evidence the field cooled; expect reactivation on first resumed sweep.
 - evidence:
   - 2026-03-23 — https://arxiv.org/abs/2603.22489 — STRIDE/DREAD threat model of the MCP stack; tool poisoning is the top client-side vulnerability; 5/7 major MCP clients lack static validation of tool descriptions.
   - 2026-08-22 — https://arxiv.org/abs/2608.21929 — SkillBloat: malicious coding-agent "skills" as a trusted instruction channel; token-amplification (resource-abuse) attacks reaching 5.4–10.1x average best amplification.
@@ -56,13 +57,13 @@ Hard cap ~25 live items.
 -->
 
 - [promoted 2026-08-25] MCP tool poisoning / agentic prompt-injection cluster → trend `agentic-injection-001`: cleared the bar with 4 new independent primaries this run (InjecMEM, SkillBloat, AgentFlow, AEGIS). Vendor leads (Microsoft "State of MCP Security 2026", Aptible/Johns Hopkins PR-title hijack writeup) remain unopened — re-queue as corroboration targets:
-- [queued 2026-08-25] Vendor MCP-security writeups — Microsoft "State of MCP Security 2026" (techcommunity.microsoft.com) + Aptible writeup on the April 2026 PR-title injection hijack of Claude Code/Gemini CLI/Copilot — missing: open both primaries; would raise `agentic-injection-001` confidence.
-- [queued 2026-08-25] Hydra config-instantiation RCE — CVE-2026-68508 / GHSA-2cp2-2r3c-7p7r verified via GitHub Advisory Database (published 2026-08-21): `hydra.utils.instantiate` with untrusted config → code execution; widely used for ML experiment configs — missing: ≥2 more independent sources on ML-pipeline config-RCE to seed a trend.
-- [queued 2026-08-25] OWASP GenAI LLM Top 10 2026 — published 2026-08-04, project page verified (owasp.org, accessed 2026-08-25); canonical source now the GenAI-Security-Project repo — missing: diff vs 1.1 list and open the 2026 final document before routing as taxonomies-axis evidence.
-- [queued 2026-08-24] Malicious models on Hugging Face as malware distribution — lead: hivesecurity.gitlab.io writeup on fake `Open-OSS/privacy-filter` repo (#1 trending, 244k downloads in 18h, May 2026) + CVE-2026-6859 (InstructLab hardcoded trust_remote_code=True) — missing: open the writeup and the CVE advisory to verify.
-- [queued 2026-08-24] Cyera "Bleeding Llama" research blog (cyera.com) claims ~300k exposed Ollama servers — advisory verified via GHSA, exposure count unverified — missing: open Cyera post.
-- [queued 2026-08-24] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page.
-- [queued 2026-08-24] NVIDIA Triton Inference Server auth bypass CVE-2026-24207/-24209/-24210/-24215 (fixed 26.03) — surfaced via secondary briefing — missing: open NVIDIA PSIRT/NVD records; likely belongs to local-inference-001.
+- [re-dated 2026-10-04; originally 2026-08-25; still unopened — no daily run since] Vendor MCP-security writeups — Microsoft "State of MCP Security 2026" (techcommunity.microsoft.com) + Aptible writeup on the April 2026 PR-title injection hijack of Claude Code/Gemini CLI/Copilot — missing: open both primaries; would raise `agentic-injection-001` confidence.
+- [re-dated 2026-10-04; originally 2026-08-25] Hydra config-instantiation RCE — CVE-2026-68508 / GHSA-2cp2-2r3c-7p7r verified via GitHub Advisory Database (published 2026-08-21): `hydra.utils.instantiate` with untrusted config → code execution; widely used for ML experiment configs — missing: ≥2 more independent sources on ML-pipeline config-RCE to seed a trend.
+- [re-dated 2026-10-04; originally 2026-08-25] OWASP GenAI LLM Top 10 2026 — published 2026-08-04, project page verified (owasp.org, accessed 2026-08-25); canonical source now the GenAI-Security-Project repo — missing: diff vs 1.1 list and open the 2026 final document before routing as taxonomies-axis evidence.
+- [re-dated 2026-10-04; originally 2026-08-24] Malicious models on Hugging Face as malware distribution — lead: hivesecurity.gitlab.io writeup on fake `Open-OSS/privacy-filter` repo (#1 trending, 244k downloads in 18h, May 2026) + CVE-2026-6859 (InstructLab hardcoded trust_remote_code=True) — missing: open the writeup and the CVE advisory to verify.
+- [re-dated 2026-10-04; originally 2026-08-24] Cyera "Bleeding Llama" research blog (cyera.com) claims ~300k exposed Ollama servers — advisory verified via GHSA, exposure count unverified — missing: open Cyera post.
+- [re-dated 2026-10-04; originally 2026-08-24] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page.
+- [promoted 2026-10-04] NVIDIA Triton auth bypass CVE-2026-24207 verified on NVD (published 2026-05-20, CVSS 9.8) → evidence on `local-inference-001`; sibling CVEs -24209/-24210/-24215 not individually opened.
 
 ## study_shelf
 
@@ -88,6 +89,8 @@ Dated notes from the curator or radar-adopted scope amendments.
   Hardware relevance filter: curator workstation = RTX 4070 Ti, 12GB VRAM — prioritize
   what fits that envelope; flag datacenter-only items instead of dropping them.
 
+- 2026-10-04 — radar-adopted: anchoring check N/A this week (no new evidence except Triton, which landed on a pre-existing trend). Next week's exploration should prioritize taxonomy/supply-chain axes (HF malicious models, OWASP 2026) and the 1b engineering stack, which has zero ledger coverage.
+
 ## blockers
 
 <!--
@@ -96,4 +99,5 @@ Access/tooling blockers that prevented verification. Format:
 -->
 
 - [2026-08-25] State persistence across scheduled sessions — session sandbox started empty (repo absent at /mnt/agents/output); recovered by cloning the GitHub remote during a curator-granted public window. Future scheduled runs CANNOT re-clone once the repo is private again (no credentials persist across sessions) — status: OPEN, curator must either keep the repo clone present in the persistent mount, provide a credential that survives sessions, or accept that each run restores from GitHub manually. Escalated per Hard rules → Operator notifications.
+- [2026-10-04] Daily routine not executed since 2026-08-25 (40 days; zero entries in reports/ or logs/source_rotation.md since) — weekly run found no daily reports for W40; all swept-list coverage this week = 0/N. Cause unknown (scheduler stopped or sandbox restore failure per the OPEN blocker above). Status: OPEN, escalated to curator via notification.
 - [2026-08-25] r/LocalLLaMA (reddit.com) — JSON endpoint rejected again, 2nd consecutive run — degraded; community-pulse lane uncovered.

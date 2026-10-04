@@ -33,3 +33,6 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - degraded: r/LocalLLaMA JSON endpoint (reddit.com) — rejected again, 2nd consecutive run.
 - Note: session sandbox started empty; repo state recovered by cloning the GitHub remote
   (public window granted by curator). See TRENDS.md#blockers.
+
+## 2026-10-04 (weekly W40)
+- No daily entries since 2026-08-25. Weekly opened: NVD CVE-2026-24207 (Triton), Ollama releases.atom (v0.35.1). All other swept sources: not opened (weekly scope) — coverage gap.
