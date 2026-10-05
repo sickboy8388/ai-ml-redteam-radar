@@ -1,48 +1,53 @@
 # AI-ML-RedTeam Radar
 
-![trends](https://img.shields.io/badge/trends-2-3266ad?style=flat-square)
+![trends](https://img.shields.io/badge/trends-3-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-0-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--08--25-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-12-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--05-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-08-25)
+## Since last scan (2026-10-05)
 
-- **New SEED trend**: [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)](#trends) — promoted from the observation queue after 4 new independent primaries in one day: InjecMEM (agent memory injection), SkillBloat (malicious coding-agent skills, token amplification), plus two defensive frameworks (AgentFlow flow policies, AEGIS latent-manifold IPI detection).
-- **llama.cpp v0.3.0** released today: first v0.3.x tag — dots3-note multimodal, MTP for GLM-4.5-Air, DeepSeek 4 tensor-split fixes, ggml v0.22.0.
-- **Queue +3**: Hydra config-instantiation RCE (CVE-2026-68508, verified via GHSA), OWASP GenAI LLM Top 10 2026 (project page verified), vendor MCP-security writeups (re-queued after the cluster's promotion).
-- **Blocker escalated**: session sandbox started empty — scheduled runs cannot re-clone the private GitHub repo without a persistent credential. See `TRENDS.md#blockers`.
+- **41-day gap**: last scan was 2026-08-25; scheduled runs did not fire or persist (state-persistence blocker still open).
+- **2 trends promoted seed→emerging**: [Self-hosted inference server attack surface](#trends) now has 8 evidence items from ≥6 independent orgs including in-the-wild exploitation (LMDeploy SSRF weaponized in 12h); [Agentic prompt-injection & agent-subsystem attacks](#trends) now has 8 evidence items including an impossibility result and a 92.5%-success hook-poisoning attack.
+- **New SEED trend**: [AI model & pipeline supply-chain attacks](#trends) — Hugging Face breached by autonomous AI agent (Jul 2026), FaceHugger CVEs bypass trust_remote_code in HF diffusers, conjunctive poisoning of deployment artifacts, instruction backdoor attacks on coding LLMs.
+- **Major tool releases**: llama.cpp b11405, Ollama v0.35.1 (Clef decision models), vLLM v0.31.0, LocalAI v4.11.0, garak v0.17.0 (EU AI Act mapping), promptfoo 0.123.1, transformers v5.18.0.
+- **PyRIT archived**: Microsoft Azure/PyRIT archived 2026-03-27 — major red-team tooling gap.
+- **ExLlamaV2 archived**: development moved to ExLlamaV3.
+- **Queue**: +5 new items, 4 resolved/promoted → 12 live items.
 
 ## Trends
 
-seed 2 · emerging 0 · accelerating 0 · mainstreaming 0 · dormant 0
+seed 1 · emerging 2 · accelerating 0 · mainstreaming 0 · dormant 0
 
 | Trend | Stage | Latest signal |
 |---|---|---|
-| [Self-hosted inference server attack surface (GGUF parsing & unauth model-management APIs)](TRENDS.md#trends) | seed | [2026-08-21](https://github.com/advisories/GHSA-x2rj-828p-hx9m) — Xinference CVE-2026-61539, CVSS 10.0 |
-| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory)](TRENDS.md#trends) | seed | [2026-08-24](https://arxiv.org/abs/2608.23471) — InjecMEM: one-interaction agent memory injection |
+| [Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)](TRENDS.md#trends) | emerging | [2026-10-05](https://www.stingrai.io/blog/inference-server-security-vllm-triton-ollama-2026) — CVE roundup: Triton auth bypass 9.8, vLLM RCE 9.8, llama.cpp UAFs |
+| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)](TRENDS.md#trends) | emerging | [2026-10-02](https://arxiv.org/abs/2610.03448) — PI detector re-evaluation: benchmark scores mislead deployment |
+| [AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)](TRENDS.md#trends) | seed | [2026-08-16](https://arxiv.org/abs/2608.15913) — Conjunctive Poisoning: deployment artifacts alter model behavior without weight modification |
 
 ## Tools & releases
 
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — v0.3.0 (2026-08-25, first v0.3.x tag); security floor: ≥b8146 (CVE-2026-27940)
-- **[Ollama](https://github.com/ollama/ollama)** — v0.32.15 (2026-08-19), v0.33.0-rc3 (2026-08-21); security floor: ≥0.17.1 (CVE-2026-7482)
-- **[vLLM](https://github.com/vllm-project/vllm)** — v0.27.1 (2026-08-11)
-- **[LocalAI](https://github.com/mudler/LocalAI)** — v4.9.0 (2026-08-20)
-- **[garak](https://github.com/NVIDIA/garak)** — v0.16.0 (2026-08-04): technique/intent annotation, first Context Aware Scanning iteration (breaking config changes)
-- **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.122.0 (2026-08-04)
-- **[transformers](https://github.com/huggingface/transformers)** — v5.15.1 (2026-08-19)
-- **[PyRIT](https://github.com/Azure/PyRIT)** — no releases feed; tags API returned empty again (2nd run) — track via repo
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — b11405 (2026-10-05); security floor: ≥b9061 (CVE-2026-43631 UAF); note: 5 of 10 Cyera-disclosed bugs still unpatched
+- **[Ollama](https://github.com/ollama/ollama)** — v0.35.1 (2026-09-29, Clef decision models), v0.40.0-rc3 (2026-09-25, MLX runtime pre-release); security floor: ≥0.17.1 (CVE-2026-7482)
+- **[vLLM](https://github.com/vllm-project/vllm)** — v0.31.0 (2026-10-05, DeepSeek-V4.1-Flash, persistent weight caching); security floor: ≥0.22.0 (CVE-2026-41523), ≥0.14.1 (CVE-2026-22778)
+- **[LocalAI](https://github.com/mudler/LocalAI)** — v4.11.0 (2026-10-02, audio scenes); v4.10.0 (2026-09-17, fleet ops dashboard)
+- **[garak](https://github.com/NVIDIA/garak)** — v0.17.0 (2026-09-09): EU AI Act mapping, Ollama generator improvements, Python 3.13 support
+- **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.123.1 (2026-09-18); 0.123.0 breaking change: GPT-5.6+ defaults to Responses API
+- **[transformers](https://github.com/huggingface/transformers)** — v5.18.0 (2026-09-30, Nemotron 3 Diarization, HyperCLOVAX Vision V2, GTE)
+- **[PyRIT](https://github.com/Azure/PyRIT)** — ARCHIVED (2026-03-27) — repository read-only, no releases
+- **[ExLlamaV3](https://github.com/turboderp/exllamav3)** — successor to ExLlamaV2 (archived); ExLlamaV3 + TabbyAPI reportedly 30–60% faster than llama.cpp on Ampere/Ada
 
 ## Worth studying
 
-- [InjecMEM: Memory Injection Attack on LLM Agent Memory Systems](https://arxiv.org/abs/2608.23471) — arXiv (2026-08-24): agent memory is now a demonstrated injection target — one interaction poisons later retrieval-conditioned answers.
-- [llama.cpp v0.3.0](https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0) — ggml-org (2026-08-25): the local-runtime baseline moved — new multimodal model support, MTP, ggml v0.22.0.
-- [garak v0.16.0](https://github.com/NVIDIA/garak/releases/tag/v0.16.0) — NVIDIA (2026-08-04): the LLM vulnerability scanner moves from static probes toward intent-driven, context-aware evaluation.
-- [MCP Threat Modeling & Tool Poisoning](https://arxiv.org/abs/2603.22489) — arXiv (2026-03-23): STRIDE/DREAD over the MCP stack; tool poisoning is the top client-side vuln; 5/7 major MCP clients lack static validation of tool descriptions.
+- [HookPry: Attacker-Controlled Hook Updates Steer AI Agent Harnesses](https://arxiv.org/abs/2609.03884) — arXiv (2026-09-03): lifecycle hooks in agent harnesses are a blindspot — 92.5% compromise rate, 0% detection. Assess local agent setups with plugin/hook systems.
+- [Cyera: Breaking Local AI Runtimes — 10 Vulnerabilities in llama.cpp](https://www.cyera.com/research/breaking-local-ai-runtimes-10-vulnerabilities-in-the-engine-behind-your-open-source-models) — Cyera (2026): systematic audit of llama.cpp; 5 of 10 bugs unpatched — essential for anyone running llama.cpp or red-teaming local deployments.
+- [InjecMEM: Memory Injection Attack on LLM Agent Memory Systems](https://arxiv.org/abs/2608.23471) — arXiv (2026-08-24): agent memory is a demonstrated injection target — one interaction poisons later retrieval-conditioned answers.
+- [llama.cpp v0.3.0](https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0) — ggml-org (2026-08-25): first v0.3.x tag — dots3-note multimodal, MTP, ggml v0.22.0.
 
 ## How it works
 
@@ -57,4 +62,4 @@ their significance. It tracks artifacts — it is not a runbook and stores no op
 payloads or jailbreak strings.
 
 ---
-[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-08-25.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
+[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-10-05.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
