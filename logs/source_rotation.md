@@ -71,3 +71,32 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-06
+- opened: tool repos & releases via WebFetch — llama.cpp (v0.6.0, 2026-10-05; b11435
+  2026-10-06; opened v0.6.0 release notes), Ollama (v0.35.1 stable, no new release since
+  last scan), vLLM (v0.31.0 confirmed, no new release), LocalAI (v4.11.0 confirmed),
+  garak (v0.17.0 confirmed), promptfoo (0.124.0, 2026-10-06; opened release page),
+  transformers (v5.18.0 confirmed).
+- opened: GHSA — GHSA-q8gq-377p-jq3r (vLLM CVE-2026-41523, assert bypass → RCE via
+  malicious HF model, CVSS 7.5, fixed 0.22.0). Global advisory search: no new high/critical
+  AI/ML advisories beyond already-tracked items.
+- opened: papers — arXiv cs.CR recent listing (2026-10-06): 11 on-axis papers identified;
+  abstracts opened: 2610.06401 (RAISED self-distillation PI defense), 2610.05943 (Runaway
+  Reaction/CRIME skill composition), 2610.05089 (Cooldown Landmines cross-tenant LLM
+  gateway attacks), 2610.05266 (provider-side IPI in proactive agents), 2610.05163
+  (boundary action auditing for staged PI), 2610.04860 (watermarking → hallucination,
+  NeurIPS 2026), 2610.04504 (The Same Zero: ASR ≠ security guarantees).
+- opened: ExLlamaV3 repo (turboderp-org/exllamav3) — v1.5.3 (Sep 27), EXL3 quantization,
+  50+ model architectures, CPU offload. Observation queue item verified.
+- opened: Unsloth MoE docs (unsloth.ai) — 12x MoE speedup, gpt-oss-20b in 12.8GB VRAM,
+  QLoRA not supported for MoE (use bf16 LoRA). Observation queue item verified.
+- opened: MCP server assessment paper (arXiv 2608.00150) — 414 servers, 91% lack OAuth.
+- opened: LiteLLM CVE writeup (danilchenko.dev) — 6 CVEs, CVSS 10.0 chain, CISA KEV.
+- web search used for triage: CVE sweep (SGLang, LiteLLM, GitLab AI Gateway), arXiv LLM
+  security papers, ExLlamaV3, Unsloth, MCP tool poisoning, awesome-llm-security lists,
+  r/LocalLLaMA community pulse. All evidence lines reference URLs opened directly.
+- degraded: r/LocalLLaMA — not attempted directly (degraded 3+ prior runs); web search
+  used for community pulse instead. 4th consecutive degraded.
+- degraded: GHSA global feed query returned empty for pip high/critical filter — used
+  web search + direct GHSA page for on-axis CVEs instead.
