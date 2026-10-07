@@ -71,3 +71,39 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-07
+- opened: tool repos & releases via WebFetch (GitHub release pages) —
+  llama.cpp (b11461, 2026-10-07), Ollama (v0.40.0 2026-09-25 / v0.35.1 2026-09-29),
+  vLLM (v0.31.0, 2026-10-05), LocalAI (v4.11.0, 2026-10-02),
+  garak (v0.17.0, 2026-09-09), promptfoo (0.124.0, 2026-10-06),
+  transformers (v5.18.0, 2026-09-30).
+  PyRIT: CORRECTED — github.com/microsoft/PyRIT is active (v1.1.0, Sep 4);
+  Azure/PyRIT is an archived stub.
+  ExLlamaV3: verified at turboderp-org/exllamav3 (v1.5.4, 2026-10-03; repo + releases
+  page opened).
+- opened: GHSA — GHSA-q8gq-377p-jq3r (vLLM CVE-2026-41523, assert bypass → RCE via
+  malicious HuggingFace model, CVSS 7.5, fixed 0.22.0). GHSA global feed search
+  (pip/high+critical): no additional on-axis advisories found.
+- opened: CVE-2026-34159 via SentinelOne vuln DB (secondary; llama.cpp RPC memory R/W
+  CVSS 9.8, fixed b8492) — NVD/GHSA primary not opened; queued for next run.
+- opened: papers — arXiv cs.CR recent listing (2026-10-07); abstracts opened:
+  2610.07645 (SkillPoison: progressive skill poisoning, 95.71% ASR),
+  2610.07639 (HarnessSecurity-Bench: coding-agent harness security, 95.6% ASR with
+  auto-approval), 2610.07125 (PEV: embedding perturbation jailbreak, 100% on
+  JailbreakBench), 2610.08571 (RAG-PIBench: PI detection benchmark for RAG),
+  2610.07723 (answer-side backdoor: model-planted triggers, ~100% ASR at 5% poisoning).
+- opened: OWASP GenAI LLM Top 10 2026 — genai.owasp.org/resource/owasp-genai-llm-top-10-2026/
+  (confirmed published 2026-08-03; incident-weighted methodology). Canonical OWASP
+  project page also opened (owasp.org).
+- opened: Unsloth MoE fine-tuning — unsloth.ai/docs/basics/faster-moe and
+  unslothai.substack.com blog (2026-02-10); 12x MoE speedup, gpt-oss-20b on 12.8GB VRAM.
+- web search used for triage: GHSA AI/ML CVEs, arXiv LLM security papers Oct 2026,
+  vLLM CVE-2026-41523, OWASP GenAI 2026, ExLlamaV3, Unsloth MoE, PyRIT status,
+  llama.cpp CVEs Oct 2026, MCP server security, Promptfoo acquisition, Ollama MLX,
+  r/LocalLLaMA community pulse, AI security tools 2026, vendor blogs. All evidence
+  lines reference URLs opened directly.
+- degraded: r/LocalLLaMA — not attempted (degraded 3+ prior runs, no new access method).
+  4th consecutive degraded.
+- degraded: vendor blogs (protectai.com, hiddenlayer.com, lakera.ai) — search returned
+  no October 2026 blog posts; no new on-axis content identified.
