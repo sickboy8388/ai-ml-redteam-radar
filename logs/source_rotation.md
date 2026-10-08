@@ -71,3 +71,36 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-08
+- opened: tool repos & releases via WebFetch — llama.cpp (b11491, 2026-10-08),
+  Ollama (v0.40.1, 2026-10-07; opened release notes), vLLM (v0.31.0 still latest,
+  2026-10-05), LocalAI (v4.11.0 still latest), garak (v0.17.0 still latest),
+  promptfoo (0.124.0, 2026-10-06), transformers (v5.19.0, 2026-10-06).
+- opened: ExLlamaV3 releases (github.com/turboderp-org/exllamav3) — v1.6.0 (Oct 7):
+  ROCm support, faster CPU offloading. Verified queue item.
+- opened: PyRIT releases (github.com/microsoft/PyRIT) — v1.1.0 (Sep 4), v1.0.0 GA
+  (Jul 24). Project active, Azure/PyRIT was archived stub. Updated SOURCES.md.
+- opened: GHSA-q8gq-377p-jq3r — vLLM CVE-2026-41523 code injection via assert bypass;
+  CVSS 7.5, fixed 0.22.0. Published Jun 14.
+- opened: GHSA-8wr5-jm2h-8r4f — vLLM CVE-2026-54234 remote DoS via speculative decoding;
+  CVSS 7.5, fixed 0.24.0. Published Jul 2.
+- opened: OWASP GenAI LLM Top 10 2026 canonical page (genai.owasp.org) — confirmed
+  published Aug 3 2026 v1.0. Agent Control Standard Sep 1.
+- opened: Unsloth 2026 Update blog (unslothai.substack.com) — Feb 10 2026: MoE 12x
+  faster, 35% less VRAM. Verified queue item.
+- opened: papers — arXiv cs.CR recent listing (2026-10-08, 50 entries): 17+ on-axis
+  papers identified. Abstracts opened: 2610.09469 (Secure-CUA), 2610.09264 (PackHallu),
+  2610.09240 (WebMirage), 2610.08951 (ASPIRE), 2610.08871 (CredLeakBench),
+  2610.09793 (formal runtime verification), 2610.09027 (visual KV-cache attacks).
+- opened: arXiv cs.CL recent listing (2026-10-08, partial): 2610.09772 (decoupled
+  edge LLM agents).
+- web search used for triage: GHSA AI/ML CVEs Oct 2026, MCP server security 2026,
+  PyRIT status, ExLlamaV3, Unsloth, OWASP GenAI 2026, llama.cpp speculative decoding,
+  Hacker News AI security. All evidence lines reference URLs opened directly.
+- degraded: r/LocalLLaMA — not attempted this run (degraded 3+ prior runs). 4th
+  consecutive degraded.
+- degraded: NVIDIA security bulletin (nvidia.custhelp.com) — not retried; prior 403
+  still expected.
+- Note: 3-day cadence restored (Oct 5 → Oct 8). GitHub MCP still scoped to radar repo
+  only — WebFetch used for external repos.

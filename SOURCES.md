@@ -23,7 +23,7 @@ Tool repos & releases (check `<repo>/releases`):
 - vLLM — https://github.com/vllm-project/vllm
 - LocalAI — https://github.com/mudler/LocalAI
 - NVIDIA garak (LLM vuln scanner) — https://github.com/NVIDIA/garak
-- Microsoft PyRIT — https://github.com/Azure/PyRIT
+- Microsoft PyRIT — https://github.com/microsoft/PyRIT (note: Azure/PyRIT is archived stub; active development at microsoft/PyRIT since v1.0.0)
 - promptfoo — https://github.com/promptfoo/promptfoo
 - Hugging Face transformers — https://github.com/huggingface/transformers
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
