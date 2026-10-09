@@ -71,3 +71,31 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-09
+- opened: tool repos & releases via WebFetch — llama.cpp (b11516, 2026-10-09; releases
+  page scanned), Ollama (v0.40.2 stable 2026-10-08 / v0.40.1 2026-10-07; releases page
+  scanned), vLLM (v0.31.0, 2026-10-05; no new releases), LocalAI (v4.11.0, 2026-10-02;
+  no new releases), garak (v0.17.0, 2026-09-09; no new releases), promptfoo (0.124.1,
+  2026-10-08; releases page opened), transformers (v5.19.0, 2026-10-06; releases page
+  opened).
+- opened: ExLlamaV3 repo (turboderp-org/exllamav3) + releases page — v1.6.0 (Oct 7),
+  EXL3 quantization, AMD ROCm, CPU offloading. Resolves observation_queue item.
+- opened: GHSA — GHSA-q8gq-377p-jq3r (vLLM CVE-2026-41523, assert bypass → RCE, CVSS 7.5,
+  fixed 0.22.0). Global advisory sweep via web search — no new on-axis high/critical
+  advisories found for Oct 2026. 2 unverified llama.cpp CVEs (34159, 21869) queued.
+- opened: OWASP GenAI LLM Top 10 2026 resource page (genai.owasp.org) — confirmed v1.0,
+  published 2026-08-03. Full document content not accessible (PDF download).
+- opened: papers — arXiv cs.CR recent listing (2026-10-09): 18 on-axis papers identified;
+  abstracts opened: 2610.10612 (PyCache Trap), 2610.10735 (DITTO), 2610.10742 (BRANCH),
+  2610.11030 (NOMOS), 2610.11634 (LTBD), 2610.10929 (Speedbumps), 2610.11893 (RAG
+  security meta-model).
+- opened: Unsloth — web search confirmed MoE speedups (Jan 2026 update), QLoRA 8B ~6GB
+  VRAM; Substack blog referenced but not directly opened.
+- web search used for triage: GHSA AI/ML CVEs Oct 2026, arXiv LLM security Oct 2026,
+  OWASP GenAI 2026, Unsloth fine-tuning, Ollama v0.40, ExLlamaV3, PyRIT successor,
+  AI red-team tools Oct 2026. All evidence lines reference URLs opened directly.
+- degraded: r/LocalLLaMA — not attempted (degraded 4 consecutive runs; no new access
+  method). Escalated per Hard rules.
+- degraded: Hacker News — not checked this run (prioritized arXiv + CVE lanes).
+- Note: 4-day gap since last scan. Scheduler appears to be running again.
