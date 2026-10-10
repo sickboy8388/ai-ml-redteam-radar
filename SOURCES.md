@@ -23,9 +23,11 @@ Tool repos & releases (check `<repo>/releases`):
 - vLLM — https://github.com/vllm-project/vllm
 - LocalAI — https://github.com/mudler/LocalAI
 - NVIDIA garak (LLM vuln scanner) — https://github.com/NVIDIA/garak
-- Microsoft PyRIT — https://github.com/Azure/PyRIT
+- Microsoft PyRIT — https://github.com/microsoft/PyRIT (Azure/PyRIT archived 2026-03-27)
 - promptfoo — https://github.com/promptfoo/promptfoo
 - Hugging Face transformers — https://github.com/huggingface/transformers
+- ExLlamaV3 — https://github.com/turboderp-org/exllamav3
+- SGLang — https://github.com/sgl-project/sglang
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
 
 ## CVE / advisory watch — swept every run

@@ -71,3 +71,40 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-10
+- opened: tool repos & releases via WebFetch —
+  llama.cpp (b11540, 2026-10-10), Ollama (v0.40.2, 2026-10-08 / v0.40.1, 2026-10-07),
+  vLLM (v0.31.0, 2026-10-05 — no new release), LocalAI (v4.11.0, 2026-10-02 — no new
+  release), garak (v0.17.0, 2026-09-09 — no new release), promptfoo (0.124.1, 2026-10-08),
+  transformers (v5.19.0, 2026-10-06), ExLlamaV3 (v1.6.0, 2026-10-07).
+- opened: ExLlamaV3 repo (turboderp-org/exllamav3) — active, EXL3 format, ROCm support,
+  v1.6.0 release notes verified. ExLlamaV2 → ExLlamaV3 succession confirmed.
+- opened: microsoft/PyRIT repo — active (2231 commits, 48 open PRs). Azure/PyRIT archived
+  2026-03-27; development continued here.
+- opened: GHSA advisory feed for SGLang — 29 advisories (7 critical) in 2026. Specific
+  advisories opened: GHSA-w4hv-c72g-pqx6 (CVE-2026-93034, pickle deserialization in IPC,
+  CVSS 9.8, Oct 8), GHSA-2wm4-697g-pfq8 (CVE-2026-5760, Jinja2 SSTI in chat template,
+  CVSS 9.8, Apr 20).
+- opened: CSA research note on SGLang CVE-2026-5760 — confirmed SSTI in getjinjaenv(),
+  /v1/rerank endpoint, no sandboxed Jinja2, discoverer Stuart Beck / CERT/CC VU#915947.
+- opened: Ollama v0.40.2 release notes — background model upgrades, no security fixes.
+- opened: papers — arXiv cs.CR recent listing (Oct 9, 2026): 13+ on-axis papers identified.
+  Abstracts opened: 2610.12463 (agent security incidents), 2610.11030 (NOMOS tool-call
+  gates), 2610.10612 (PyCache Trap skill scanner bypass), 2610.11634 (LTBD prompt injection
+  delimiters), 2610.10742 (BRANCH guardrail bypass), 2610.10735 (DITTO pickle scanner),
+  2610.10929 (Speedbumps speculative decoding DoS), 2610.11843 (LLM weight exfiltration
+  detection), 2610.11467 (GROB agentic activity investigation).
+- opened: arXiv cs.CL recent listing (Oct 9) — 4 potentially on-axis (alignment
+  generalization, intent recovery, constitutional gating, adversarial cues in judges).
+- opened: OWASP GenAI LLM Top 10 2026 resource page (genai.owasp.org) — confirmed v1.0,
+  2026-08-03; download-only PDF, could not extract categories.
+- web search used for triage: GHSA AI/ML, SGLang CVEs, PyRIT replacement, Unsloth MoE,
+  ExLlamaV3, OWASP GenAI 2026, MCP tool poisoning CVEs, AI security tools, r/LocalLLaMA.
+  All evidence lines reference URLs opened directly.
+- degraded: GHSA filtered search (pip/high+critical) — returned 0 results (rendering issue);
+  fell back to specific advisory queries.
+- degraded: r/LocalLLaMA (reddit.com) — 4th consecutive run without access; community-pulse
+  lane uncovered. Secondary sources used for pulse context only.
+- Note: state persisted via GitHub remote clone to feature branch. 5-day gap since last
+  scan (2026-10-05 → 2026-10-10).
