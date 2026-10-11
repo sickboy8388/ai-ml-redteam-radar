@@ -2,23 +2,21 @@
 
 ![trends](https://img.shields.io/badge/trends-3-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-0-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-12-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--10--05-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-5-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--10--11-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-10-05)
+## Since last scan (2026-10-11, weekly recalibration W41)
 
-- **41-day gap**: last scan was 2026-08-25; scheduled runs did not fire or persist (state-persistence blocker still open).
-- **2 trends promoted seed→emerging**: [Self-hosted inference server attack surface](#trends) now has 8 evidence items from ≥6 independent orgs including in-the-wild exploitation (LMDeploy SSRF weaponized in 12h); [Agentic prompt-injection & agent-subsystem attacks](#trends) now has 8 evidence items including an impossibility result and a 92.5%-success hook-poisoning attack.
-- **New SEED trend**: [AI model & pipeline supply-chain attacks](#trends) — Hugging Face breached by autonomous AI agent (Jul 2026), FaceHugger CVEs bypass trust_remote_code in HF diffusers, conjunctive poisoning of deployment artifacts, instruction backdoor attacks on coding LLMs.
-- **Major tool releases**: llama.cpp b11405, Ollama v0.35.1 (Clef decision models), vLLM v0.31.0, LocalAI v4.11.0, garak v0.17.0 (EU AI Act mapping), promptfoo 0.123.1, transformers v5.18.0.
-- **PyRIT archived**: Microsoft Azure/PyRIT archived 2026-03-27 — major red-team tooling gap.
-- **ExLlamaV2 archived**: development moved to ExLlamaV3.
-- **Queue**: +5 new items, 4 resolved/promoted → 12 live items.
+- **No stage moves**: inference-server and agentic-injection stay emerging; supply-chain stays seed (no sustained new multi-org evidence this week; daily sweeps did not run 10-06..10-11).
+- **Evidence**: vLLM CVE-2026-41523 (GHSA-q8gq-377p-jq3r, malicious model → code execution) added to the inference-server and supply-chain trends.
+- **PyRIT is not dead**: Azure/PyRIT is archived but moved to microsoft/PyRIT (v1.1.0, 4 Sep).
+- **Dropped**: unverified "OWASP LLM Top 10 2026" claim (canonical page lists only the 2025 edition); unverified ExLlamaV3 speed claim.
+- **Queue**: 5 live items; anchoring warning recorded in strategy_notes.
 
 ## Trends
 
@@ -39,15 +37,14 @@ seed 1 · emerging 2 · accelerating 0 · mainstreaming 0 · dormant 0
 - **[garak](https://github.com/NVIDIA/garak)** — v0.17.0 (2026-09-09): EU AI Act mapping, Ollama generator improvements, Python 3.13 support
 - **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.123.1 (2026-09-18); 0.123.0 breaking change: GPT-5.6+ defaults to Responses API
 - **[transformers](https://github.com/huggingface/transformers)** — v5.18.0 (2026-09-30, Nemotron 3 Diarization, HyperCLOVAX Vision V2, GTE)
-- **[PyRIT](https://github.com/Azure/PyRIT)** — ARCHIVED (2026-03-27) — repository read-only, no releases
-- **[ExLlamaV3](https://github.com/turboderp/exllamav3)** — successor to ExLlamaV2 (archived); ExLlamaV3 + TabbyAPI reportedly 30–60% faster than llama.cpp on Ampere/Ada
+- **[PyRIT](https://github.com/microsoft/PyRIT)** — v1.1.0 (Sep 4); v1.0.0 (Jul 24) new architecture; Azure/PyRIT archived 2026-03-27 (moved here)
+- **[ExLlamaV3](https://github.com/turboderp-org/exllamav3)** — EXL3 quant + inference library for consumer GPUs, MoE CPU offload, TabbyAPI backend; speed claims unverified
 
 ## Worth studying
 
+- [ExLlamaV3](https://github.com/turboderp-org/exllamav3) — turboderp-org (accessed 2026-10-11): EXL3 quantization + inference for consumer GPUs with MoE CPU offload; fits a 12GB RTX 4070 Ti.
 - [HookPry: Attacker-Controlled Hook Updates Steer AI Agent Harnesses](https://arxiv.org/abs/2609.03884) — arXiv (2026-09-03): lifecycle hooks in agent harnesses are a blindspot — 92.5% compromise rate, 0% detection. Assess local agent setups with plugin/hook systems.
 - [Cyera: Breaking Local AI Runtimes — 10 Vulnerabilities in llama.cpp](https://www.cyera.com/research/breaking-local-ai-runtimes-10-vulnerabilities-in-the-engine-behind-your-open-source-models) — Cyera (2026): systematic audit of llama.cpp; 5 of 10 bugs unpatched — essential for anyone running llama.cpp or red-teaming local deployments.
-- [InjecMEM: Memory Injection Attack on LLM Agent Memory Systems](https://arxiv.org/abs/2608.23471) — arXiv (2026-08-24): agent memory is a demonstrated injection target — one interaction poisons later retrieval-conditioned answers.
-- [llama.cpp v0.3.0](https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0) — ggml-org (2026-08-25): first v0.3.x tag — dots3-note multimodal, MTP, ggml v0.22.0.
 
 ## How it works
 
