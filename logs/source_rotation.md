@@ -71,3 +71,36 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-11 (daily sweep)
+- opened: tool repos & releases via WebFetch (GitHub release pages) —
+  llama.cpp (b11552, 2026-10-10), Ollama (v0.40.3 stable 2026-10-11 / v0.40.2 Oct 8 /
+  v0.40.1 Oct 7), vLLM (v0.31.0, 2026-10-05, still latest), LocalAI (v4.11.0, 2026-10-02,
+  still latest), garak (v0.17.0, 2026-09-09, still latest), PyRIT (v1.1.0, 2026-09-04,
+  still latest), promptfoo (0.124.1, 2026-10-08), transformers (v5.19.0, 2026-10-06),
+  ExLlamaV3 (v1.6.1, 2026-10-10; very active — 10 releases Sep 5–Oct 10).
+- opened: GHSA — date-filtered sweep (published 2026-10-06..2026-10-11): 25 advisories,
+  none AI/ML on-axis.
+- opened: CSA research note — SGLang CVE-2026-5760 (CVSS 9.8, Jinja2 SSTI via GGUF
+  chat_template, CERT/CC VU#915947, disclosed Apr 20). Gap fill for local-inference-001.
+- opened: papers — arXiv cs.CR recent listing (323 entries, 50 reviewed): 16 on-axis
+  papers identified; abstracts opened: 2610.11634 (LTBD), 2610.11030 (NOMOS),
+  2610.10735 (DITTO), 2610.10612 (PyCache Trap), 2610.10742 (BRANCH), 2610.10929
+  (Speedbumps), 2610.11893 (RAG security meta-model), 2610.12463 (agent security
+  incidents / PASAC).
+- opened: arXiv cs.CL recent listing: 4 on-axis papers identified; titles noted (none
+  promoted to evidence this run).
+- opened: Unsloth Substack primary (Feb 10, 2026) — MoE training speedups, embedding
+  model support; self-reported benchmarks.
+- opened: ExLlamaV3 releases page — v1.6.1 (Oct 10) through v1.4.7 (Sep 5).
+- web search used for triage: GHSA AI/ML CVEs Oct 2026, arXiv papers Oct 2026,
+  SGLang CVE-2026-5760, Ollama v0.40, vendor blogs (protectai/hiddenlayer/lakera),
+  local LLM inference releases, r/LocalLLaMA, consumer GPU inference,
+  Unsloth/Axolotl fine-tuning, MCP security.
+- degraded: r/LocalLLaMA — not attempted directly (degraded 3+ prior runs; no new
+  access method). 4th consecutive degraded.
+- degraded: vendor blogs (protectai.com, hiddenlayer.com, lakera.ai, blog.trailofbits.com,
+  wiz.io/blog, elastic.co/security-labs) — web search triage found no October 2026 posts;
+  not opened individually. Blog indexes should be opened directly next run.
+- degraded: NVIDIA security bulletin (nvidia.custhelp.com) — not retried (403 on prior
+  run). Non-blocking.
