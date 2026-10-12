@@ -71,3 +71,44 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-12 (daily — 7 days since last scan)
+- opened: tool repos & releases via WebFetch (GitHub release pages) —
+  llama.cpp (b11564, 2026-10-12; incremental builds, no security fixes),
+  Ollama (v0.40.3 stable 2026-10-11, v0.40.2 2026-10-08, v0.40.1 2026-10-07; MLX shipped),
+  vLLM (v0.31.0, 2026-10-05; no new release since last scan),
+  LocalAI (v4.11.0, 2026-10-02; no new release),
+  garak (v0.17.0, 2026-09-09; no new release),
+  promptfoo (0.124.1 2026-10-08, 0.124.0 2026-10-06; Claude Opus 5.5 / GPT-6 support),
+  transformers (v5.19.0, 2026-10-06; EmbeddingGemma2, MoE router logits),
+  PyRIT (v1.1.0, 2026-09-04; no new release),
+  ExLlamaV3 (no version tags; repo active).
+- opened: GHSA — global feed sweep (type:reviewed, AI/ML ecosystem keywords);
+  14 on-axis advisories found (Oct 5-8): 8 vLLM Moderate/Low (Trail of Bits / OpenAI
+  "Patch the Planet" audit), Langflow CVE-2026-10561 Critical 9.9, fsspec CVE-2026-104851
+  High 8.8, LangChain MongoDB/Redis Moderate/Low, langgraph-sdk High.
+  Opened full advisories: GHSA-ph3r-5jfg-f84f (vLLM multimodal cache desync),
+  GHSA-8qpj-27x8-pwpq (Langflow unsandboxed RCE), GHSA-27vj-qcqg-25rc (fsspec SSTI → RCE).
+- opened: papers — arXiv cs.CR recent listing (2026-10-12): 17 on-axis papers identified
+  (Oct 8-12); abstracts opened: 2610.13651 (ToFu MCP fuzzing), 2610.13227 (cross-session
+  skill attacks), 2610.12893 (vulnerable models in AI supply chain), 2610.13928 (provably
+  hidden capabilities), 2610.12524 (attacks on AI agent systems), 2610.12644 (cancerous
+  backdoor), 2610.12822 (reward hacking contagion), 2610.12813 (VEPA guardrails),
+  2610.13083 (model extraction monitoring limits).
+  arXiv cs.CL recent listing: page 1 (50 of 116 entries) — no strong on-axis hits.
+- opened: Unsloth 2026 blog (unslothai.substack.com, Feb 10, 2026): 12x MoE speedup,
+  >35% less VRAM; verified vendor claims. Added to study_shelf.
+- opened: MITRE ATLAS navigator-data releases page — latest is v1.14.0 (Feb 2026,
+  ATLAS Data 5.4.0); no v2026.09 release found on the repo. Secondary claims unverified.
+- searched: vendor/lab blogs (Protect AI, HiddenLayer, Lakera) — web search only;
+  HiddenLayer 2026 threat landscape report and Lakera/Check Point webinar series found as
+  secondary signals; individual blog indexes not opened. No new on-axis primary posts found.
+- searched: discovery topics rotated — "MCP server security vulnerability" (MCP CVE cluster
+  signal), "awesome-llm-security" (lists checked but not opened).
+- searched: llama.cpp KV-cache quantization improvements — forks with TurboQuant/KVarN
+  found; not upstream llama.cpp. Queued for future investigation.
+- degraded: r/LocalLLaMA — not attempted (degraded 3+ prior runs; no new access method).
+  4th consecutive degraded.
+- community pulse: Hacker News front page checked — no on-axis stories.
+- web search used for triage and discovery only; all evidence lines reference URLs opened
+  directly via WebFetch.
