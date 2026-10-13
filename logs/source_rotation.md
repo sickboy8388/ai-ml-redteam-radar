@@ -71,3 +71,44 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-13 (daily)
+- opened: tool repos & releases via WebFetch — llama.cpp (b11580, 2026-10-13), Ollama
+  (v0.40.3 stable 2026-10-11 / v0.40.4-rc1 pre-release 2026-10-12), vLLM (v0.31.0,
+  2026-10-05; no new release since last scan), garak (v0.17.0, 2026-09-09; no new release),
+  promptfoo (0.124.1, 2026-10-08; opened release notes), Unsloth (v0.1.906-beta,
+  2026-10-12; opened release notes — browser use, decision models, consumer GPU layer
+  offload, AMD RX support). MITRE ATLAS data repo (v2026.09, 2026-09-15; opened release
+  notes).
+- opened: GHSA — global advisory feed sweep; on-axis captures: LiteLLM CVE-2026-42208
+  (SQL injection, Critical CVSS 9.3, opened GHSA-r75f-5x8p-qvmc). Flowise CVE-2026-69255
+  (CSV Agent code injection, High, verified via GHSA search but advisory page blocked by
+  safeguards). ComfyUI 4-CVE cluster (Jul 2026, path traversal, verified via search).
+  Ollama CVE-2026-102697 (agent bash session bypass, verified via search, primary
+  unconfirmed).
+- opened: NetSPI blog — LiteLLM supply chain compromise (TeamPCP, Mar 24 2026); verified
+  attack chain, affected versions, credential exfiltration. First in-the-wild supply-chain
+  attack on AI/LLM proxy infrastructure.
+- opened: Wiz blog — "State of AI in Cloud 2026" recap (Apr 29): MCP in 80% of
+  environments, AI infra attacks doubled, 57% orgs deploy self-hosted agents.
+- opened: papers — arXiv cs.CR current listing (2026-10-13): ≥15 on-axis papers identified;
+  abstracts opened: 2610.07510 (PersistBD, backdoor persistence, EMNLP 2026 Findings),
+  2610.07723 (answer-side backdoor), 2610.01564 (APEX skill chaining hijack),
+  2610.01768 (LLMLeak web-fetch exfiltration), 2610.00450 (ZoneClaw memory zoning).
+- opened: Obisidan/ollama-security-audit GitHub repo — 27 vulnerabilities (5 critical) in
+  Ollama; no official CVE IDs (author's labels); published Jun 28 after 9-day no-response
+  from Ollama security team.
+- opened: MITRE ATLAS data releases page — v2026.09 confirmed (Sep 15): 120 techniques,
+  88 sub-techniques, 11 new techniques including agentic AI, "AI Honeypots" mitigation.
+- web search used for triage: HiddenLayer blog (2026 AI Threat Landscape Report found,
+  blog posts not individually opened), Trail of Bits (AI-native field report found, blog
+  not opened), Protect AI/huntr (no October 2026 disclosures surfaced), consumer GPU
+  quantization landscape, MCP server security (MCP TypeScript SDK CVE Oct 6 found via
+  search, primary not opened).
+- degraded: r/LocalLLaMA — not attempted (degraded 4+ consecutive runs; no new access
+  method). Community pulse lane uncovered.
+- degraded: Flowise advisory GHSA-vmv7-4m6c-3cg5 — WebFetch blocked by downstream model
+  safeguards; verified via search results and metadata.
+- degraded: vendor security blogs (Microsoft, Anthropic, OpenAI, Google DeepMind, Protect
+  AI, HiddenLayer, Lakera, Trail of Bits, Elastic) — not individually opened this run;
+  search-verified only. Partial improvement over prior runs (Wiz opened).
