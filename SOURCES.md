@@ -27,6 +27,7 @@ Tool repos & releases (check `<repo>/releases`):
 - promptfoo — https://github.com/promptfoo/promptfoo
 - ExLlamaV3 — https://github.com/turboderp-org/exllamav3 [verified 2026-10-11]
 - Hugging Face transformers — https://github.com/huggingface/transformers
+- Unsloth — https://github.com/unslothai/unsloth [verified 2026-10-14]
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
 
 ## CVE / advisory watch — swept every run

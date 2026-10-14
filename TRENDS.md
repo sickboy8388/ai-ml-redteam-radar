@@ -1,7 +1,7 @@
 # AI-ML-RedTeam Radar — Trend ledger
 
 Single source of truth. The README and reports are derived from this file.
-Last updated: 2026-10-11
+Last updated: 2026-10-14
 
 Trend stages: `seed` → `emerging` → `accelerating` → `mainstreaming` → `dormant`.
 Evidence line format: `date — primary URL — one line of context`. Max 10 per trend.
@@ -11,11 +11,11 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
 ## trends
 
 ### id: local-inference-001 — Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)
-- stage: emerging
+- stage: accelerating
 - confidence: high
-- last_evidence: 2026-10-05
+- last_evidence: 2026-10-08
 - aliases: [Bleeding Llama, Breaking Local AI Runtimes]
-- notes: Critical CVE cluster spanning the entire local/self-hosted inference stack (llama.cpp, Ollama, vLLM, LMDeploy, NVIDIA Triton, Xinference); attack classes include GGUF parser overflows, server use-after-free, SSRF via multimodal endpoints, and authentication bypass. In-the-wild exploitation confirmed (LMDeploy CVE-2026-33626 weaponized within 12h of disclosure). Weekly 2026-10-11: held at emerging (one new GHSA item, no sustained acceleration). Promoted seed→emerging 2026-10-05: ≥6 independent orgs (Cyera, Sysdig, NVIDIA, Orca Security, GHSA maintainers, StingRAI) + concrete artifacts across the stack.
+- notes: Critical CVE cluster spanning the entire local/self-hosted inference stack (llama.cpp, Ollama, vLLM, LMDeploy, NVIDIA Triton, Xinference); attack classes include GGUF parser overflows, server use-after-free, SSRF via multimodal endpoints, path traversal to RCE, and authentication bypass. In-the-wild exploitation confirmed (LMDeploy CVE-2026-33626 weaponized within 12h of disclosure). Daily 2026-10-14: promoted emerging→accelerating — 2 new critical CVEs in one week (Ollama path-traversal RCE CVE-2026-103663 CVSS 9.4 + llama.cpp UAF CVE-2026-107183 CVSS 9.2), vLLM v0.31.0 shipped 10 labeled security fixes, llama.cpp b11608 patched a remotely-triggerable DoS (SIGSEGV via crafted regex); CVE rate across the stack is sustained and broadening. Also noted: vLLM audio heap overflow CVE-2026-109311, Ollama SSRF CVE-2026-108836, vLLM cross-tenant cache oracle CVE-2026-105752. Weekly 2026-10-11: held at emerging (one new GHSA item, no sustained acceleration). Promoted seed→emerging 2026-10-05.
 - evidence:
   - 2026-08-21 — https://github.com/advisories/GHSA-x2rj-828p-hx9m — Xinference CVE-2026-61539: unsafe eval() on Llama3 tool-call parser output → unauth RCE, CVSS 10.0, fixed v2.7.0.
   - 2026-08-24 — https://github.com/advisories/GHSA-x8qc-fggm-mpqg — Ollama CVE-2026-7482 "Bleeding Llama": crafted GGUF → heap OOB read → memory (env vars, API keys, system prompts) exfiltrated via /api/push. Floor 0.17.1.
@@ -26,13 +26,14 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
   - (undated, accessed 2026-10-05) — https://www.stingrai.io/blog/inference-server-security-vllm-triton-ollama-2026 — Roundup: NVIDIA Triton CVE-2026-24207 auth bypass CVSS 9.8 (fixed 26.03), vLLM CVE-2026-22778 RCE CVSS 9.8 (fixed 0.14.1), llama.cpp CVE-2026-33298.
   - 2026-05-05 — https://www.cyera.com/research/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama — Cyera: ~300k exposed Ollama servers; CVE-2026-7482 exfiltrates API keys/prompts via crafted GGUF + /api/push; no methodology for server count disclosed.
   - 2026-06-16 — https://github.com/advisories?query=CVE-2026-41523 — vLLM CVE-2026-41523 (GHSA-q8gq-377p-jq3r, High): assert-based security check bypass in activation-function loading → arbitrary code execution via a malicious model; fixed version not stated on the opened page (0.22.0 per earlier secondary report).
+  - 2026-10-08 — https://github.com/advisories/GHSA-w8p2-phwr-px3r — Ollama CVE-2026-103663 (CVSS 9.4): path traversal in /api/pull digestToPath → write malicious binary outside model store → RCE as root in Docker; unauth, fixed v0.35.0.
 
 ### id: agentic-injection-001 — Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)
-- stage: emerging
+- stage: accelerating
 - confidence: high
-- last_evidence: 2026-10-02
-- aliases: [tool poisoning, skill injection, memory injection, indirect prompt injection, IPI, hook poisoning, HookPry]
-- notes: Attack surface spans agent subsystems — MCP tool descriptions, coding-agent skills, persistent agent memory, lifecycle hooks — plus a growing impossibility-result literature and defensive frameworks. Weekly 2026-10-11: held at emerging (no new evidence this week; daily sweeps did not run). Promoted seed→emerging 2026-10-05: ≥8 independent research groups + in-the-wild MCP tool-poisoning rates exceeding 60% reported.
+- last_evidence: 2026-10-13
+- aliases: [tool poisoning, skill injection, memory injection, indirect prompt injection, IPI, hook poisoning, HookPry, Agentjacking, PackHallu]
+- notes: Attack surface spans agent subsystems — MCP tool descriptions, coding-agent skills/rule files, persistent agent memory, lifecycle hooks — plus a growing impossibility-result literature and defensive frameworks. Daily 2026-10-14: promoted emerging→accelerating — 10 new agent-security papers on arXiv in Oct 6–13 alone (Kairos boundary monitor, ASPIRE red-teaming engine, PackHallu rule-file injection, encrypted skill injection, cross-agent propagation, delayed injection against life-support agent, SA-CUA dual-LLM defense, CoDA constrained diffusion, Jev-Guard policy-tree guardrail, APEX-Harm shared-workspace benchmark); plus Agentjacking (CSA/Tenet, Jun 2026) demonstrated 85% code-execution success via Sentry MCP injection across Claude Code, Cursor, and Codex CLI; plus Flowise CVE-2026-73487 (CVSS 9.0) prompt injection → RCE via regex blocklist bypass and PraisonAI 7 CVEs (CVSS up to 10.0) confirming that agent frameworks ship without effective sandboxing. Research volume and real-world attack vectors are both accelerating. Weekly 2026-10-11: held at emerging. Promoted seed→emerging 2026-10-05.
 - evidence:
   - 2026-03-23 — https://arxiv.org/abs/2603.22489 — STRIDE/DREAD threat model of the MCP stack; tool poisoning is the top client-side vulnerability; 5/7 major MCP clients lack static validation of tool descriptions.
   - 2026-08-22 — https://arxiv.org/abs/2608.21929 — SkillBloat: malicious coding-agent "skills" as a trusted instruction channel; token-amplification (resource-abuse) attacks reaching 5.4–10.1x average best amplification.
@@ -42,19 +43,23 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
   - 2026-05-17 — https://arxiv.org/abs/2605.17634 — "AI Agents May Always Fall for Prompt Injections": impossibility result via Contextual Integrity theory; adversary can always construct a context making a blocked flow appear legitimate.
   - 2026-09-03 — https://arxiv.org/abs/2609.03884 — HookPry: attacker-controlled lifecycle-hook updates steer AI agent harnesses; 92.5% per-harness success rate across 7 harnesses; Microsoft Defender 0% detection.
   - 2026-10-02 — https://arxiv.org/abs/2610.03448 — PI detector re-evaluation: best detector on BIPIA catches only 2% of AgentDojo injections at 1% FPR; benchmark scores mislead deployment decisions.
+  - 2026-06-14 — https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-sentry-mcp-20260614-csa-style/ — Agentjacking (CSA/Tenet Security): injection via Sentry MCP server — attacker submits crafted error events via exposed DSN; 85% code-execution success across Claude Code, Cursor, Codex CLI.
+  - 2026-10-07 — https://arxiv.org/abs/2610.09264 — PackHallu: prompt injection in agent rule files (.cursorrules, AGENTS.md) tricks coding agents into installing attacker-controlled packages; evolutionary optimization achieves high success across LLMs and agent frameworks.
 
 ### id: ai-supplychain-001 — AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)
-- stage: seed
+- stage: emerging
 - confidence: high
-- last_evidence: 2026-08-16
-- aliases: [nullifAI, FaceHugger, model poisoning, conjunctive poisoning, pickle deserialization, trust_remote_code bypass]
-- notes: Held at seed on 2026-10-11 (no new multi-org evidence since 2026-08-16; vLLM CVE-2026-41523 added as a bridge to local-inference-001). New trend seeded 2026-10-05. Attack surface spans model-hub poisoning (pickle/safetensors, malicious repos), library-level code execution bypasses (HF diffusers TOCTOU), deployment-artifact tampering (prompt wrappers + config metadata), and instruction backdoors in customized coding LLMs. Hugging Face breach (Jul 2026) demonstrated autonomous-agent exploitation of the model-hub attack surface at scale. ≥4 independent sources + concrete artifacts.
+- last_evidence: 2026-10-13
+- aliases: [nullifAI, FaceHugger, model poisoning, conjunctive poisoning, pickle deserialization, trust_remote_code bypass, DPOison-VL]
+- notes: Daily 2026-10-14: promoted seed→emerging — new independent evidence from HiddenLayer (fake OpenAI model "Open-OSS/privacy-filter" with infostealer reaching #1 trending, 244k downloads on HuggingFace) + DPOison-VL paper (98% attack success on VLM alignment with 2% poisoned data). Now 7 evidence items from 7 independent orgs. Attack surface spans model-hub poisoning (pickle/safetensors, malicious repos, typosquatting), library-level code execution bypasses (HF diffusers TOCTOU), deployment-artifact tampering, instruction backdoors, and clean-label alignment poisoning. Hugging Face breach (Jul 2026) demonstrated autonomous-agent exploitation of the model-hub attack surface at scale. Held at seed on 2026-10-11 (no new multi-org evidence since 2026-08-16). Seeded 2026-10-05.
 - evidence:
   - 2026-07-20 — https://www.helpnetsecurity.com/2026/07/20/hugging-face-breached-by-autonomous-ai-agent/ — Hugging Face breach: autonomous AI agent exploited dataset-loader + template-injection vulns → node-level access, cloud/cluster credential harvest, lateral movement across clusters.
   - 2026-07-27 — https://www.zafran.io/resources/facehugger-vulnerabilities-in-hugging-face-diffusers-open-door-to-supply-chain-attacks-on-enterprise-ai — FaceHugger: CVE-2026-44827/45804/44513 (CVSS 8.8/7.5) in HF diffusers; TOCTOU bypasses trust_remote_code → silent arbitrary code execution; fixed diffusers 0.38.0.
   - 2026-08-16 — https://arxiv.org/abs/2608.15913 — Conjunctive Poisoning: malicious deployment artifacts (prompt wrappers + metadata) deterministically alter model behavior without weight modification; existing defenses (PromptShield, SigStore) insufficient.
   - 2026-08-06 — https://arxiv.org/abs/2608.05659 — ARIA: automated instruction backdoor attacks on customized coding LLMs; 0.945 attack success rate, 1.000 false negative rate against detection mechanisms.
   - 2026-06-16 — https://github.com/advisories?query=CVE-2026-41523 — vLLM CVE-2026-41523: a malicious Hugging Face model triggers code execution via an assert-based check bypass at activation-function load; bridges inference-server and model-supply-chain surfaces.
+  - 2026-05-11 — https://www.infoworld.com/article/4169418/malicious-hugging-face-model-masquerading-as-openai-release-hits-244k-downloads-2.html — HiddenLayer: malicious HF repo "Open-OSS/privacy-filter" impersonated OpenAI Privacy Filter; 244k downloads, #1 trending in 18h; Rust infostealer targeting browsers, crypto wallets, Discord; 6 related repos found with shared infrastructure.
+  - 2026-10-13 — https://arxiv.org/abs/2610.18609 — DPOison-VL: clean preference poisoning in VLM Direct Preference Optimization; imperceptible image perturbations on 2% of training data redirect alignment with 98% attack success rate while preserving clean accuracy.
 
 ## observation_queue
 
@@ -73,9 +78,16 @@ Hard cap ~25 live items.
 - [resolved 2026-10-11] vLLM CVE-2026-41523 — GHSA-q8gq-377p-jq3r opened and verified (published 2026-06-16, High); folded into local-inference-001 and ai-supplychain-001.
 - [resolved 2026-10-11] PyRIT — Azure/PyRIT archived 2026-03-27 but banner points to https://github.com/microsoft/PyRIT, which is actively released (v1.0.0 24 Jul, v1.0.1 30 Jul, v1.1.0 4 Sep). Not a tooling gap; SOURCES.md updated.
 - [resolved 2026-10-11] ExLlamaV3 — repo opened at github.com/turboderp-org/exllamav3 (EXL3 quant, CPU offload for MoE, spec decoding, TabbyAPI backend). The page does NOT state the 30–60% speed claim or an ExLlamaV2 succession; claim dropped as unverified. Added to study_shelf (axis 1b).
-- [queued 2026-10-05] Ollama v0.40.0-rc3 MLX runtime — Apple Silicon native support via MLX backend (Sep 25 pre-release) — missing: open release notes and verify scope.
-- [queued 2026-10-05] Unsloth MoE fine-tuning — Feb 2026 release claims 7–12x speedup on MoE fine-tuning, native Llama 4 QLoRA, 500+ base models — relevant to scope axis 1b — missing: open Unsloth release/blog primary.
-- [re-dated 2026-10-11] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page.
+- [resolved 2026-10-14] Ollama v0.40.0-rc3 MLX runtime → shipped as stable v0.40.4 (Oct 12) with MLX runner improvements, decision models, multimodal embeddings.
+- [resolved 2026-10-14] Unsloth MoE fine-tuning → verified via Substack primary (Feb 10 2026): 12x faster MoE, >35% less VRAM, gpt-oss-20b at 12.8GB VRAM. Added to study_shelf (axis 1b). Active Oct releases (v0.1.903-907) adding LoRA+, layer offload, sandboxing.
+- [resolved 2026-10-14] ACM WPLL 2026 paper → verified as arXiv:2602.22242 (Feb 24 2026): inference-time jailbreak defenses bypassed by long reasoning-heavy prompts on Llama 3.2, Mistral, Qwen, Gemma. Added to study_shelf.
+- [queued 2026-10-14] Microsoft FORGE Lab / MDASH (Oct 7 2026 blog) — AI-driven agentic vulnerability discovery: 140 Windows CVEs, 155 OSS reports (May-Sep 2026); MDASH now available to customers; MAI-Cyber-1-Flash model — missing: ≥1 more independent AI-vuln-discovery org to seed a trend.
+- [queued 2026-10-14] Wiz Atlas/AI SAST/Red Agent (Oct 6-7 2026 blogs) — AI pentesting agents finding real exposures; Atlas ranked #1 CyberGym — missing: more independent orgs for AI-pentesting trend.
+- [queued 2026-10-14] PraisonAI agent framework CVE cluster — 7 GHSA advisories (CVSS up to 10.0): unsandboxed LLM code execution, file write, command injection, unauthenticated MCP/AgentOS defaults; all fixed 4.6.78/1.6.78/1.7.3 — supports agentic-injection-001 pattern.
+- [queued 2026-10-14] MITRE ATLAS Secure AI v2 (CTID blog May 6 2026) — 45+ new techniques/sub-techniques, monthly release cadence, threat emulation playbooks including prompt injection scenario, ATLAS Knowledge Graph — missing: open atlas.mitre.org for current technique count.
+- [queued 2026-10-14] Unsloth v0.1.903-907 (Oct 6-13 2026) — LoRA+ support, layer offload for training, 3x faster MoE GGUFs, sandboxing, decision-model training — relevant to scope 1b — missing: open individual release notes.
+- [queued 2026-10-14] llama.cpp CVE-2026-107183 (GHSA-3g9g-qh2j-c5q8, CVSS 9.2): UAF/double-free in chat_peg_mapper, unauth remote crash/heap write via crafted completion request, fixed b11393 — evidence overflow for local-inference-001 (trend at 10/10).
+- [queued 2026-10-14] arXiv agent-security paper surge (Oct 6-13): 10 papers including Kairos (47%→2.7% attack success), ASPIRE red-teaming engine, encrypted skill injection (47.5% success), cross-agent propagation, delayed injection against life-support agent — supports agentic-injection-001 acceleration.
 
 ## study_shelf
 
@@ -85,7 +97,9 @@ Hard cap ~25 live items.
 Prune picks older than 30 days on weekly runs.
 -->
 
-- [ExLlamaV3](https://github.com/turboderp-org/exllamav3) — turboderp-org (accessed 2026-10-11): EXL3 quantization + inference library for consumer GPUs with MoE CPU offload, speculative decoding and TabbyAPI backend; the natural fit for a 12GB RTX 4070 Ti (axis 1b). Performance claims unverified.
+- [Unsloth MoE Fine-Tuning Update](https://unslothai.substack.com/p/unsloth-2026-update-faster-moe) — Unsloth (2026-02-10): 12x faster MoE training, >35% less VRAM; gpt-oss-20b fits 12.8GB VRAM (RTX 4070 Ti). Active Oct 2026 releases (v0.1.903-907) add LoRA+, layer offload, sandboxing, 3x faster MoE GGUFs. Axis 1b essential.
+- [Analysis of LLMs Against Prompt Injection and Jailbreak Attacks](https://arxiv.org/abs/2602.22242) — arXiv (2026-02-24): inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts; tested on Llama 3.2, Mistral, DeepSeek-R1, Qwen, Gemma. Directly relevant to local open-weight model security.
+- [ExLlamaV3 v1.6.1](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.1) — turboderp-org (2026-10-10): EXL3 quant + inference for consumer GPUs; v1.6.1 adds ROCm support, Turing (sm_75) optimization, reduced VRAM for drafting, hybrid drafting mode; fits a 12GB RTX 4070 Ti (axis 1b).
 - [HookPry: Attacker-Controlled Hook Updates Steer AI Agent Harnesses](https://arxiv.org/abs/2609.03884) — arXiv (2026-09-03): lifecycle hooks in agent harnesses are a blindspot — 92.5% compromise rate across 7 harnesses, 0% detection. Directly relevant when assessing local agent setups with plugin/hook systems.
 - [Cyera: Breaking Local AI Runtimes — 10 Vulnerabilities in llama.cpp](https://www.cyera.com/research/breaking-local-ai-runtimes-10-vulnerabilities-in-the-engine-behind-your-open-source-models) — Cyera (2026): systematic audit of the most widely-used local inference engine; 5 of 10 bugs unpatched — essential reading for anyone running llama.cpp in production or red-teaming local deployments.
 
@@ -119,4 +133,6 @@ Access/tooling blockers that prevented verification. Format:
 - [2026-10-05] Microsoft "State of MCP Security 2026" blog (techcommunity.microsoft.com) — page returned empty content; topic covered via independent sources. Non-blocking.
 - [2026-10-05] GitHub MCP scoped to radar repo only — cannot query external repos for releases via API; used WebFetch on GitHub release pages instead. Non-blocking.
 - [2026-10-05] 41-day gap since last scan (2026-08-25 → 2026-10-05) — scheduled runs did not fire or did not persist. Root cause likely the state-persistence blocker above. Status: OPEN.
-- [2026-10-11] Daily sweeps absent 10-06..10-11 (only 2026-10-05 ran in W41). Vendor/lab blog feeds (all 10 in SOURCES primary list) never logged as opened or degraded. Status: OPEN.
+- [2026-10-11] Daily sweeps absent 10-06..10-11 (only 2026-10-05 ran in W41). Vendor/lab blog feeds (all 10 in SOURCES primary list) never logged as opened or degraded. Status: PARTIALLY RESOLVED — 2026-10-14 daily ran full sweep; opened Microsoft Security Blog (3 posts), Wiz (2 posts), Lakera, Trail of Bits; Protect AI and HiddenLayer returned 404 (see below).
+- [2026-10-14] protectai.com/blog — HTTP 404; blog URL may have changed. First attempt. Non-blocking.
+- [2026-10-14] hiddenlayer.com/blog/ — HTTP 404; blog URL may have changed. First attempt. Non-blocking.
