@@ -71,3 +71,46 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-15 (daily, first run since 10-05)
+- opened: tool repos & releases via WebFetch (GitHub release pages) —
+  llama.cpp (b11642, 2026-10-15), Ollama (v0.40.4 stable 2026-10-12 / v0.40.5-rc0
+  pre-release 2026-10-14; v0.40.4 release notes opened), vLLM (v0.31.0, 2026-10-05),
+  LocalAI (v4.11.0, 2026-10-02), garak (v0.17.0, 2026-09-09), promptfoo (0.124.1,
+  2026-10-08), transformers (v5.19.0, 2026-10-06). PyRIT (v1.1.0, 2026-09-04; release
+  notes opened — Best-of-N scanner, ShieldGemma, 488 jailbreak templates).
+- opened: GHSA — global feed sweep (reviewed/pip/critical): 14 on-axis advisories
+  identified Sep 8–Oct 8; individually opened: GHSA-g5f9-3xfg-p9mf (Decepticon
+  CVE-2026-61732, ChatML injection CVSS 10.0), GHSA-6qxp-vccf-f47h (MCP SDK
+  CVE-2026-104850, OAuth credential theft CVSS 7.5), GHSA-7m6h-x95x-82q5 (vLLM
+  CVE-2026-73558, cross-user data leak CVSS 5.3), GHSA-2vh9-42vm-xmv2 (LMDeploy
+  CVE-2025-66455, pickle RCE CVSS 9.8), GHSA-w794-rj3p-xv45 (Langflow CVE-2026-105697,
+  MCP stdio RCE CVSS 9.9), GHSA-2xv2-w8cq-5gxw (PraisonAI CVE-2026-61447, unsandboxed
+  code CVSS 10.0). GHSA high/pip sweep returned empty (filter issue).
+- opened: papers — arXiv cs.CR recent listing (2026-10-14): 12 on-axis papers identified
+  from 141 entries (first 50 shown); abstracts opened: 2610.18457 (Kairos transactional
+  security), 2610.17457 (BrowseSafe++ PI detection benchmark), 2610.17313 (TRAP automated
+  jailbreaking), 2610.19422 (AgentSafeEvo adversarial co-evolution), 2610.18430 (FedGraph
+  federated LLM backdoor defense), 2610.17820 (safety judge comparison).
+- opened: OWASP GenAI LLM Top 10 2026 download page (genai.owasp.org) — confirmed
+  published Aug 3 2026, v1.0. Announcement page opened (Sep 2 2026). Full item list not
+  retrieved (PDF download required).
+- opened: MITRE ATLAS navigator data releases (github.com/mitre-atlas) — v1.14.0 (Feb
+  2026, ATLAS Data 5.4.0); v2026.09 update reported by secondary sources only.
+- opened: NVD CVE-2026-34159 — redirected to NVD home (no content); llama.cpp CVE details
+  from secondary vuln databases only (CVE-2026-34159 RPC RCE CVSS 9.8, CVE-2026-43628 DRY
+  sampler CVSS 8.5, CVE-2026-43632 tokenization race CVSS 8.1).
+- web search used for triage: llama.cpp CVEs, AI ML security advisories Oct 2026, arXiv
+  LLM security Oct 2026, MCP server security, malicious HuggingFace models, OWASP GenAI
+  2026, MITRE ATLAS 2026, Ollama v0.40 CVEs, vLLM cross-user leak, consumer GPU inference,
+  Unsloth fine-tuning, r/LocalLLaMA community. All evidence lines reference URLs opened
+  directly.
+- degraded: NVD (nvd.nist.gov) — CVE detail pages redirect to homepage; enrichment
+  limited per April 2026 NIST restructuring.
+- degraded: vendor blog primary feeds (Microsoft, Google, Anthropic, OpenAI, Protect AI,
+  HiddenLayer, Lakera, Trail of Bits, Wiz, Elastic) — web search found no October 2026
+  posts; individual blog indexes not opened this run. Coverage gap persists.
+- degraded: r/LocalLLaMA — not attempted this run (degraded 3+ prior runs; reddit.com
+  JSON endpoint blocked). 4th consecutive degraded.
+- degraded: arXiv cs.CR listing showed only 50/141 Oct 14 entries; earlier October
+  listings not retrieved.
