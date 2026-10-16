@@ -71,3 +71,37 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-16 (daily scan, 11 days since last daily)
+- opened: tool repos & releases via WebFetch — llama.cpp (v0.7.0 + b11681, 2026-10-15/16;
+  opened v0.7.0 release notes), Ollama (v0.40.5 stable 2026-10-14; opened release notes),
+  vLLM (v0.31.0 still latest, 2026-10-05), LocalAI (v4.11.0 still latest, 2026-10-02),
+  garak (v0.17.0 still latest, 2026-09-09), promptfoo (0.124.1, 2026-10-08),
+  transformers (v5.20.0, 2026-10-15), PyRIT (v1.1.0 still latest, 2026-09-04),
+  ExLlamaV3 (v1.6.2, 2026-10-14; opened releases page), Unsloth (v0.1.908-beta,
+  2026-10-15; opened releases page).
+- opened: GHSA — global feed sweep (reviewed, updated >2026-10-05); on-axis captures:
+  GHSA-pq7j-f95f-qfcv (Claude Code CVE-2026-86063, plugin hash-pin bypass, High CVSS 7.5,
+  opened full advisory), GHSA-hqm2-cfx2-2vgh (Pipecat CVE-2026-102682, unauthenticated
+  bot sessions, Moderate CVSS 5.6, opened full advisory).
+- opened: papers — arXiv cs.CR recent listing (2026-10-16): ~18 on-axis papers identified;
+  abstracts opened: 2610.22301 (MCP filesystem capability laundering), 2610.20776 (INFUSE
+  IPI benchmark), 2610.21464 (HNSW RAG poisoning), 2610.20907 (PI detection calibration),
+  2610.22244 (language as agent guard surface), 2610.21208 (support-persistent backdoors).
+- opened: arXiv cs.CL recent listing (2026-10-16): 1 borderline match (framing erodes
+  safety), no strong on-axis papers on this page.
+- opened: CSA research note — OWASP GenAI LLM Top 10 2026 + Agent Control Standard
+  (labs.cloudsecurityalliance.org); confirmed Aug 3 publication, Sep 1-2 formal unveiling.
+- web search used for triage: arXiv LLM security Oct 2026, llama.cpp/vLLM/Ollama CVEs,
+  GHSA AI/ML, Unsloth releases, LLM red team tools, MITRE ATLAS / OWASP 2026, Hacker News
+  AI security, vendor blogs (Protect AI, HiddenLayer, Lakera), awesome-llm-security lists.
+  All evidence lines reference URLs opened directly.
+- degraded: r/LocalLLaMA — 4th consecutive run with no direct access; web search returns
+  only secondary blogs. Community-pulse lane partially uncovered.
+- degraded: genai.owasp.org — HTTP 403 on both Top 10 2026 URLs; verified via CSA fallback.
+- degraded: vendor/lab blogs — not directly opened this run. Web search surfaced no
+  October 2026 posts from Protect AI, HiddenLayer, or Lakera. Protect AI noted as acquired
+  by Palo Alto Networks; Lakera acquired by Check Point (2025). HiddenLayer RSAC 2026
+  report noted but not opened (March 2026).
+- Note: 11-day gap since last daily scan. State persisted via GitHub remote (cloned to
+  working branch). GitHub MCP scoped to radar repo only; external repo queries via WebFetch.
