@@ -1,7 +1,7 @@
 # AI-ML-RedTeam Radar — Trend ledger
 
 Single source of truth. The README and reports are derived from this file.
-Last updated: 2026-10-11
+Last updated: 2026-10-17
 
 Trend stages: `seed` → `emerging` → `accelerating` → `mainstreaming` → `dormant`.
 Evidence line format: `date — primary URL — one line of context`. Max 10 per trend.
@@ -13,9 +13,9 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
 ### id: local-inference-001 — Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)
 - stage: emerging
 - confidence: high
-- last_evidence: 2026-10-05
+- last_evidence: 2026-10-06
 - aliases: [Bleeding Llama, Breaking Local AI Runtimes]
-- notes: Critical CVE cluster spanning the entire local/self-hosted inference stack (llama.cpp, Ollama, vLLM, LMDeploy, NVIDIA Triton, Xinference); attack classes include GGUF parser overflows, server use-after-free, SSRF via multimodal endpoints, and authentication bypass. In-the-wild exploitation confirmed (LMDeploy CVE-2026-33626 weaponized within 12h of disclosure). Weekly 2026-10-11: held at emerging (one new GHSA item, no sustained acceleration). Promoted seed→emerging 2026-10-05: ≥6 independent orgs (Cyera, Sysdig, NVIDIA, Orca Security, GHSA maintainers, StingRAI) + concrete artifacts across the stack.
+- notes: Critical CVE cluster spanning the entire local/self-hosted inference stack (llama.cpp, Ollama, vLLM, LMDeploy, NVIDIA Triton, Xinference); attack classes include GGUF parser overflows, server use-after-free, SSRF via multimodal endpoints, and authentication bypass. In-the-wild exploitation confirmed (LMDeploy CVE-2026-33626 weaponized within 12h of disclosure). Daily 2026-10-17: +1 evidence (vLLM Oct 6 advisory batch, 5 advisories incl. RCE via code_revision); evidence slots now 10/10. Also noted: Ollama CVE-2026-108836 SSRF in Pull API (Oct 12, Moderate CVSS 5.5, fixed 0.34.2) — routed to observation_queue (evidence overflow). vLLM now has a systematic security advisory program (4 batches in 5 weeks: Sep 3, Sep 12, Sep 23, Oct 6). Weekly 2026-10-11: held at emerging (one new GHSA item, no sustained acceleration). Promoted seed→emerging 2026-10-05: ≥6 independent orgs (Cyera, Sysdig, NVIDIA, Orca Security, GHSA maintainers, StingRAI) + concrete artifacts across the stack.
 - evidence:
   - 2026-08-21 — https://github.com/advisories/GHSA-x2rj-828p-hx9m — Xinference CVE-2026-61539: unsafe eval() on Llama3 tool-call parser output → unauth RCE, CVSS 10.0, fixed v2.7.0.
   - 2026-08-24 — https://github.com/advisories/GHSA-x8qc-fggm-mpqg — Ollama CVE-2026-7482 "Bleeding Llama": crafted GGUF → heap OOB read → memory (env vars, API keys, system prompts) exfiltrated via /api/push. Floor 0.17.1.
@@ -26,13 +26,14 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
   - (undated, accessed 2026-10-05) — https://www.stingrai.io/blog/inference-server-security-vllm-triton-ollama-2026 — Roundup: NVIDIA Triton CVE-2026-24207 auth bypass CVSS 9.8 (fixed 26.03), vLLM CVE-2026-22778 RCE CVSS 9.8 (fixed 0.14.1), llama.cpp CVE-2026-33298.
   - 2026-05-05 — https://www.cyera.com/research/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama — Cyera: ~300k exposed Ollama servers; CVE-2026-7482 exfiltrates API keys/prompts via crafted GGUF + /api/push; no methodology for server count disclosed.
   - 2026-06-16 — https://github.com/advisories?query=CVE-2026-41523 — vLLM CVE-2026-41523 (GHSA-q8gq-377p-jq3r, High): assert-based security check bypass in activation-function loading → arbitrary code execution via a malicious model; fixed version not stated on the opened page (0.22.0 per earlier secondary report).
+  - 2026-10-06 — https://github.com/vllm-project/vllm/security/advisories — vLLM Oct 6 advisory batch: 5 advisories incl. GHSA-h3rc-6mm3-gc2m (RCE via request-controlled code_revision, High) and GHSA-823j-m4cj-hmjf (MOSS-Audio remote memory exhaustion, High); systematic advisory program now active.
 
 ### id: agentic-injection-001 — Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)
 - stage: emerging
 - confidence: high
 - last_evidence: 2026-10-02
-- aliases: [tool poisoning, skill injection, memory injection, indirect prompt injection, IPI, hook poisoning, HookPry]
-- notes: Attack surface spans agent subsystems — MCP tool descriptions, coding-agent skills, persistent agent memory, lifecycle hooks — plus a growing impossibility-result literature and defensive frameworks. Weekly 2026-10-11: held at emerging (no new evidence this week; daily sweeps did not run). Promoted seed→emerging 2026-10-05: ≥8 independent research groups + in-the-wild MCP tool-poisoning rates exceeding 60% reported.
+- aliases: [tool poisoning, skill injection, memory injection, indirect prompt injection, IPI, hook poisoning, HookPry, skill chaining, APEX, covert exfiltration, LLMLeak]
+- notes: Attack surface spans agent subsystems — MCP tool descriptions, coding-agent skills, persistent agent memory, lifecycle hooks, web-fetching channels — plus a growing impossibility-result literature and defensive frameworks. Daily 2026-10-17: +2 evidence (APEX skill-chaining 74.2% ASR across 6 models; LLMLeak covert exfil via web-fetching 79.7% ASR across 11 models); evidence slots now 10/10. Also noted: PACE defense framework (0/30 adaptive attacks), OverAct over-authorization measurement, ZoneClaw memory-zoning defense, False Floors safety-routing evaluation critique — routed to observation_queue/study_shelf. Weekly 2026-10-11: held at emerging (no new evidence this week; daily sweeps did not run). Promoted seed→emerging 2026-10-05: ≥8 independent research groups + in-the-wild MCP tool-poisoning rates exceeding 60% reported.
 - evidence:
   - 2026-03-23 — https://arxiv.org/abs/2603.22489 — STRIDE/DREAD threat model of the MCP stack; tool poisoning is the top client-side vulnerability; 5/7 major MCP clients lack static validation of tool descriptions.
   - 2026-08-22 — https://arxiv.org/abs/2608.21929 — SkillBloat: malicious coding-agent "skills" as a trusted instruction channel; token-amplification (resource-abuse) attacks reaching 5.4–10.1x average best amplification.
@@ -42,13 +43,15 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
   - 2026-05-17 — https://arxiv.org/abs/2605.17634 — "AI Agents May Always Fall for Prompt Injections": impossibility result via Contextual Integrity theory; adversary can always construct a context making a blocked flow appear legitimate.
   - 2026-09-03 — https://arxiv.org/abs/2609.03884 — HookPry: attacker-controlled lifecycle-hook updates steer AI agent harnesses; 92.5% per-harness success rate across 7 harnesses; Microsoft Defender 0% detection.
   - 2026-10-02 — https://arxiv.org/abs/2610.03448 — PI detector re-evaluation: best detector on BIPIA catches only 2% of AgentDojo injections at 1% FPR; benchmark scores mislead deployment decisions.
+  - 2026-10-01 — https://arxiv.org/abs/2610.01564 — APEX: chaining adversarial coding-agent skills to hijack LLM agents; 74.2% attack success across 6 models on SkillsBench; prompting defense drops ASR to 59.1% but also drops benign task performance.
+  - 2026-10-01 — https://arxiv.org/abs/2610.01768 — LLMLeak: covert data exfiltration through legitimate LLM web-fetching tools; malware embeds secrets in URLs the LLM fetches; 79.7% ASR across 11 open-parameter models.
 
 ### id: ai-supplychain-001 — AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)
-- stage: seed
+- stage: dormant
 - confidence: high
 - last_evidence: 2026-08-16
 - aliases: [nullifAI, FaceHugger, model poisoning, conjunctive poisoning, pickle deserialization, trust_remote_code bypass]
-- notes: Held at seed on 2026-10-11 (no new multi-org evidence since 2026-08-16; vLLM CVE-2026-41523 added as a bridge to local-inference-001). New trend seeded 2026-10-05. Attack surface spans model-hub poisoning (pickle/safetensors, malicious repos), library-level code execution bypasses (HF diffusers TOCTOU), deployment-artifact tampering (prompt wrappers + config metadata), and instruction backdoors in customized coding LLMs. Hugging Face breach (Jul 2026) demonstrated autonomous-agent exploitation of the model-hub attack surface at scale. ≥4 independent sources + concrete artifacts.
+- notes: Daily 2026-10-17: moved seed→dormant per 21-day rule (62 days since last evidence date 2026-08-16; no new multi-org evidence found this scan). Reactivate on fresh primary evidence. Held at seed on 2026-10-11 (no new multi-org evidence since 2026-08-16; vLLM CVE-2026-41523 added as a bridge to local-inference-001). New trend seeded 2026-10-05. Attack surface spans model-hub poisoning (pickle/safetensors, malicious repos), library-level code execution bypasses (HF diffusers TOCTOU), deployment-artifact tampering (prompt wrappers + config metadata), and instruction backdoors in customized coding LLMs. Hugging Face breach (Jul 2026) demonstrated autonomous-agent exploitation of the model-hub attack surface at scale. ≥4 independent sources + concrete artifacts.
 - evidence:
   - 2026-07-20 — https://www.helpnetsecurity.com/2026/07/20/hugging-face-breached-by-autonomous-ai-agent/ — Hugging Face breach: autonomous AI agent exploited dataset-loader + template-injection vulns → node-level access, cloud/cluster credential harvest, lateral movement across clusters.
   - 2026-07-27 — https://www.zafran.io/resources/facehugger-vulnerabilities-in-hugging-face-diffusers-open-door-to-supply-chain-attacks-on-enterprise-ai — FaceHugger: CVE-2026-44827/45804/44513 (CVSS 8.8/7.5) in HF diffusers; TOCTOU bypasses trust_remote_code → silent arbitrary code execution; fixed diffusers 0.38.0.
@@ -73,9 +76,15 @@ Hard cap ~25 live items.
 - [resolved 2026-10-11] vLLM CVE-2026-41523 — GHSA-q8gq-377p-jq3r opened and verified (published 2026-06-16, High); folded into local-inference-001 and ai-supplychain-001.
 - [resolved 2026-10-11] PyRIT — Azure/PyRIT archived 2026-03-27 but banner points to https://github.com/microsoft/PyRIT, which is actively released (v1.0.0 24 Jul, v1.0.1 30 Jul, v1.1.0 4 Sep). Not a tooling gap; SOURCES.md updated.
 - [resolved 2026-10-11] ExLlamaV3 — repo opened at github.com/turboderp-org/exllamav3 (EXL3 quant, CPU offload for MoE, spec decoding, TabbyAPI backend). The page does NOT state the 30–60% speed claim or an ExLlamaV2 succession; claim dropped as unverified. Added to study_shelf (axis 1b).
-- [queued 2026-10-05] Ollama v0.40.0-rc3 MLX runtime — Apple Silicon native support via MLX backend (Sep 25 pre-release) — missing: open release notes and verify scope.
-- [queued 2026-10-05] Unsloth MoE fine-tuning — Feb 2026 release claims 7–12x speedup on MoE fine-tuning, native Llama 4 QLoRA, 500+ base models — relevant to scope axis 1b — missing: open Unsloth release/blog primary.
-- [re-dated 2026-10-11] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page.
+- [resolved 2026-10-17] Ollama v0.40.0-rc3 MLX runtime → Ollama reached v0.40.5 stable (Oct 14) with MLX decision models; v0.40.6 pre-release (Oct 16). MLX backend shipped. Tracked in tool releases.
+- [resolved 2026-10-17] Unsloth MoE fine-tuning → primary opened (Substack 2026-02-10): 12x MoE speedup verified claim, QLoRA support, 500+ models. Moved to study_shelf.
+- [queued 2026-10-17] Ollama CVE-2026-108836 SSRF in Pull API — GHSA-fr42-jr2w-mx59 (Oct 12, Moderate CVSS 5.5): IsValid function SSRF, affects ≤0.34.1, fixed 0.34.2; exploitation publicly disclosed — routed here as evidence overflow from local-inference-001 (10/10 slots). Missing: reviewed GHSA status.
+- [queued 2026-10-17] MCP TypeScript SDK CVE-2026-104850 (Oct 6, High) — OAuth-enabled client vulnerability; workaround available for 1.x users — missing: ≥2 more independent sources to seed a trend; open the GHSA primary.
+- [queued 2026-10-17] MITRE ATLAS Secure AI Phase 1 closed (May 2026) — 45+ new techniques/sub-techniques, 10+ mitigations, 20+ case studies; agentic AI and LLM coverage expanded; monthly release cadence; prompt-injection emulation playbook — missing: open the ATLAS matrix to confirm current counts.
+- [queued 2026-10-17] vLLM systematic security advisory program — 4 advisory batches in 5 weeks (Sep 3, Sep 12, Sep 23, Oct 6); 13+ advisories across all severity levels. Indicator of maturation of inference-server attack surface.
+- [queued 2026-10-17] MOMAT: jailbreak defense for quantized LLMs (arXiv:2610.01058, Oct 1) — hardware-enhanced safety framework for edge-deployed quantized models; directly relevant to local/quantized model setups — missing: independent validation of claims.
+- [re-dated 2026-10-17] ACM WPLL 2026 paper: inference-time jailbreak defenses consistently bypassed by long reasoning-heavy prompts (open-source models incl. Llama 3.2, Mistral, Qwen, Gemma) — missing: open the paper page. Stale 12+ days since last re-date.
+- [re-dated 2026-10-17] Hydra config-instantiation RCE — CVE-2026-68508 / GHSA-2cp2-2r3c-7p7r — stale 57 days; no additional ML-pipeline config-RCE sources found. Drop candidate at next weekly.
 
 ## study_shelf
 
@@ -85,7 +94,9 @@ Hard cap ~25 live items.
 Prune picks older than 30 days on weekly runs.
 -->
 
-- [ExLlamaV3](https://github.com/turboderp-org/exllamav3) — turboderp-org (accessed 2026-10-11): EXL3 quantization + inference library for consumer GPUs with MoE CPU offload, speculative decoding and TabbyAPI backend; the natural fit for a 12GB RTX 4070 Ti (axis 1b). Performance claims unverified.
+- [Unsloth 2026 Update — Faster MoE](https://unslothai.substack.com/p/unsloth-2026-update-faster-moe) — Unsloth (2026-02-10): 12x MoE training speedup, QLoRA on consumer GPUs (gpt-oss-20b in 12.8GB VRAM), 500+ model support, embedding model training; the practical fine-tuning framework for a 12GB RTX 4070 Ti (axis 1b).
+- [PACE: Provenance-Aware Capability Enforcement for Tool-Using LLM Agents](https://arxiv.org/abs/2610.01349) — arXiv (2026-10-01): mediates every tool call pre-execution; lowest ASR in 62/79 attack columns across 8 benchmarks; 0/30 adaptive attacks succeeded. The strongest defensive framework for tool-using agents to date.
+- [ExLlamaV3](https://github.com/turboderp-org/exllamav3) — turboderp-org (accessed 2026-10-17): v1.6.2 (Oct 14) with ROCm support, hybrid drafting, faster CPU offload; very active dev cycle (v1.5.0→v1.6.2 in 5 weeks). EXL3 quantization for consumer GPUs; the natural fit for a 12GB RTX 4070 Ti (axis 1b).
 - [HookPry: Attacker-Controlled Hook Updates Steer AI Agent Harnesses](https://arxiv.org/abs/2609.03884) — arXiv (2026-09-03): lifecycle hooks in agent harnesses are a blindspot — 92.5% compromise rate across 7 harnesses, 0% detection. Directly relevant when assessing local agent setups with plugin/hook systems.
 - [Cyera: Breaking Local AI Runtimes — 10 Vulnerabilities in llama.cpp](https://www.cyera.com/research/breaking-local-ai-runtimes-10-vulnerabilities-in-the-engine-behind-your-open-source-models) — Cyera (2026): systematic audit of the most widely-used local inference engine; 5 of 10 bugs unpatched — essential reading for anyone running llama.cpp in production or red-teaming local deployments.
 
@@ -120,3 +131,4 @@ Access/tooling blockers that prevented verification. Format:
 - [2026-10-05] GitHub MCP scoped to radar repo only — cannot query external repos for releases via API; used WebFetch on GitHub release pages instead. Non-blocking.
 - [2026-10-05] 41-day gap since last scan (2026-08-25 → 2026-10-05) — scheduled runs did not fire or did not persist. Root cause likely the state-persistence blocker above. Status: OPEN.
 - [2026-10-11] Daily sweeps absent 10-06..10-11 (only 2026-10-05 ran in W41). Vendor/lab blog feeds (all 10 in SOURCES primary list) never logged as opened or degraded. Status: OPEN.
+- [2026-10-17] Vendor/lab blog feeds still not returning content via WebFetch (search-only fallback used for triage). r/LocalLLaMA still degraded (4th+ consecutive run). vLLM individual GHSA pages return 404 (repository-level advisories; verified via security tab listing instead). Status: NON-BLOCKING.

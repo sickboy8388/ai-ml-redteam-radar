@@ -71,3 +71,44 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-17 (first daily since 2026-10-05; 12-day gap)
+- opened: tool repos & releases via WebFetch —
+  llama.cpp (b11706, 2026-10-17; memory error fixes in b11693, Beam model in b11701),
+  Ollama (v0.40.5 Latest 2026-10-14 / v0.40.6 pre-release 2026-10-16; decision models, q2_0 tensor),
+  vLLM (v0.31.0, 2026-10-05; no new release),
+  LocalAI (v4.11.0, 2026-10-02; no new release),
+  garak (v0.17.1, 2026-10-16; hit@k metric, Python 3.14),
+  promptfoo (0.124.1, 2026-10-08; cost recording, OpenAI Decisions support),
+  transformers (v5.20.1, 2026-10-16; Beam model, Muse Spark Open, Ling 3.0),
+  ExLlamaV3 (v1.6.2, 2026-10-14; ROCm support v1.6.0, hybrid drafting v1.6.1, faster CPU offload),
+  PyRIT (v1.1.0, 2026-09-04; no new release).
+- opened: GHSA — GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836, SSRF Pull API, Moderate CVSS 5.5, Oct 12).
+  GHSA global feed sweep via search (no new high/critical pip advisories matched filter).
+- opened: vLLM security/advisories tab — 5 new advisories Oct 6 (GHSA-h3rc-6mm3-gc2m RCE High,
+  GHSA-823j-m4cj-hmjf memory exhaustion High, + 3 Moderate/Low); 3 advisories Sep 23;
+  individual GHSA pages returned 404 (repository-level advisories).
+- opened: papers — arXiv cs.CR October 2026 listing; abstracts opened:
+  2610.01564 (APEX skill chaining), 2610.01508 (OverAct tool over-authorization),
+  2610.01768 (LLMLeak covert exfil), 2610.01058 (MOMAT quantized LLM defense),
+  2610.00450 (ZoneClaw memory-zoning), 2610.01349 (PACE capability enforcement),
+  2610.00850 (AuraForge coding agent security), 2610.01535 (False Floors safety routing).
+  arXiv cs.CL October listing: 2610.00320 (safety under fine-tuning) identified but not opened.
+- opened: Unsloth Substack primary (2026-02-10): 12x MoE speedup, QLoRA, 500+ models confirmed.
+  Observation_queue item resolved → study_shelf.
+- opened: MITRE CTID blog (2026-05-06): Secure AI Phase 1 closed, 45+ techniques, agentic coverage.
+- opened via search: MCP TypeScript SDK CVE-2026-104850 (Oct 6, High) identified via search;
+  GHSA primary not opened (queued).
+- degraded: vendor/lab blog feeds (Microsoft Security, Google DeepMind, Anthropic, OpenAI,
+  Protect AI/huntr, HiddenLayer, Lakera, Trail of Bits, Wiz, Elastic) — search-only fallback
+  used for triage; no individual blog pages opened this session.
+- degraded: r/LocalLLaMA — not attempted (degraded 3+ prior runs, 4th+ consecutive).
+- degraded: vLLM individual GHSA pages (GHSA-823j-m4cj-hmjf, GHSA-h3rc-6mm3-gc2m) — 404;
+  verified via security/advisories listing instead.
+- discovery: searched GitHub for awesome-llm-security lists (corca-ai last push Aug 2025,
+  TalEliyahu Apr 2026) — no significant updates found.
+- discovery: searched consumer GPU inference / ExLlamaV3 / GGUF quantization — EXL3 vs GGUF
+  comparison coverage found; ExLlamaV3 rapid development confirmed via releases page.
+- community pulse: searched HN — Kaspersky LLMjacking article (industrial-scale hijacking
+  of self-hosted AI compute) noted; no October 2026 HN front-page thread found.
+- exploration: MITRE ATLAS expansion and MCP ecosystem security scanned as off-axis exploration.
