@@ -71,3 +71,32 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-18 (daily, same-day as weekly W42)
+- opened: tool repos & releases — llama.cpp (b11718, 2026-10-18), Ollama (v0.40.7-rc0
+  pre-release 2026-10-18 / v0.40.6 stable 2026-10-16), vLLM (v0.32.0, 2026-10-18 — 3
+  security fixes), LocalAI (v4.11.0, 2026-10-02), garak (v0.17.1, 2026-10-16), Unsloth
+  (v0.1.908-beta, 2026-10-15). promptfoo and transformers unchanged since last check.
+- opened: GHSA — GHSA-4hhp-h66f-j5j7 (vLLM CVE-2026-73560 SSRF, Moderate, Aug 2026);
+  GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836 SSRF, Moderate, Oct 12 — resolved from queue);
+  GHSA-j8f7-x8jm-wmm4 (Langflow SSRF, Moderate, Sep 28 — partially verifies app-layer
+  queue item). GHSA-q97c and GHSA-frvg (vLLM v0.32.0) returned 404 (not yet public).
+- opened: papers — arXiv search for LLM+security October 2026; abstracts opened:
+  2610.14836 (MetaCascade, metadata-only skill poisoning), 2610.09264 (PackHallu, rule-file
+  injection → evidence), 2610.01768 (Innocent Courier, covert exfiltration), 2610.04378
+  (COPEX, MCP benchmark → study_shelf), 2610.14431 (MemForm, memory-formation poisoning),
+  2610.17727 (SkillScreen, defensive screening).
+- opened: Wiz blog (wiz.io/blog) — no direct AI security posts in Oct 2026.
+- opened: Trail of Bits blog (blog.trailofbits.com) — package manager integrity (Oct 14,
+  supply chain adjacent), "VMs won't contain cyber-capable agents" (Aug 26).
+- opened: huntr.com — no new AI/ML disclosures in Oct 2026.
+- degraded: Microsoft AI Red Team blog (microsoft.com/security/blog/topic/ai-red-team/) —
+  HTTP 404.
+- degraded: HiddenLayer blog (hiddenlayer.com/blog/) — HTTP 404.
+- degraded: Protect AI blog (protectai.com/blog) — HTTP 404.
+- degraded: NVD detail pages (nvd.nist.gov/vuln/detail/) — redirected to home page.
+- degraded: arXiv listing pages (arxiv.org/list/cs.CR/) — HTTP 404; used search instead.
+- degraded: r/LocalLLaMA — not attempted (degraded 4+ prior runs).
+- web search used for triage: app-layer advisories (Open WebUI CVE-2026-109296, Portkey
+  CVE-2026-110719, ChatOllama CVE-2026-111702, 9router CVE-2026-56676); AI security news.
+  All evidence lines reference URLs opened directly.
