@@ -26,6 +26,7 @@ Tool repos & releases (check `<repo>/releases`):
 - Microsoft PyRIT — https://github.com/microsoft/PyRIT [verified 2026-10-11] (Azure/PyRIT archived 2026-03-27; moved)
 - promptfoo — https://github.com/promptfoo/promptfoo
 - ExLlamaV3 — https://github.com/turboderp-org/exllamav3 [verified 2026-10-11]
+- Unsloth — https://github.com/unslothai/unsloth/releases [verified 2026-10-18] (axis 1b; releases every 1–3 days)
 - Hugging Face transformers — https://github.com/huggingface/transformers
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
 
