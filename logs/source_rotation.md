@@ -71,3 +71,41 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-19 (daily — first daily since 2026-10-05)
+- opened: tool repos & releases via WebFetch — llama.cpp (b11724, 2026-10-19; Q1_0/Q2_0
+  quant, Hexagon backend, CUDA flash-attn fixes), Ollama (v0.40.7-rc0 2026-10-18 /
+  v0.40.6 latest 2026-10-16; decision models, q2_0 GGUF, background model upgrades),
+  vLLM (v0.32.0 2026-10-18; NVFP4 KV cache, GPU n-gram speculator, CORS security fix),
+  LocalAI (v4.11.0 2026-10-02; decision models, signed OCI galleries), garak (v0.17.1
+  2026-10-16; hit@k metric, Python 3.14), promptfoo (v0.124.1 2026-10-08; OpenAI
+  Decisions, Codex security), ExLlamaV3 (v1.6.3 2026-10-17; ROCm, hybrid drafting,
+  CPU offload), Unsloth (v0.1.908 2026-10-15; Nemotron 3.5, prompt caching for coding
+  agents), transformers (v5.20.1 2026-10-16; Beam, Muse Spark Open), PyRIT (v1.1.0
+  2026-09-04; no October release), MITRE ATLAS navigator-data (v1.14.0 2026-02-06;
+  no new release).
+- opened: GHSA — GHSA-w5f2-9q9c-ff4h (LMCache CVE-2026-105192 Critical pickle RCE);
+  GHSA-865q-vfjv-p93j (Open WebUI CVE-2026-109572 High priv esc); GHSA-j8f7-x8jm-wmm4
+  (Langflow SSRF Moderate); GHSA-7pf8-cp62-gc3p (ChatOllama CVE-2026-111702 High IDOR);
+  GHSA-h36v-27jx-93r3 (Portkey CVE-2026-110719 Moderate SSRF); GHSA-fr42-jr2w-mx59
+  (Ollama CVE-2026-108836 Moderate SSRF); GHSA-8wc5-pcgr-pg48 (vLLM CVE-2026-109311
+  High heap overflow). GHSA listing page sweep (Oct 1–19 AI/ML query): 24 on-axis
+  advisories identified, 7 opened individually.
+- opened: papers — arXiv search + abs pages: 2610.08951 (ASPIRE, agentic PI red-teaming
+  engine), 2610.06401 (RAISED, self-distillation defense against PI in agents). arXiv
+  cs.CR listing returned HTTP 429; search-based approach used instead.
+- opened: Langflow SSRF details via web search (IBM bulletins confirm multiple CVEs:
+  CVE-2026-19305, -18545, -12767, -81213).
+- opened: LMCache CVE-2026-105192 details via web search (JFrog advisory JFSA-2026-
+  001694382; public PoC; 6 additional reports filed).
+- web search used for triage: GHSA AI/ML advisories, arXiv LLM security papers, Langflow
+  SSRF, LMCache RCE, MITRE ATLAS 2026 updates, llama.cpp quantization, awesome-llm-
+  security lists, community pulse (r/LocalLLaMA). All evidence lines reference URLs
+  opened directly.
+- degraded: arXiv cs.CR listing page — HTTP 429 (rate limited); abstracts opened via
+  search results instead.
+- degraded: r/LocalLLaMA — not attempted directly (degraded 4+ prior runs); web search
+  returned aggregator pages only. 5th+ consecutive degraded.
+- degraded: vendor/lab blogs (Microsoft, Google DeepMind, Anthropic, OpenAI, Protect AI,
+  HiddenLayer, Lakera, Trail of Bits, Wiz, Elastic) — not opened this run; no on-axis
+  hits surfaced via search triage. Coverage gap persists from prior runs.
