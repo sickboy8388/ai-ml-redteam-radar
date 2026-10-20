@@ -71,3 +71,36 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-20 (daily — first daily since 2026-10-05; 15-day gap)
+- opened: tool repos & releases via WebFetch — llama.cpp (b11751, Oct 20; b11744 adds
+  --connect P2P), Ollama (v0.40.7-rc0, Oct 18 pre-release), vLLM (v0.32.0, Oct 18; NVFP4
+  KV cache, CORS hardening), LocalAI (no new since v4.11.0), garak (v0.17.1, Oct 16;
+  hit@k metric), promptfoo (0.124.1, Oct 8), transformers (v5.20.2, Oct 19), PyRIT (no new
+  since v1.1.0), Unsloth (v0.1.909-beta, Oct 19; Vulkan, MCP, DeepSeek-V4.1-Flash local),
+  ExLlamaV3 (no release page change noted), MITRE ATLAS (no October release).
+- opened: GHSA — GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836, Moderate SSRF, fixed 0.34.2);
+  GHSA search listing (pip reviewed high+critical Oct 10–20: 0 results); GHSA search listing
+  (unreviewed: ollama/open-webui/langflow/chatollama/portkey Oct 1–20: 226 results, 25
+  shown); individual advisories: GHSA-865q-vfjv-p93j (Open WebUI privesc), GHSA-x8qf-hm43-c9g2
+  (Open WebUI session theft), GHSA-qf42-fp6f-25w9 (Langflow message bypass), GHSA-wvwm-whv3-3f6j
+  (Langflow RCE), GHSA-7pf8-cp62-gc3p (ChatOllama IDOR), GHSA-h36v-27jx-93r3 (Portkey SSRF).
+- opened: papers — arXiv cs.CR recent listing (2026-10-20): ~17 on-axis papers identified
+  (first 50/81 entries visible); abstracts opened: 2610.25372 (SEAL persistent tool
+  poisoning), 2610.25937 (RAGLeak supply-chain RAG backdoors), 2610.26013 (SpanGuard
+  lightweight IPI defense), 2610.24999 (PIAtlas SoK prompt injection taxonomy),
+  2610.26589 (cost-aware jailbreak evaluation), 2610.26501 (Connection Escrow agent pod
+  egress), 2610.24834 (CoordGuard RAG poisoning detection). arXiv cs.CL recent listing:
+  partial (first 50/283; 2 on-axis: safety mid-training, AfriGuard).
+- opened: HF transformers releases (v5.19.0 through v5.20.2).
+- not opened: vendor blogs (HiddenLayer, Protect AI, Lakera, Trail of Bits, Wiz, etc.) —
+  web search returned no October 2026 blog posts from these sources; individual blog
+  index pages not loaded this run. Anchoring warning persists.
+- not opened: NVD REST API (not attempted this run; advisory coverage via GHSA instead).
+- degraded: r/LocalLLaMA — not attempted (degraded 3+ prior runs; no new access method).
+- degraded: Hacker News — not opened (web search did not return relevant HN threads).
+- community pulse: web search for HN/community chatter returned no directly usable results
+  this run; community lane uncovered.
+- discovery: web search for new LLM red-team/agent-security tools — no clearly new 2026
+  tool found beyond established projects (promptfoo, garak, PyRIT, DeepTeam).
+- exploration: MITRE ATLAS releases page opened — no October 2026 update found.
