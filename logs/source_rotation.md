@@ -71,3 +71,44 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-21 (first daily since 2026-10-05; 16-day gap)
+- opened: tool repos & releases via WebFetch — llama.cpp (b11774–b11785, 2026-10-21;
+  b11780 adds WebSocket auth, b11776 speculative-decoding logprobs, b11781 TTS endpoint),
+  Ollama (v0.40.7, 2026-10-18; pplx-decider 27B model), vLLM (v0.32.0, 2026-10-18; FP8
+  KV cache default for GLM-5.x, security fixes CVE-2026-73560 SSRF patched, CORS default
+  change), LocalAI (v4.11.0 still latest, 2026-10-02), garak (v0.17.1, 2026-10-16;
+  hit@k metric, Python 3.14), promptfoo (0.124.1, 2026-10-08 still latest), transformers
+  (v5.20.2, 2026-10-19; multimodal generate fix), Unsloth (v0.1.909-beta, 2026-10-19;
+  multi-GPU FSDP2, Vulkan non-NVIDIA, adamw_flash), ExLlamaV3 (repo page opened, v0.0.6
+  still latest release, added DeepSeek V4/Gemma 4/Qwen 3.5 MoE architectures), PyRIT
+  (not checked — last at v1.1.0 Sep 4), MITRE ATLAS navigator data (v1.14.0 Feb 6,
+  ATLAS Data 5.4.0).
+- opened: GHSA — individual advisories: GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836
+  SSRF, Moderate), GHSA-4hhp-h66f-j5j7 (vLLM CVE-2026-73560 SSRF, Moderate, patched
+  0.26.0), GHSA-865q-vfjv-p93j (Open WebUI CVE-2026-109572 privilege escalation, High),
+  GHSA-7pf8-cp62-gc3p (ChatOllama CVE-2026-111702 IDOR, High), GHSA-h36v-27jx-93r3
+  (Portkey AI Gateway CVE-2026-110719 SSRF, Moderate), GHSA-qf42-fp6f-25w9 (Langflow
+  CVE-2026-107366 authz bypass, High), GHSA-chcq-pfxc-99ww (9router CVE-2026-108593
+  config injection, High). GHSA listing page for AI front-end/gateway advisories opened
+  (25 of 202 unreviewed results).
+- opened: papers — arXiv cs.CR recent listing (2026-10-21): 18+ on-axis papers identified;
+  abstracts opened: 2610.28425 (CarryoverBench — persistent memory carryover attacks),
+  2610.27620 ("Local Allow, Global Deny" — authorization composability impossibility),
+  2610.27244 (AutoRedClaw — automated agent red-teaming), 2610.28364 (nokast-secureRAG —
+  PI detection in RAG), 2610.28397 (MAS-Guard — multi-agent guardrails), 2610.28484
+  (Proof-Carrying Contracts), 2610.26935 (intervention history vs agent sabotage),
+  2610.27383 (AgenticVulHunter — local agentic vuln hunting). arXiv cs.CL recent listing:
+  2610.27908 (polarity blindness in LLM safety).
+- opened: MITRE CTID blog — "Secure AI v2 Release" (2026-05-06); confirms ATLAS v5.4.0
+  with 45+ agentic AI techniques, monthly release cadence, Knowledge Graph.
+- degraded: protectai.com/blog — HTTP 404 (1st consecutive).
+- degraded: hiddenlayer.com/blog/ — HTTP 404 (1st consecutive).
+- degraded: r/LocalLLaMA — not attempted (degraded 4+ consecutive runs; no new access
+  method available).
+- web search used for triage: llama.cpp KV cache quantization, MITRE ATLAS 2026, local
+  LLM red-team tools, Open WebUI CVE details. All evidence lines reference URLs opened
+  directly.
+- Note: 16-day gap since last scan (2026-10-05). First daily run since then. Vendor/lab
+  blog feeds (protectai, hiddenlayer) returned 404; remaining 8 vendor blogs not attempted
+  this run — flagged for next run.
