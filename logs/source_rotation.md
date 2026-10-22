@@ -71,3 +71,48 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-22 (daily — first since 2026-10-05)
+- opened: tool repos & releases via WebFetch —
+  llama.cpp (b11809, 2026-10-22; b11798–b11809 triaged),
+  Ollama (v0.40.8 stable 2026-10-21, v0.40.9-rc1 2026-10-22),
+  vLLM (v0.32.0, 2026-10-18; full release notes opened incl. security advisories),
+  LocalAI (no new release since v4.11.0),
+  garak (v0.17.1, 2026-10-16; release notes opened),
+  promptfoo (0.124.1, 2026-10-08; 0.124.0, 2026-10-06; release notes opened),
+  transformers (v5.20.2 2026-10-19, v5.20.0 2026-10-15; release notes opened),
+  PyRIT (no new release since v1.1.0),
+  ExLlamaV3 (v1.6.4 2026-10-20; v1.6.0–1.6.4 triaged; ROCm, tensor-parallel, hybrid drafting),
+  Unsloth (v0.1.909, 2026-10-19; release notes opened).
+- opened: GHSA —
+  GHSA-w5f2-9q9c-ff4h (LMCache CVE-2026-105192, Critical 9.8, pickle RCE),
+  GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836, Moderate, SSRF in Pull API),
+  GHSA-4hhp-h66f-j5j7 (vLLM CVE-2026-73560, Moderate, MiMoV2 SSRF),
+  GHSA-f2ph-cmg5-wxc8 (Storybook MCP addon CVE-2026-114125, Critical 9.4).
+  GHSA global search (published >2026-10-15 + ML/LLM/inference terms): LMCache and Storybook
+  MCP hits; remaining results non-AI.
+- opened: vLLM v0.32.0 release page — 3 security GHSAs (chat template DoS, tokenizer
+  off-by-one, P2P socket exhaustion) + CORS deny-by-default + image-format restrictions +
+  HMAC-signed multimodal cache handles.
+- opened: papers — arXiv cs.CR October listing; abstracts opened:
+  2610.01349 (PACE tool-call enforcement), 2610.01508 (OverAct over-authorization),
+  2610.01564 (Chaining Skills / APEX skill-chain hijacking),
+  2610.01768 (LLMLeak covert exfiltration via web-fetch),
+  2610.01367 (data poisoning after quality selection).
+  arXiv cs.CL October listing: 2610.00320 (refusal localization), 2610.00568 (emergent
+  unfaithfulness). Listing only — full months would need deeper traversal.
+- opened: vendor blogs —
+  Trail of Bits blog (blog.trailofbits.com): 3 Oct posts identified; "Package managers have
+  an integrity problem" (Oct 14, supply-chain relevant) and "AI agent patch delegation"
+  (Oct 21, agentic relevant).
+- degraded: Protect AI blog (protectai.com/blog) — HTTP 404.
+- degraded: HiddenLayer blog (hiddenlayer.com/blog/) — HTTP 404.
+- degraded: Lakera blog (lakera.ai/blog) — no October 2026 posts found on page.
+- degraded: r/LocalLLaMA — not attempted (degraded since 2026-08-24; 4+ runs).
+- web search used for triage: GHSA AI/ML CVEs Oct 2026, LMCache CVE-2026-105192, Open WebUI
+  CVE-2026 (secondary aggregator results — primaries not opened), LLM red team tools 2026,
+  llama.cpp GGUF/KV-cache/speculative Oct 2026, MITRE ATLAS 2026, Protect AI/huntr Oct 2026,
+  Hacker News LLM security Oct 2026. All evidence lines reference URLs opened directly.
+- Note: 17-day gap since last daily (2026-10-05); weekly ran 2026-10-18. Web access
+  functional. 3 vendor blog feeds (Protect AI, HiddenLayer, Lakera) returned 404/empty —
+  URLs may have changed; investigate on next run.
