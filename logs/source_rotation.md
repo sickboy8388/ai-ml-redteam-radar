@@ -71,3 +71,35 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-23 (daily, first since 2026-10-05)
+- opened: tool repos & releases via WebFetch — llama.cpp (b11835, 2026-10-23), Ollama
+  (v0.40.9, 2026-10-22), vLLM (v0.32.0, 2026-10-18), LocalAI (v4.12.0, 2026-10-22),
+  garak (v0.17.1, 2026-10-16), promptfoo (0.124.1, 2026-10-08), transformers (v5.20.2,
+  2026-10-19), ExLlamaV3 (v1.6.4, 2026-10-20), Unsloth (v0.1.909-beta, 2026-10-19).
+  PyRIT: no change (v1.1.0).
+- opened: GHSA — GHSA-fr42-jr2w-mx59 (Ollama CVE-2026-108836, SSRF, Moderate CVSS4 5.5,
+  fixed 0.34.2); GHSA-7pf8-cp62-gc3p (ChatOllama CVE-2026-111702, IDOR, High CVSS4 8.7);
+  GHSA Ollama unreviewed listing (confirmed Oct 2026 entries). GHSA-2wvm-gjg7-5jfm
+  (SGLang) — 404, not found.
+- opened: papers — arXiv cs.CR listing 2026-10-23: 12 on-axis papers identified.
+  Abstracts opened: 2610.31404 (AgentPhishing), 2610.30418 (Agent Mosaic), 2610.30202
+  (MPIDetector), 2610.30738 (AgentTriage). arXiv cs.CL listing 2026-10-23: 1 on-axis
+  (2610.31047, safety moderation bias). Date-specific cs.CR listings (Oct 20–22)
+  returned HTTP 400.
+- opened: Forkast "Four weeks four critical CVEs" analysis — SGLang CVE-2026-86793,
+  DeepSeek Harness CVE-2026-82533, Langflow CVE-2026-81204, NemoClaw CVE-2026-65105.
+  Secondary source — all items queued, not cited as evidence.
+- opened: CVE-2026-86793 secondary details via opencve.io, mend.io (CVSS 9.3/9.8,
+  SafeUnpickler bypass). NemoClaw CVE-2026-65105 via CSA/esecurityplanet (CVSS 8.1,
+  DNS rebinding). Both secondary — queued.
+- web search used for triage: GHSA AI/ML October 2026, arXiv LLM security Oct, local
+  model security tools Oct. All evidence lines reference URLs opened directly.
+- degraded: vendor blogs (Microsoft AI Red Team, Google DeepMind, Anthropic, OpenAI
+  safety, Protect AI/huntr, HiddenLayer, Lakera, Trail of Bits, Wiz, Elastic Security
+  Labs) — not opened this run (time budget spent on primary feeds and CVE verification).
+  4th consecutive period with vendor blogs unopened.
+- degraded: r/LocalLLaMA — not attempted (degraded since 2026-08-24).
+- degraded: arXiv cs.CR date-specific listings (Oct 20–22) — HTTP 400; only Oct 23
+  listing succeeded.
+- degraded: GHSA search for reviewed+pip+high/critical — HTTP 429 (rate limit).
