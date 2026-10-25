@@ -71,3 +71,11 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+
+## 2026-10-25 (weekly W43 sweep; no daily ran)
+- opened: GHSA search listings (ollama, open-webui) + advisories GHSA-h36v-27jx-93r3, GHSA-j8f7-x8jm-wmm4, GHSA-fr42-jr2w-mx59, GHSA-7pf8-cp62-gc3p, GHSA-865q-vfjv-p93j.
+- opened: arXiv cs.CR recent (2026-10-23) + abstracts 2610.30418, 2610.31404, 2610.30365.
+- opened: github.com/ollama/ollama/releases (v0.40.7–0.40.11); github.com/ggml-org/llama.cpp/releases (b11871).
+- opened: Trail of Bits blog, Wiz blog (+ LiteLLM post), Anthropic research index.
+- web search (triage only): LiteLLM compromise Oct 2026 — results not opened except Wiz.
+- not opened this week: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, vLLM, LocalAI, garak, promptfoo, PyRIT, ExLlamaV3, transformers, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA (coverage gap, scheduler outage).
