@@ -79,3 +79,15 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - opened: Trail of Bits blog, Wiz blog (+ LiteLLM post), Anthropic research index.
 - web search (triage only): LiteLLM compromise Oct 2026 — results not opened except Wiz.
 - not opened this week: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, vLLM, LocalAI, garak, promptfoo, PyRIT, ExLlamaV3, transformers, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA (coverage gap, scheduler outage).
+
+## 2026-10-25 (daily, after W43 weekly)
+- opened: tool repos & releases via WebFetch — vLLM (v0.32.0, 2026-10-18; v0.31.0 recap; 3 security fixes), LocalAI (v4.12.1 2026-10-23 security-only patch, v4.12.0 2026-10-22), garak (v0.17.1 2026-10-16), promptfoo (0.125.0 2026-10-23), ExLlamaV3 (v1.6.4 2026-10-20; 10 releases v1.5.0–v1.6.4 with ROCm + Turing + consumer GPU focus), Unsloth (v0.1.910 2026-10-23; Vulkan backend, Flint 40B MoE), transformers (v5.20.2 2026-10-19), PyRIT (v1.1.0 2026-09-04).
+- opened: GHSA reviewed advisory listing (pip, High+Critical) — captured vLLM batch (≥12 GHSAs Oct 5–23), Langflow batch (8 GHSAs Oct 5–7 incl. 3 Critical), LMCache CVE-2026-105192 (Critical).
+- opened: individual advisories GHSA-w794-rj3p-xv45 (Langflow MCP cmd injection), GHSA-cf6m-vc3m-7cgm (Langflow webhook bypass), GHSA-w5f2-9q9c-ff4h (LMCache RCE), GHSA-gx7p-2j49-hfq4 (vLLM DoS).
+- opened: Anthropic research index + posts (alignment assessment of cybersecurity incidents 2026-09-09, investigating unintended model actions 2026-10-09).
+- opened: Wiz blog index + posts (From Phishing to LLMjacking 2026-10-20, Anatomy of AI-Driven Cloud Attacks 2026-10-19, PHP2Shell 2026-10-21).
+- opened: Microsoft Security Blog AI red team topic page + LiteLLM supply-chain compromise analysis (2026-10-23) + FORGE Lab 3 lessons (2026-10-07).
+- opened: arXiv cs.CL recent listing (2026-10-23) — no on-axis papers in first 50 of 117.
+- web search (triage only): Anthropic UK AISI cybertesting (primary URL not found), Wiz blog URLs (found correct slugs), Microsoft ARTEX/Storm-0940 (secondary coverage only, primary URL not opened).
+- degraded: Protect AI blog (protectai.com/blog) — HTTP 404. HiddenLayer blog (hiddenlayer.com/blog/) — HTTP 404. r/LocalLLaMA — not attempted (degraded 4+ prior runs).
+- not opened this run: DeepMind, OpenAI, Lakera, Elastic, ATLAS, NVD, huntr, arXiv cs.CR new listing page (weekly already opened 10-23 listing).
