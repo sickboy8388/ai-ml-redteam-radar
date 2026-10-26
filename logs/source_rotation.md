@@ -2,12 +2,12 @@
 
 Append-only. One dated entry per run: which sources were `opened` or `degraded: <reason>`.
 
-## 2026-08-24 (first run)
-- opened: tool repos & releases via GitHub API — llama.cpp (b10604, 2026-08-24), Ollama
-  (v0.32.15 stable / v0.33.0-rc2, 2026-08-21), vLLM (v0.27.1, 2026-08-11), LocalAI
+## 2026-08-24 (first run) LocalAI
   (v4.9.0, 2026-08-20), garak (v0.16.0, 2026-08-04, opened full release notes), promptfoo
   (0.122.0, 2026-08-04), transformers (v5.15.1, 2026-08-19). PyRIT: no releases feed
   (tags-based distribution — track via tags in future runs).
+- opened: tool repos & releases via GitHub API — llama.cpp (b10604, 2026-08-24), Ollama
+  (v0.32.15 stable / v0.33.0-rc2, 2026-08-21), vLLM (v0.27.1, 2026-08-11),
 - opened: GHSA — ecosystem sweep + full advisories GHSA-x2rj-828p-hx9m (Xinference,
   CVE-2026-61539), GHSA-x8qc-fggm-mpqg (Ollama, CVE-2026-7482),
   GHSA-3p4r-fq3f-q74v (llama.cpp, CVE-2026-27940).
@@ -19,7 +19,17 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 
 ## 2026-08-25
 - opened: tool repos & releases via GitHub API — llama.cpp (v0.3.0 first v0.3.x tag +
-  b10621/b10620, 2026-08-25; opened v0.3.0 release notes), Ollama (v0.32.15 stable /
+  b10621/b10620, 2026-08-25; opened v0.3.0 release notes), Ollama (v0.32
+Resolving conflicts between claude/zen-lamport-nl45gx and main and committing changes  claude/zen-lamport-nl45gx
+3 conflicting files
+README.md
+README.md
+TRENDS.md
+TRENDS.md
+source_rotation.md
+logs/source_rotation.md
+logs/source_rotation.md
+.15 stable /
   v0.33.0-rc3, 2026-08-21), vLLM (v0.27.1, 2026-08-11), LocalAI (v4.9.0, 2026-08-20),
   garak (v0.16.0, 2026-08-04), promptfoo (0.122.0, 2026-08-04), transformers (v5.15.1,
   2026-08-19). PyRIT: tags API returned empty — degraded (2nd run).
@@ -71,11 +81,11 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
-
-## 2026-10-25 (weekly W43 sweep; no daily ran)
-- opened: GHSA search listings (ollama, open-webui) + advisories GHSA-h36v-27jx-93r3, GHSA-j8f7-x8jm-wmm4, GHSA-fr42-jr2w-mx59, GHSA-7pf8-cp62-gc3p, GHSA-865q-vfjv-p93j.
-- opened: arXiv cs.CR recent (2026-10-23) + abstracts 2610.30418, 2610.31404, 2610.30365.
-- opened: github.com/ollama/ollama/releases (v0.40.7–0.40.11); github.com/ggml-org/llama.cpp/releases (b11871).
+- opened: arXiv cs.CR recent (2026-10-23) + abstracts 2610.30418, 2610.31404,W43 sweep; no daily ran
+## 2026-10-25 (weekly )
+- opened: GHSA search listings (ollama, open-webui) +- opened: github.com/ollama/ollama/releases (v0.40.7–0.40.11); github.com/ggml-org/llama.cpp/releases (b11871).
+ advisories GHSA-h36v-27jx-93r3, GHSA-j8f7-x8jm-wmm4, GHSA-fr42-jr2w-mx59, GHSA-7pf8-cp62-gc3p, GHSA-865q-vfjv-p93j.
+ 2610.30365.
 - opened: Trail of Bits blog, Wiz blog (+ LiteLLM post), Anthropic research index.
 - web search (triage only): LiteLLM compromise Oct 2026 — results not opened except Wiz.
 - not opened this week: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, vLLM, LocalAI, garak, promptfoo, PyRIT, ExLlamaV3, transformers, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA (coverage gap, scheduler outage).

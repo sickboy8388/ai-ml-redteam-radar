@@ -11,7 +11,7 @@ Evidence line format: `date — primary URL — one line of context`. Max 10 per
 ## trends
 
 ### id: local-inference-001 — Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)
-- stage: emerging
+- stage: accelerating
 - confidence: high
 - last_evidence: 2026-10-12
 - aliases: [Bleeding Llama, Breaking Local AI Runtimes]
