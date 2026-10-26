@@ -2,12 +2,12 @@
 
 Append-only. One dated entry per run: which sources were `opened` or `degraded: <reason>`.
 
-## 2026-08-24 (first run)
-- opened: tool repos & releases via GitHub API — llama.cpp (b10604, 2026-08-24), Ollama
-  (v0.32.15 stable / v0.33.0-rc2, 2026-08-21), vLLM (v0.27.1, 2026-08-11), LocalAI
+## 2026-08-24 (first run) LocalAI
   (v4.9.0, 2026-08-20), garak (v0.16.0, 2026-08-04, opened full release notes), promptfoo
   (0.122.0, 2026-08-04), transformers (v5.15.1, 2026-08-19). PyRIT: no releases feed
   (tags-based distribution — track via tags in future runs).
+- opened: tool repos & releases via GitHub API — llama.cpp (b10604, 2026-08-24), Ollama
+  (v0.32.15 stable / v0.33.0-rc2, 2026-08-21), vLLM (v0.27.1, 2026-08-11),
 - opened: GHSA — ecosystem sweep + full advisories GHSA-x2rj-828p-hx9m (Xinference,
   CVE-2026-61539), GHSA-x8qc-fggm-mpqg (Ollama, CVE-2026-7482),
   GHSA-3p4r-fq3f-q74v (llama.cpp, CVE-2026-27940).
@@ -19,7 +19,17 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 
 ## 2026-08-25
 - opened: tool repos & releases via GitHub API — llama.cpp (v0.3.0 first v0.3.x tag +
-  b10621/b10620, 2026-08-25; opened v0.3.0 release notes), Ollama (v0.32.15 stable /
+  b10621/b10620, 2026-08-25; opened v0.3.0 release notes), Ollama (v0.32
+Resolving conflicts between claude/zen-lamport-nl45gx and main and committing changes  claude/zen-lamport-nl45gx
+3 conflicting files
+README.md
+README.md
+TRENDS.md
+TRENDS.md
+source_rotation.md
+logs/source_rotation.md
+logs/source_rotation.md
+.15 stable /
   v0.33.0-rc3, 2026-08-21), vLLM (v0.27.1, 2026-08-11), LocalAI (v4.9.0, 2026-08-20),
   garak (v0.16.0, 2026-08-04), promptfoo (0.122.0, 2026-08-04), transformers (v5.15.1,
   2026-08-19). PyRIT: tags API returned empty — degraded (2nd run).
@@ -71,39 +81,25 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - Note: 41-day gap since last scan. State persisted via GitHub remote this time (cloned
   to working branch). GitHub MCP was scoped to radar repo only — external repo queries
   required WebFetch fallback.
+- opened: arXiv cs.CR recent (2026-10-23) + abstracts 2610.30418, 2610.31404,W43 sweep; no daily ran
+## 2026-10-25 (weekly )
+- opened: GHSA search listings (ollama, open-webui) +- opened: github.com/ollama/ollama/releases (v0.40.7–0.40.11); github.com/ggml-org/llama.cpp/releases (b11871).
+ advisories GHSA-h36v-27jx-93r3, GHSA-j8f7-x8jm-wmm4, GHSA-fr42-jr2w-mx59, GHSA-7pf8-cp62-gc3p, GHSA-865q-vfjv-p93j.
+ 2610.30365.
+- opened: Trail of Bits blog, Wiz blog (+ LiteLLM post), Anthropic research index.
+- web search (triage only): LiteLLM compromise Oct 2026 — results not opened except Wiz.
+- not opened this week: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, vLLM, LocalAI, garak, promptfoo, PyRIT, ExLlamaV3, transformers, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA (coverage gap, scheduler outage).
 
-## 2026-10-07
-- opened: tool repos & releases via WebFetch (GitHub release pages) —
-  llama.cpp (b11461, 2026-10-07), Ollama (v0.40.0 2026-09-25 / v0.35.1 2026-09-29),
-  vLLM (v0.31.0, 2026-10-05), LocalAI (v4.11.0, 2026-10-02),
-  garak (v0.17.0, 2026-09-09), promptfoo (0.124.0, 2026-10-06),
-  transformers (v5.18.0, 2026-09-30).
-  PyRIT: CORRECTED — github.com/microsoft/PyRIT is active (v1.1.0, Sep 4);
-  Azure/PyRIT is an archived stub.
-  ExLlamaV3: verified at turboderp-org/exllamav3 (v1.5.4, 2026-10-03; repo + releases
-  page opened).
-- opened: GHSA — GHSA-q8gq-377p-jq3r (vLLM CVE-2026-41523, assert bypass → RCE via
-  malicious HuggingFace model, CVSS 7.5, fixed 0.22.0). GHSA global feed search
-  (pip/high+critical): no additional on-axis advisories found.
-- opened: CVE-2026-34159 via SentinelOne vuln DB (secondary; llama.cpp RPC memory R/W
-  CVSS 9.8, fixed b8492) — NVD/GHSA primary not opened; queued for next run.
-- opened: papers — arXiv cs.CR recent listing (2026-10-07); abstracts opened:
-  2610.07645 (SkillPoison: progressive skill poisoning, 95.71% ASR),
-  2610.07639 (HarnessSecurity-Bench: coding-agent harness security, 95.6% ASR with
-  auto-approval), 2610.07125 (PEV: embedding perturbation jailbreak, 100% on
-  JailbreakBench), 2610.08571 (RAG-PIBench: PI detection benchmark for RAG),
-  2610.07723 (answer-side backdoor: model-planted triggers, ~100% ASR at 5% poisoning).
-- opened: OWASP GenAI LLM Top 10 2026 — genai.owasp.org/resource/owasp-genai-llm-top-10-2026/
-  (confirmed published 2026-08-03; incident-weighted methodology). Canonical OWASP
-  project page also opened (owasp.org).
-- opened: Unsloth MoE fine-tuning — unsloth.ai/docs/basics/faster-moe and
-  unslothai.substack.com blog (2026-02-10); 12x MoE speedup, gpt-oss-20b on 12.8GB VRAM.
-- web search used for triage: GHSA AI/ML CVEs, arXiv LLM security papers Oct 2026,
-  vLLM CVE-2026-41523, OWASP GenAI 2026, ExLlamaV3, Unsloth MoE, PyRIT status,
-  llama.cpp CVEs Oct 2026, MCP server security, Promptfoo acquisition, Ollama MLX,
-  r/LocalLLaMA community pulse, AI security tools 2026, vendor blogs. All evidence
-  lines reference URLs opened directly.
-- degraded: r/LocalLLaMA — not attempted (degraded 3+ prior runs, no new access method).
-  4th consecutive degraded.
-- degraded: vendor blogs (protectai.com, hiddenlayer.com, lakera.ai) — search returned
-  no October 2026 blog posts; no new on-axis content identified.
+## 2026-10-26 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11879-b11889, Oct 25-26), Ollama/releases (v0.40.11 still latest), vLLM/releases (v0.32.0, Oct 18: 3 security fixes, NVFP4 KV cache on Ada), LocalAI/releases (v4.12.0 Oct 22, v4.12.1 Oct 23 security-only SSRF hardening), garak/releases (v0.17.1, Oct 16), promptfoo/releases (0.124.0-0.125.1, Oct 6-25), ExLlamaV3/releases (1.6.2-1.6.5, Oct 14-25), Unsloth/releases (v0.1.909-0.1.910, Oct 19-23), transformers/releases (v5.19.0-v5.20.2, Oct 6-19).
+- opened: GHSA search listings (pip high/critical; vllm; ollama) — vLLM: 19+ new GHSAs Oct 21-25 (Critical CVE-2026-114053, multiple High). Individual advisories opened: GHSA-f623-hjm8-5wg5 (vLLM Critical code injection), GHSA-6vc9-vh4h-cxh4 (vLLM High resource exhaustion), GHSA-4hhp-h66f-j5j7 (vLLM Moderate SSRF). No new Ollama advisories beyond W43 weekly.
+- opened: arXiv cs.CR recent (Mon 26 Oct listing, 38 entries) — 6 on-axis papers: 2610.32531 (NTBench near-target PI), 2610.32155 (KnotScryer insecure skill compositions), 2610.31974 (MCP provenance binding), 2610.31914 (agent tool auth minima), 2610.31695 (safety guard target rebinding), 2610.31366 (AfterDeleteBench post-deletion persistence). Also opened: 2610.32334 (code model backdoors via TNCS).
+- opened: arXiv abstracts — 2610.30798 (LLVMhammer Rowhammer on LLM inference), 2610.30202 (MPIDetector multimodal PI detection).
+- opened: Anthropic research index + posts — "Investigating unintended model actions" (Oct 9), "UK AISI cybertesting alignment assessment" (Oct 23).
+- opened: Wiz blog index + "From Phishing to LLMjacking" (Oct 20); "Gheist" and "Anatomy of a Real AI-Driven Cloud Attack" returned 404.
+- opened: Trail of Bits blog — no new AI-security posts since W43 weekly.
+- web search (triage): GHSA for ollama/vllm/open-webui/litellm/langflow CVE 2026; arXiv cs.CR LLM security Oct 2026; Wiz LLMjacking; HN LLM security Oct 2026; LLM red team / MCP security new tools 2026.
+- not opened this run: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, PyRIT, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA, awesome-lists (coverage gap, single-agent time budget).
+- degraded: Wiz blog — 2 of 4 target URLs returned 404 (Gheist, Anatomy); the other 2 opened (LiteLLM, LLMjacking).
+- degraded: GHSA pip high/critical listing — page returned "No results matched" (rendering issue); used per-project query instead.
+- degraded: r/LocalLLaMA — not attempted (degraded 4+ consecutive runs, no new access method).

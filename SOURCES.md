@@ -8,13 +8,13 @@ entries `[verified YYYY-MM-DD]`. This is a SEED list — replace/extend with you
 Research / vendor security & AI-safety blogs (open the blog index, read new posts):
 - Microsoft Security Blog (AI Red Team) — https://www.microsoft.com/en-us/security/blog/topic/ai-red-team/ (mirror: none verified yet)
 - Google DeepMind — security & safety posts — https://deepmind.google/discover/blog/ (mirror: none verified yet)
-- Anthropic — research & security posts — https://www.anthropic.com/research (mirror: none verified yet)
+- Anthropic — research & security posts — https://www.anthropic.com/research [verified 2026-10-25] (index opens)
 - OpenAI — safety/security posts — https://openai.com/safety/ (mirror: none verified yet)
 - Protect AI / huntr — https://protectai.com/blog and https://huntr.com/ (mirror: none verified yet)
 - HiddenLayer blog — https://hiddenlayer.com/blog/ (mirror: none verified yet)
 - Lakera blog — https://www.lakera.ai/blog (mirror: none verified yet)
-- Trail of Bits blog — https://blog.trailofbits.com/ (mirror: none verified yet)
-- Wiz blog (AI/cloud security research) — https://www.wiz.io/blog (mirror: none verified yet)
+- Trail of Bits blog — https://blog.trailofbits.com/ [verified 2026-10-25] (index opens)
+- Wiz blog (AI/cloud security research) — https://www.wiz.io/blog [verified 2026-10-25] (index opens; Wiz produced the LiteLLM-compromise evidence)
 - Elastic Security Labs (AI-assisted threats) — https://www.elastic.co/security-labs (mirror: none verified yet)
 
 Tool repos & releases (check `<repo>/releases`):
@@ -23,8 +23,10 @@ Tool repos & releases (check `<repo>/releases`):
 - vLLM — https://github.com/vllm-project/vllm
 - LocalAI — https://github.com/mudler/LocalAI
 - NVIDIA garak (LLM vuln scanner) — https://github.com/NVIDIA/garak
-- Microsoft PyRIT — https://github.com/Azure/PyRIT
+- Microsoft PyRIT — https://github.com/microsoft/PyRIT [verified 2026-10-11] (Azure/PyRIT archived 2026-03-27; moved)
 - promptfoo — https://github.com/promptfoo/promptfoo
+- ExLlamaV3 — https://github.com/turboderp-org/exllamav3 [verified 2026-10-11]
+- Unsloth — https://github.com/unslothai/unsloth/releases [verified 2026-10-18] (axis 1b; releases every 1–3 days)
 - Hugging Face transformers — https://github.com/huggingface/transformers
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
 
@@ -32,6 +34,7 @@ Tool repos & releases (check `<repo>/releases`):
 - NVD recent — https://services.nvd.nist.gov/rest/json/cves/2.0
 - GitHub Security Advisories — https://github.com/advisories
 - huntr.com (AI/ML bug bounty & advisories) — https://huntr.com/
+- GHSA keyword queries for the app layer (`?query=open-webui`, `ollama`, `langflow`, `litellm`, `portkey`) [verified 2026-10-25] — produced the llm-frontend-001 cluster
 - Vendor PSIRTs as they become relevant (NVIDIA, Hugging Face, Microsoft, Ollama)
 
 ## Papers — swept every run
