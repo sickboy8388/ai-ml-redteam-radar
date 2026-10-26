@@ -79,3 +79,17 @@ Append-only. One dated entry per run: which sources were `opened` or `degraded: 
 - opened: Trail of Bits blog, Wiz blog (+ LiteLLM post), Anthropic research index.
 - web search (triage only): LiteLLM compromise Oct 2026 — results not opened except Wiz.
 - not opened this week: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, vLLM, LocalAI, garak, promptfoo, PyRIT, ExLlamaV3, transformers, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA (coverage gap, scheduler outage).
+
+## 2026-10-26 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11879-b11889, Oct 25-26), Ollama/releases (v0.40.11 still latest), vLLM/releases (v0.32.0, Oct 18: 3 security fixes, NVFP4 KV cache on Ada), LocalAI/releases (v4.12.0 Oct 22, v4.12.1 Oct 23 security-only SSRF hardening), garak/releases (v0.17.1, Oct 16), promptfoo/releases (0.124.0-0.125.1, Oct 6-25), ExLlamaV3/releases (1.6.2-1.6.5, Oct 14-25), Unsloth/releases (v0.1.909-0.1.910, Oct 19-23), transformers/releases (v5.19.0-v5.20.2, Oct 6-19).
+- opened: GHSA search listings (pip high/critical; vllm; ollama) — vLLM: 19+ new GHSAs Oct 21-25 (Critical CVE-2026-114053, multiple High). Individual advisories opened: GHSA-f623-hjm8-5wg5 (vLLM Critical code injection), GHSA-6vc9-vh4h-cxh4 (vLLM High resource exhaustion), GHSA-4hhp-h66f-j5j7 (vLLM Moderate SSRF). No new Ollama advisories beyond W43 weekly.
+- opened: arXiv cs.CR recent (Mon 26 Oct listing, 38 entries) — 6 on-axis papers: 2610.32531 (NTBench near-target PI), 2610.32155 (KnotScryer insecure skill compositions), 2610.31974 (MCP provenance binding), 2610.31914 (agent tool auth minima), 2610.31695 (safety guard target rebinding), 2610.31366 (AfterDeleteBench post-deletion persistence). Also opened: 2610.32334 (code model backdoors via TNCS).
+- opened: arXiv abstracts — 2610.30798 (LLVMhammer Rowhammer on LLM inference), 2610.30202 (MPIDetector multimodal PI detection).
+- opened: Anthropic research index + posts — "Investigating unintended model actions" (Oct 9), "UK AISI cybertesting alignment assessment" (Oct 23).
+- opened: Wiz blog index + "From Phishing to LLMjacking" (Oct 20); "Gheist" and "Anatomy of a Real AI-Driven Cloud Attack" returned 404.
+- opened: Trail of Bits blog — no new AI-security posts since W43 weekly.
+- web search (triage): GHSA for ollama/vllm/open-webui/litellm/langflow CVE 2026; arXiv cs.CR LLM security Oct 2026; Wiz LLMjacking; HN LLM security Oct 2026; LLM red team / MCP security new tools 2026.
+- not opened this run: Microsoft, DeepMind, OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, PyRIT, ATLAS, NVD, huntr, arXiv cs.CL, r/LocalLLaMA, awesome-lists (coverage gap, single-agent time budget).
+- degraded: Wiz blog — 2 of 4 target URLs returned 404 (Gheist, Anatomy); the other 2 opened (LiteLLM, LLMjacking).
+- degraded: GHSA pip high/critical listing — page returned "No results matched" (rendering issue); used per-project query instead.
+- degraded: r/LocalLLaMA — not attempted (degraded 4+ consecutive runs, no new access method).
