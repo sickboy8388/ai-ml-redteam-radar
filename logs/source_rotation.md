@@ -103,3 +103,22 @@ logs/source_rotation.md
 - degraded: Wiz blog — 2 of 4 target URLs returned 404 (Gheist, Anatomy); the other 2 opened (LiteLLM, LLMjacking).
 - degraded: GHSA pip high/critical listing — page returned "No results matched" (rendering issue); used per-project query instead.
 - degraded: r/LocalLLaMA — not attempted (degraded 4+ consecutive runs, no new access method).
+
+## 2026-10-27 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11890-b11918, Oct 26-27, no security fixes), Ollama/releases (v0.40.12-rc0 pre-release Oct 27: MLX DFlash2, llama.cpp b11901), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still 1.6.5), Unsloth/releases (v0.1.911-beta Oct 26: security fix forwarded IP trust, LoRA TP, GRPO vLLM 1.9x), transformers/releases (still v5.20.2).
+- opened: GHSA search listings (pip reviewed high/critical; vllm reviewed; open-webui; litellm) — no new advisories beyond Oct 25.
+- opened: arXiv cs.CR recent (Tue 27 Oct listing, 81 entries, first 50 loaded) — ≥15 on-axis papers identified; abstracts opened: 2610.35451 (OpenClaw 521 CWEs), 2610.35071 (GuardRAG), 2610.35043 (steering trojans 97.8% ASR), 2610.34542 (LLM WikiLeaks), 2610.34253 (NameTrap 22-56% ASR), 2610.33489 (SCS 627 malicious/66k skills), 2610.33633 (ProbeID MCP identity), 2610.34535 (SentryBench), 2610.33411 (agent social engineering 96.7%), 2610.35082 (CoSA), 2610.35541 (VELA), 2610.35199 (open LLM transparency risks), 2610.34675 (TrFP LLM provenance), 2610.33849 (RAG defense benchmark critique).
+- opened: arXiv cs.CL recent (Tue 27 Oct listing, first 50 of 232) — 3 on-axis papers: 2610.35743 (SEMA-Auto 76% multi-turn jailbreak), 2610.35671 (DeepSeek V4.1 loss-of-control eval), 2610.35082 (CoSA cross-listed).
+- opened: Microsoft Security Blog AI Red Team index — 2 new posts: "Inside the LiteLLM 1.107.0 supply chain compromise" (Oct 23, opened and cited), "ARTEX AI-driven supply chain compromise" (Oct 21, blog 404 on direct URL).
+- opened: Anthropic research index — no new posts since Oct 23.
+- opened: Trail of Bits blog — no new AI-security posts since W43.
+- opened: Wiz blog index — 1 new post "Pwn Request Reckoning" (Oct 26); direct URL 404.
+- opened: DeepMind blog — Gemini 4 Argon safety post (Oct 2026, exact date unknown).
+- opened: GitGuardian blog — GhostAction campaign primary (Sep 2025 original + Oct 2026 resurgence).
+- web search (triage): GhostAction/Gheist 2026; ARTEX/Storm-0940; MCP server security Oct 2026; LLM red team new tools Oct 2026; QLoRA/GGUF Oct 2026.
+- not opened this run: OpenAI (403), Protect AI (404), HiddenLayer (404), Lakera, Elastic, PyRIT, ATLAS, NVD, huntr, arXiv cs.CR entries 51-81, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft ARTEX blog post — direct URL returned 404 (slug mismatch); confirmed via 9+ secondary sources (DarkReading, TheHackerNews, SecurityAffairs).
+- degraded: Wiz "Pwn Request Reckoning" — direct URL 404.
+- degraded: OpenAI safety page — HTTP 403.
+- degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
