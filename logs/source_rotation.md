@@ -122,3 +122,26 @@ logs/source_rotation.md
 - degraded: OpenAI safety page — HTTP 403.
 - degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
+
+## 2026-10-28 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11919-b11946, Oct 27-28; b11935 RPC length_error catch, b11946 cross-session output mixing fix, LiquidAI LFM3 models, realtime API), Ollama/releases (v0.40.12 stable Oct 27: LFM3/d1 families, DFlash2 speculative decoding on MLX), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still 1.6.5), Unsloth/releases (still v0.1.911-beta), transformers/releases (v5.21.0 Oct 26: MiniCPM-OCR, Pocket TTS, FP8 cache, no security), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings — vllm: 2 new (Oct 27, GHSA-h3rc-6mm3-gc2m High code_revision RCE already known, GHSA-frvg-qw88-hww9 Moderate zmq exhaustion); ollama: none new; open-webui: none new; litellm: 3 new (Oct 27, GHSA-g5ff-637f-6q2m High file read, GHSA-hhww-mrg2-969h Moderate XSS, GHSA-7hp6-4w63-5g45 High priv escalation); langflow: 25+ new (Oct 7-20, Critical + High). Individual advisories opened: GHSA-w794-rj3p-xv45 (Langflow MCP RCE), GHSA-4hmc-cfm3-w43c (Langflow MCP file disclosure), GHSA-7hp6-4w63-5g45 (LiteLLM priv escalation), GHSA-g5ff-637f-6q2m (LiteLLM file read). pip reviewed high/critical listing returned "No results" again.
+- opened: arXiv cs.CR recent (Wed 28 Oct listing, 47 entries) — ≥12 on-axis papers identified; abstracts opened: 2610.36108 (Log-To-Leak MCP PI 62-100% ASR), 2610.36258 (SpecGuard multi-turn jailbreak detection), 2610.37657 (HoS attention gates PI 97%→10% ASR), 2610.37055 (Blindfold audit-coin evasion), 2610.37415 (Envelope Layer defense), 2610.36570 (CASEL consequence-aware execution), 2610.36711 (PrivacyEvalClaw jailbreak privacy audit), 2610.37467 (Penny for Your Prompts contextual leakage IEEE S&P 2027), 2610.36422 (attack reuse after PI). Also identified: 2610.36295 (system prompt leakage), 2610.37407 (agentic entity resolution guardrail), 2610.36108 (MCP PI via logs).
+- opened: arXiv cs.CL recent (Wed 28 Oct listing, first 50 of 108) — 5 on-axis papers identified: Arabic harmful-prompt detection (ArGuard), LLM safety alignment in African languages, cross-lingual watermarking fairness. No major new attack/defense papers beyond cs.CR cross-listings.
+- opened: Sysdig blog — "AI agent at the wheel" (May 26, 2026): first AI-agent-driven intrusion, CVE-2026-39987 marimo → 4 pivots → Postgres dump <1h. Primary for autonomous-agent-001.
+- opened: StepSecurity blog — "GhostAction returns" (Oct 2026): Oct 8, 345 repos, 2 compromised maintainer accounts, security-audit.yml exfiltrated Actions secrets + git-history creds to 193.32.204.199.
+- opened: TheHackerNews — ARTEX/Storm-0940 details (secondary): Go-based AI framework using DeepSeek/GLM/Grok, ConnectWise Cloud Backup compromise, 2,250+ tenants, <3h to privileged access.
+- opened: Microsoft Security Blog AI Red Team index — no new posts since Oct 23. ARTEX blog (Oct 21) still 404.
+- opened: Anthropic research index — 2 new posts Oct 27 (drug development, agent influence on judgment — non-security).
+- opened: Trail of Bits blog — most recent Oct 21 (AI agent patches).
+- opened: Wiz blog — PHP2Shell Oct 27 (non-AI); no new AI posts.
+- opened: DeepMind blog — Gemini 4 Argon safety post (Oct 2026); no new posts since.
+- opened: Lakera blog — no Oct 2026 posts (most recent Nov 2025).
+- opened: Elastic Security Labs — no new AI posts (most recent AI: "Auditing the auditor" Oct 12).
+- opened: huntr.com — no Oct 2026 AI/ML disclosures visible on main page.
+- opened: MITRE ATLAS (atlas-navigator-data) — project deprecated, moved to atlas-data.
+- web search (triage): ARTEX/Storm-0940; Sysdig LLM agent intrusion; StepSecurity GhostAction Oct 2026; LiteLLM CVE-2026-114612.
+- not opened this run: OpenAI (not attempted after prior 403), Protect AI (not attempted after prior 404), HiddenLayer (not attempted after prior 404), NVD, arXiv cs.CR entries 48-47 (listing only had 47), arXiv cs.CL entries 51-108, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft ARTEX blog post — still 404 on direct URL; detailed secondary (TheHackerNews) opened instead.
+- degraded: GHSA pip reviewed high/critical listing — returned "No results matched" (rendering issue); per-project queries used instead.
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
