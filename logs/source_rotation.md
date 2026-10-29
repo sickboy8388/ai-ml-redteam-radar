@@ -122,3 +122,20 @@ logs/source_rotation.md
 - degraded: OpenAI safety page — HTTP 403.
 - degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
+
+## 2026-10-29 (daily)
+- opened: tool repos & releases — llama.cpp/releases (v0.8.0 MAJOR Oct 28 + b11972-b11980 Oct 28-29; security hardening + OOB fixes), Ollama/releases (v0.40.12 Oct 27 + v0.40.13 Oct 28: LFM3, d1 decision models), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still 1.6.5), Unsloth/releases (v0.1.912-beta Oct 28: multi-LoRA batching, tool-call safety), transformers/releases (v5.21.0 Oct 26), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings (ollama Oct 27-29; vllm Oct 27-29; open-webui/litellm/langflow Oct 27-29) — new: vLLM GHSA-6757-hggm-hp2w (High, CVE-2026-115912, pickle.loads via SHM forgery, reviewed Oct 28); LiteLLM GHSA-7hp6-4w63-5g45 (High, CVE-2026-114612, privilege escalation, reviewed Oct 27), GHSA-g5ff-637f-6q2m (High, file read, reviewed Oct 27); FlexibleGraphRAG GHSA-vqrg-773h-4wxc (High, Cypher injection, reviewed Oct 27).
+- opened: arXiv cs.CR recent (Wed 28 Oct listing, 47 entries) — 11 on-axis papers; abstracts opened: 2610.36108 (Log-To-Leak MCP PI 62-100% ASR), 2610.37415 (Envelope Layer agent defense), 2610.36258 (SpecGuard LTL jailbreak detector), 2610.36422 (attack reuse after PI), 2610.37657 (Heads of Security attention gates 97%→10% ASR), 2610.36711 (PrivacyEvalClaw), 2610.36295 (system prompt leakage), 2610.37055 (Blindfold audit secrecy), 2610.37467 (Penny for Your Prompts S&P 2027), 2610.37407 (DIO/ODI agentic guardrail), 2610.36570 (CASEL tool agents).
+- opened: arXiv cs.CL recent (Wed 28 Oct listing) — 2610.36523 (Benchmarking Task Takeover agent handoffs) on-axis.
+- opened: Sysdig blog — "AI Agent at the Wheel" (May 26, 2026): first captured LLM-agent-driven intrusion, 4-pivot chain from Marimo RCE to Postgres dump in <1h. Primary for autonomous-agent-actions-001.
+- opened: StepSecurity blog — "GhostAction Returns" (Oct 9, 2026): 345+ repos targeted, 13 credential patterns including AI provider keys.
+- opened: Anthropic research — re-verified "UK AISI cybertesting alignment assessment" (Oct 23) and "Investigating unintended model actions" (Oct 9). Primaries for autonomous-agent-actions-001.
+- opened: Microsoft Security Blog AI Red Team index — 2 new posts since Oct 27: "CISO's evolving role in the agentic era" (Oct 28, general). ARTEX (Oct 21) still listed but direct URL still 404.
+- opened: Wiz blog index — 3 new posts since Oct 27: PHP2Shell (Oct 27), Pwn Request Reckoning (Oct 26), Gheist (Oct 25). Wiz ARTEX post (Oct 22) on index but direct URL 404.
+- opened: Trail of Bits blog — "Your AI agent fixed the bug, but what else did it change?" (Oct 21): 21 regressions in 130 merged agent PRs.
+- web search (triage): Microsoft ARTEX/Storm-0940; Sysdig LLM agent intrusion 2026; StepSecurity GhostAction Oct 2026; new LLM red team tools Oct 2026.
+- not opened this run: OpenAI (historic 403), Protect AI (404), HiddenLayer (404), Lakera, Elastic, DeepMind, NVD, huntr, ATLAS, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft ARTEX blog post — direct URL still 404 (2nd consecutive run); Wiz ARTEX/Anatomy/Gheist direct URLs all 404 despite appearing on index.
+- degraded: Protect AI blog, HiddenLayer blog — still HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
