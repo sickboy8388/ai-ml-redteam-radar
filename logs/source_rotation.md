@@ -122,3 +122,19 @@ logs/source_rotation.md
 - degraded: OpenAI safety page — HTTP 403.
 - degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
+
+## 2026-10-30 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11979-b12000, Oct 29-30, OCP FP8 E4M3, Mistral Large 4, no security fixes), Ollama/releases (v0.40.13 Oct 28: Liquid LFM3 on Linux/Windows, no security changes), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.5), Unsloth/releases (v0.1.912-beta Oct 28: multi-LoRA batching, 2x faster launch), transformers/releases (v5.22.0 Oct 29: Mistral Large 4), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings — vllm updated:>2026-10-27 (8 new GHSAs Oct 28, 2 High opened: CVE-2026-115912 SHM pickle RCE, CVE-2026-115915 Ghostscript RCE); open-webui updated:>2026-10-27 (0 results); litellm updated:>2026-10-27 (0 results); ollama reviewed (no new); langflow updated:>2026-10-27 (33 new GHSAs Oct 29, 6 Critical opened: CVE-2026-110186, CVE-2026-104339, CVE-2026-93680, CVE-2026-107327).
+- opened: arXiv cs.CR recent (Fri 30 Oct listing, first 50 of 83) — ≥18 on-axis papers; abstracts opened: 2610.38799 (CARI 94.8% coding-agent injection), 2610.39122 (self-evolution IPI degradation +14-49pp), 2610.39758 (SEAL IPI defense 34.6→0.1%), 2610.40396 (role spoofing), 2610.38209 (RGA memory poisoning), 2610.40543 (edge LLM security), 2610.39807 (InferD AI honeypot), 2610.38895 (FlipJev adversarial suffixes), 2610.39509 (jailbreak 7 LLMs).
+- opened: arXiv cs.CL recent (Fri 30 Oct listing, first 50 of 175) — 3 on-axis papers: 2610.40627 (ShallowDefend multi-turn defense), 2610.40516 (multilingual safety training), 2610.39590 (red-teaming African languages).
+- opened: Wiz blog index — "Rise of Agentic Attacks" (Oct 29, opened and cited in ai-agent-incidents-001); "PHP2Shell" (Oct 27, not on-axis). Gheist post (Oct 25) still 404 on direct URL.
+- opened: Anthropic research index — no new posts since Oct 27 (Oct 27 posts: drug development + AI agent judgment calls; not on-axis).
+- opened: Trail of Bits blog — no new AI-security posts since Oct 21.
+- opened: Microsoft Security Blog AI Red Team index — returned 404 (degraded; was working Oct 27).
+- web search (triage): MCP server security tools Oct 2026; LLM red team tool releases Oct 2026; GGUF/NVFP4/KV-cache llama.cpp consumer GPU Oct 2026; ARTEX/Storm-0940.
+- not opened this run: DeepMind, OpenAI (403), Protect AI (404), HiddenLayer (404), Lakera, Elastic, ATLAS, NVD, huntr, arXiv cs.CR entries 51-83, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft Security Blog AI Red Team — HTTP 404 (was accessible Oct 27).
+- degraded: Wiz Gheist post — direct URL still 404.
+- degraded: OpenAI, Protect AI, HiddenLayer — not attempted (persistent 403/404).
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
