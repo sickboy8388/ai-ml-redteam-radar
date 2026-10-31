@@ -122,3 +122,20 @@ logs/source_rotation.md
 - degraded: OpenAI safety page — HTTP 403.
 - degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
+
+## 2026-10-31 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11919-b12019, Oct 28-31, cpp-httplib 0.64.0, KV-cache rotation GPU buffers, no security fixes), Ollama/releases (v0.40.12 Oct 27 + v0.40.13 Oct 28: LFM3 cross-platform, d1 models, no security fixes), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still 1.6.5), Unsloth/releases (v0.1.912-beta Oct 28, v0.1.913-beta Oct 30: multi-LoRA batching, DeepSeek-V4.1-Flash GGUFs), transformers/releases (v5.21.0 Oct 26, v5.21.1 Oct 29, v5.22.0 Oct 29 Mistral Large 4 + FP8 backward, v5.22.1 Oct 30), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings — vLLM: 8 new GHSAs Oct 28 (GHSA-6757-hggm-hp2w High pickle deser, GHSA-h3rc-j82p-2c3h High Ghostscript RCE, 6 Moderate). Ollama: no new since Oct 23. Langflow: 25 new IBM GHSAs Oct 29 (6 Critical, 8 High, 11 Moderate). Open WebUI/LiteLLM/Portkey: no new.
+- opened: individual advisories — GHSA-6757-hggm-hp2w (vLLM SHM pickle deser, Trail of Bits), GHSA-h3rc-j82p-2c3h (vLLM Ghostscript RCE), GHSA-vfwm-g9g9-v2g5 (Langflow auth bypass CVSS 9.8), GHSA-mm82-q33r-3rjw (Langflow code injection CVSS 9.8).
+- opened: arXiv cs.CR recent (Fri 30 Oct listing, 83 entries, first 50 loaded) — 12+ on-axis papers. Abstracts opened: 2610.38799 (CARI 94.8% ASR), 2610.39758 (SEAL PI defense), 2610.38209 (RGA memory attack), 2610.40396 (role spoofing), 2610.39122 (self-evolution IPI), 2610.38895 (FlipJev), 2610.39509 (jailbreak benchmark), 2610.40543 (edge LLM security risks).
+- opened: arXiv cs.CL recent (Fri 30 Oct listing, first 50 of 175) — 3 on-axis papers (ShallowDefend, multilingual safety training, low-resource red teaming).
+- opened: Wiz blog index + "The Rise of Agentic Attacks" (Oct 29: 6 real-world AI-agent attack cases, 7 fingerprints).
+- opened: Sysdig blog "AI Agent at the Wheel" (May 26: first in-wild LLM-agent post-exploitation, CVE-2026-39987).
+- opened: StepSecurity blog "GhostAction Returns" (Oct 9: Oct 8 resurgence, 345 repos, credential exfiltration).
+- opened: Anthropic research index — no new posts since Oct 27.
+- opened: Trail of Bits blog — no new AI-security posts since Oct 21.
+- opened: mcpwatch (github.com/Fredbcx/mcpwatch) — MCP server static analyzer, 2,627 findings in 3,199 servers.
+- not opened this run: OpenAI, Protect AI, HiddenLayer, Lakera, Elastic, DeepMind, ATLAS, NVD, huntr, arXiv cs.CR entries 51-83, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft Security Blog AI Red Team topic page — HTTP 404 (previously worked Oct 27).
+- degraded: Wiz "Black October" blog post — URL 404 (blog index showed post but direct URL failed).
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs, no new access method).
