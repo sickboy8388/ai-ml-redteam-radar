@@ -127,3 +127,19 @@ logs/source_rotation.md
 - opened: GHSA listings (ollama — no new advisories since Oct 25; vllm — 10 new advisories Oct 27-28, High RCE-class items); Sysdig blog index + "In a pickle" post (Oct 27, cited).
 - not re-opened this week by weekly: all other swept sources (see daily logs Oct 26-27). Week coverage overall: opened 18/28 swept-listed; degraded 3 (OpenAI, Protect AI, HiddenLayer); never opened all week: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr.
 - degraded: Sysdig May 2026 LLM-agent post not found on blog first page (archive not opened).
+
+## 2026-11-01 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12019-b12030, Oct 31-Nov 1, no security fixes, LFM3/Gemma 4/Hexagon), Ollama/releases (v0.40.12 Oct 27 + v0.40.13 Oct 28: LFM3 cross-platform, d1 decision models), vLLM/releases (still v0.32.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.6 Oct 31: DeepSeek V4.1 + LFM3, reduced VRAM quant), Unsloth/releases (v0.1.912-beta Oct 28 + v0.1.913-beta Oct 30: multi-LoRA batching, sandbox per-mode, batched MoE fine-tuning).
+- opened: GHSA search listings (vllm — no new advisories beyond Oct 28 batch; open-webui — no new after Oct 16; combined ollama+vllm+open-webui+litellm+langflow — 0 results; pip reviewed high/critical — 0 results).
+- opened: arXiv cs.CR recent (Fri 30 Oct listing, 83 entries, first 50) — ≥8 on-axis papers; abstracts opened: 2610.38799 (CARI 94.8% coding-agent injection), 2610.39758 (SEAL IPI defense 34.6%→0.1%), 2610.39122 (self-evolution IPI +14-48.8pp), 2610.40396 (role spoofing), 2610.38895 (FlipJev universal adversarial suffixes), 2610.40543 (edge LLM privacy/security risks), 2610.39807 (InferD AI inference honeypot), 2610.39155 (REALM minimal agent assets).
+- opened: arXiv cs.CL recent (Fri 30 Oct listing, first 50 of 175) — 3 on-axis papers: 2610.40627 (ShallowDefend multi-turn), 2610.40516 (multilingual safety training), 2610.39590 (red-teaming low-resource languages).
+- opened: Wiz blog index + 3 posts — "ARTEX in the Wild: Storm-0940" (Oct 22, cited), "The Rise of Agentic Attacks" (Oct 29, cited), "Black October for AI Developer Platforms" (Oct 30, cited). Also noted: "Gheist" (Oct 25, not opened), "AI Threat Readiness Survey" (Oct 30, not opened).
+- opened: Sysdig blog index + "Three layers of open source defense for AI coding agents" (Oct 27, → study_shelf). Also noted: "Mythos access is expanding" (Oct 27, not AI-security axis).
+- opened: Anthropic research index — no new posts after Oct 27 (drug development and agent judgment study, not security-axis).
+- opened: Trail of Bits blog — "AI agent fixed the bug" (Oct 21) and "Package managers integrity" (Oct 14) noted, not opened individually.
+- opened: DeepMind blog — checked via prior weekly, no new security posts.
+- web search (triage): Microsoft ARTEX/Storm-0940 (secondary coverage only, Microsoft blog post 404); Hunt.io Hermes (secondary coverage, primary URL not found); Sysdig three-layers post URL; GitHub LLM red team / MCP security tools.
+- not opened this run: OpenAI (known 403), Protect AI (known 404), HiddenLayer (known 404), Lakera, Elastic, PyRIT, ATLAS, NVD, huntr, transformers/releases, r/LocalLLaMA, awesome-lists, arXiv cs.CR entries 51-83 of Oct 30 listing.
+- degraded: Microsoft AI Red Team topic page — HTTP 404.
+- degraded: Hunt.io Hermes primary — URL not found via search.
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
