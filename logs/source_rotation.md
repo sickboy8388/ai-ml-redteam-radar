@@ -122,3 +122,8 @@ logs/source_rotation.md
 - degraded: OpenAI safety page — HTTP 403.
 - degraded: Protect AI blog, HiddenLayer blog — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 5+ consecutive runs).
+
+## 2026-11-01 (weekly)
+- opened: GHSA listings (ollama — no new advisories since Oct 25; vllm — 10 new advisories Oct 27-28, High RCE-class items); Sysdig blog index + "In a pickle" post (Oct 27, cited).
+- not re-opened this week by weekly: all other swept sources (see daily logs Oct 26-27). Week coverage overall: opened 18/28 swept-listed; degraded 3 (OpenAI, Protect AI, HiddenLayer); never opened all week: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr.
+- degraded: Sysdig May 2026 LLM-agent post not found on blog first page (archive not opened).

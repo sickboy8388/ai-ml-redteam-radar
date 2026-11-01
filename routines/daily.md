@@ -21,6 +21,10 @@ FULL CHECK; there is no "light pass". Separate CHECK from EXTRACT:
   blogs, tool repos & releases (local-model runtimes first: llama.cpp, Ollama, vLLM,
   LocalAI — then red-team tooling: garak, PyRIT, promptfoo). Open posts/releases newer
   than the last scan; filter for on-axis relevance. Primary = citable evidence.
+  Vendor/lab blogs: always open the evidence producers (Wiz, Trail of Bits, Anthropic,
+  Microsoft AI Red Team, Sysdig) plus a rotating 3 of the rest (check the last log tail so
+  every blog is opened at least once per 3 runs). Persistently 403/404 blogs (OpenAI,
+  Protect AI, HiddenLayer) are logged `degraded` after one attempt, not retried.
 - **CVE / advisory watch** — new CVEs & advisories (NVD recent, GHSA, huntr) affecting the
   AI/ML stack: inference servers, model formats/deserialization, vector DBs, agent
   frameworks, MCP tooling; note whether a public PoC exists (link only).

@@ -15,6 +15,7 @@ Research / vendor security & AI-safety blogs (open the blog index, read new post
 - Lakera blog — https://www.lakera.ai/blog (mirror: none verified yet)
 - Trail of Bits blog — https://blog.trailofbits.com/ [verified 2026-10-25] (index opens)
 - Wiz blog (AI/cloud security research) — https://www.wiz.io/blog [verified 2026-10-25] (index opens; Wiz produced the LiteLLM-compromise evidence)
+- Sysdig Threat Research blog — https://www.sysdig.com/blog [verified 2026-11-01] (index opens; produced LMDeploy exploitation and ML-pickle-defense-bypass evidence)
 - Elastic Security Labs (AI-assisted threats) — https://www.elastic.co/security-labs (mirror: none verified yet)
 
 Tool repos & releases (check `<repo>/releases`):
@@ -58,3 +59,4 @@ Tool repos & releases (check `<repo>/releases`):
 
 ## Discovered-source candidates
 <!-- auto-staged tally: domain — times seen — last artifact+date — first-seen date -->
+- 2026-11-01 weekly: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr unopened all week — heal-or-remove proposed (see weekly W44).
