@@ -127,3 +127,19 @@ logs/source_rotation.md
 - opened: GHSA listings (ollama — no new advisories since Oct 25; vllm — 10 new advisories Oct 27-28, High RCE-class items); Sysdig blog index + "In a pickle" post (Oct 27, cited).
 - not re-opened this week by weekly: all other swept sources (see daily logs Oct 26-27). Week coverage overall: opened 18/28 swept-listed; degraded 3 (OpenAI, Protect AI, HiddenLayer); never opened all week: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr.
 - degraded: Sysdig May 2026 LLM-agent post not found on blog first page (archive not opened).
+
+## 2026-11-04 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b11919-b12099, Oct 28-Nov 4, no security fixes), Ollama/releases (v0.40.13 Oct 28, v0.40.14 Nov 3, v0.40.15-rc0 Nov 3), vLLM/releases (v0.33.0 Nov 2), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.6 Oct 31, reduced quantization VRAM), Unsloth/releases (v0.1.912-0.1.914, Oct 28-Nov 3), transformers/releases (v5.21.0-v5.22.1, Oct 26-30).
+- opened: GHSA search listings — vllm (no new after Oct 28), ollama (no new after Oct 25), open-webui (no new after Oct 13), litellm (3 new Oct 27: GHSA-g5ff-637f-6q2m High file read, GHSA-hhww-mrg2-969h Moderate XSS, GHSA-7hp6-4w63-5g45 High priv escalation CVE-2026-114612), langflow (25 new Oct 29: 6 Critical, 9 High, 10 Moderate; IBM Langflow OSS). Individual advisories opened: GHSA-vfwm-g9g9-v2g5, GHSA-mm82-q33r-3rjw, GHSA-8rq9-23x9-43h7 (Langflow Critical); GHSA-g5ff-637f-6q2m, GHSA-7hp6-4w63-5g45 (LiteLLM).
+- opened: arXiv cs.CR recent (Wed 4 Nov listing, 37 entries, all 37 loaded) — 12+ on-axis papers: 2611.04803 (ExtraHerO system-prompt extraction), 2611.04717 (BrainwashedLLM CoT jailbreak ASR 0.74-0.98), 2611.04673 (AuthorityFlow parameter-poisoning defense), 2611.04672 (nine-dimension PI taxonomy), 2611.04393 (Voluntary Servitude NeurIPS 2026), 2611.04356 (CloakFEM agentic red-teaming), 2611.04299 (benign skills induce misalignment), 2611.04289 (social-bias MAD 0→100%), 2611.04086 (affordance-induced scope violations), 2611.03772 (RuntimeTickets), 2611.03759 (JevBreak), 2611.03754 (self-evolving search-agent attacks NeurIPS 2026), 2611.03752 (LoRA-Patch backdoored adapter defense). All abstracts opened.
+- opened: Wiz blog index + 4 posts: "ARTEX in the Wild" (Oct 22), "Rise of Agentic Attacks" (Oct 29), "Black October for AI Developer Platforms" (Oct 30), "Anatomy of AI-Driven Cloud Attacks" (Oct 19). All 4 fully opened and cited.
+- opened: Sysdig blog index + "Security briefing: October 2026" (Nov 3, covers ARTEX/Storm-0940, DIVD AI-agent breach, pickle bypasses).
+- opened: Anthropic research index + "Provable inference" (Nov 2, FlashProve zkSNARKs).
+- opened: Trail of Bits blog index (2 new: voting Nov 3, Codex backporting Nov 2).
+- opened: DeepMind blog index (no new AI-security posts).
+- web search (triage): arXiv cs.CL LLM jailbreak/agent safety Nov 2026 — no new results.
+- not opened this run: OpenAI (historically 403), Protect AI (historically 404), HiddenLayer (historically 404), Lakera, Elastic, PyRIT, ATLAS, NVD, huntr, arXiv cs.CL listing, r/LocalLLaMA, awesome-lists.
+- degraded: Microsoft AI Red Team topic page — HTTP 404 (was working Oct 27).
+- degraded: Trail of Bits "Codex backporting" post — direct URL 404.
+- degraded: OpenAI, Protect AI, HiddenLayer — persistently degraded (403/404 for 7+ runs).
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
