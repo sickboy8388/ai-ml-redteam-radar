@@ -127,3 +127,20 @@ logs/source_rotation.md
 - opened: GHSA listings (ollama — no new advisories since Oct 25; vllm — 10 new advisories Oct 27-28, High RCE-class items); Sysdig blog index + "In a pickle" post (Oct 27, cited).
 - not re-opened this week by weekly: all other swept sources (see daily logs Oct 26-27). Week coverage overall: opened 18/28 swept-listed; degraded 3 (OpenAI, Protect AI, HiddenLayer); never opened all week: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr.
 - degraded: Sysdig May 2026 LLM-agent post not found on blog first page (archive not opened).
+
+## 2026-11-05 (daily)
+- opened: tool repos & releases — llama.cpp/releases (v0.9.0 Nov 4 feature release + b12125 Nov 5; minor hardening: bounded control-vector indices, rejects mismatched GGUF shards), Ollama/releases (v0.40.13 Oct 28, v0.40.14 Nov 3 stable, v0.40.15-rc1 Nov 3 pre-release; no security changes), vLLM/releases (v0.33.0 Nov 2; removes Medusa/MLP speculator), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.6 Oct 31: reduced VRAM for quantization, DeepSeekV4.1), Unsloth/releases (v0.1.912-0.1.915-beta Oct 28-Nov 4: FP8 LoRA, SDXL 4GB VRAM, browser-use, Qwen3-8B speedup), transformers (not checked this run).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (no new since Oct 28), open-webui (no new since Oct 13), open-webui unreviewed (no new since Oct 13), langflow+litellm+portkey (no results), pip high/critical reviewed (rendering issue, 0 results).
+- opened: CrowdStrike blog — "Uncovers New Agentic AI Campaigns" (Oct 21): 4 threat actors with exposed AI agent frameworks in real intrusions May-Aug 2026; cited as evidence in new agentic-offense-001.
+- opened: CrowdStrike report landing page — "Agentic AI Attack Campaigns" (undated).
+- opened: Wiz blog index + posts — "Black October for AI Developer Platforms" (Oct 30, cited), "Rise of Agentic Attacks" (Oct 29, cited), "ROI of Agentic Remediation" (Nov 3), "Red and Blue Agents" (Nov 2), "AI Threat Readiness Survey" (Oct 30).
+- opened: Sysdig blog index + "Introducing Sysdig AI Defense" (Nov 4, queued).
+- degraded: Sysdig "What one organization revealed about AI agent risk" (Nov 4) — HTTP 404.
+- opened: Anthropic research index + re-opened "UK AISI cybertesting alignment assessment" (Oct 23, cited) and "Investigating unintended model actions" (Oct 9, cited). New: "Provable inference for LLMs" (Nov 2, queued).
+- opened: Trail of Bits blog — "Backporting security fixes at scale with Codex" (Nov 2); no new AI-security posts.
+- degraded: Microsoft AI Red Team blog topic page — HTTP 404 (2nd consecutive run). CrowdStrike blog opened as substitute source for the ARTEX/Storm-0940 topic.
+- opened: arXiv cs.CR recent (Thu 5 Nov listing, 38 entries) — 11 on-axis papers identified; abstracts opened: 2611.06585 (MCP germline execution, cited), 2611.06138 (KVGuard, study_shelf), 2611.06039 (Baya web agent security, queued), 2611.05632 (ACCA continuous authorization, queued), 2611.06498 (RAG integrity gap, queued), 2611.06294 (A.S.E 2.0 repo context, queued), 2611.06553 (fragile safety alignment, queued), 2611.06257 (local LLM agents vuln reproduction, study_shelf).
+- opened: arXiv cs.CL recent (Thu 5 Nov listing, first 50 of 90) — 4 on-axis papers: 2611.06545 (agent handoff summaries as instructions, queued), 2611.06116 (agent scaffolding vs banking rules), 2611.06839 (time-sensitive safety), 2611.06806 (LLM psychological harm risk).
+- rotation blogs: Lakera blog (degraded: no 2026 content visible), Elastic Security Labs (opened: 2 posts Nov 4 — neither AI-specific; AI agent monitoring post undated). Rotation 2/3 complete.
+- not opened this run: Microsoft (404), DeepMind, OpenAI (403), Protect AI (404), HiddenLayer (404), PyRIT, ATLAS, NVD, huntr, transformers, r/LocalLLaMA, awesome-lists, HN. Coverage gaps: ATLAS/OWASP (0 coverage, 6th week), arXiv cs.CR Nov 3-4 listings, community pulse.
+- web search: CrowdStrike agentic AI campaigns (found primary), langflow GHSA Nov 2026 (no new), MCP server security Nov 2026 (no new tool), LLM red team tool Nov 2026 (no new).
