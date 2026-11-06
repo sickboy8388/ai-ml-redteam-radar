@@ -127,3 +127,20 @@ logs/source_rotation.md
 - opened: GHSA listings (ollama — no new advisories since Oct 25; vllm — 10 new advisories Oct 27-28, High RCE-class items); Sysdig blog index + "In a pickle" post (Oct 27, cited).
 - not re-opened this week by weekly: all other swept sources (see daily logs Oct 26-27). Week coverage overall: opened 18/28 swept-listed; degraded 3 (OpenAI, Protect AI, HiddenLayer); never opened all week: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr.
 - degraded: Sysdig May 2026 LLM-agent post not found on blog first page (archive not opened).
+
+## 2026-11-06 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12132–b12144 Nov 5-6, b12137 crash fix for malformed realtime session updates), Ollama/releases (v0.40.13–v0.40.15 Oct 28–Nov 3, no security fixes), vLLM/releases (v0.33.0 Nov 2, no explicit security section), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.6 Oct 31, reduced VRAM during quantization), Unsloth/releases (v0.1.912–0.1.915 Oct 28–Nov 4, FP8 LoRA training, tile_mlp, Qwen-Image speedups), transformers/releases (v5.21.0–v5.22.1 Oct 26-30, Mistral Large 4, FP8 adapter training), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (no new since Oct 28), open-webui (no new since Oct 13), langflow (25 new advisories Oct 29 incl. 6 Critical CVSS 9.8; 3 individual advisories opened: GHSA-mm82-q33r-3rjw, GHSA-vfwm-g9g9-v2g5, GHSA-8rq9-23x9-43h7).
+- opened: arXiv cs.CR recent (Thu 5 Nov + Fri 6 Nov listings, ≥14 on-axis papers) — abstracts opened: 2611.07640 (task-tampering PI benchmark), 2611.07222 (SPILLWAY tool-agent defense), 2611.07611 (LLM-agent honeypots), 2611.07530 (JailBound FOL jailbreak eval), 2611.07483 (signed multi-agent handoffs), 2611.06585 (MCP toolchain trust/germline exec), 2611.06498 (text-vector integrity RAG), 2611.06294 (repo context LLM code security), 2611.06257 (local LLM agents vuln reproduction), 2611.06138 (KVGuard KV cache safety), 2611.06039 (securing web agents), 2611.05971 (accountable disclosure), 2611.06100 (LM watermark privacy), 2611.08325 (decision models as RAG gates).
+- opened: Wiz blog index + "Black October for AI Developer Platforms" (Oct 30, cited) + "Rise of Agentic Attacks" (Oct 29, cited) + "AI Threat Readiness Survey" (Oct 30, title only).
+- opened: Sysdig blog index + "Introducing Sysdig AI Defense" (Nov 4) + "Three layers of open source defense" (Oct 27, correct URL found via search, cited in study_shelf).
+- opened: Trail of Bits blog — 1 post: "Backporting security fixes at scale with Codex" (Nov 2, not on-axis).
+- opened: Anthropic research index — 1 new on-axis post: "Progress on provable inference for LLMs" (Nov 2, FlashProve zkSNARKs; queued).
+- opened: DeepMind blog — no new AI-security posts in the Nov window (Gemini 4 Argon safety from Oct only).
+- opened: Lakera blog — no dated posts in Oct 28–Nov 6 range; several undated posts visible but uncitable.
+- web search (triage): arXiv cs.CR LLM jailbreak agent security November 2026; GitHub LLM red team / MCP security new tools 2026.
+- not opened this run: Microsoft AI Red Team (404), OpenAI (not attempted, persistently 403), Protect AI (not attempted, persistently 404), HiddenLayer (not attempted, persistently 404), Elastic, NVD, huntr, ATLAS, arXiv cs.CL, arXiv cs.CR Nov 3-4 listings (rate limited 429), r/LocalLLaMA (degraded 6+ runs), awesome-lists.
+- degraded: Microsoft AI Red Team blog — HTTP 404.
+- degraded: arXiv cs.CR Nov 3-4 listings — HTTP 429 (rate limited).
+- degraded: Sysdig "What one organization revealed about AI agent risk" (Nov 4) — HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
