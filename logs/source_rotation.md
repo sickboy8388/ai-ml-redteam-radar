@@ -144,3 +144,26 @@ logs/source_rotation.md
 - degraded: arXiv cs.CR Nov 3-4 listings — HTTP 429 (rate limited).
 - degraded: Sysdig "What one organization revealed about AI agent risk" (Nov 4) — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
+
+## 2026-11-07 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12171–b12182 Nov 6-7, b12177 crash fix invalid UTF-8, b12179 DMA overflow/div-by-zero), Ollama/releases (still v0.40.15), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.6), Unsloth/releases (v0.1.916-beta Nov 6: two-GPU image/video, LTX-2.5 16-24GB GPUs, faster loads), transformers/releases (v5.22.2 Nov 6: Jinja sandbox hardening PR #50431), PyRIT/releases (still v1.1.0).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (no new since Oct 28), open-webui (no new since Oct 13), langflow (no new since Oct 29), litellm (3 new Oct 27: GHSA-g5ff-637f-6q2m High arbitrary file read, GHSA-7hp6-4w63-5g45 High priv escalation, GHSA-hhww-mrg2-969h Moderate XSS; first 2 added to llm-frontend-001 evidence).
+- opened: arXiv cs.CR recent (Fri 6 Nov + Thu 5 Nov listings, 29+21 entries shown) — on-axis papers: 2611.08325, 2611.07640, 2611.07530, 2611.07483, 2611.07370 (SimBreak model extraction), 2611.07222, 2611.07613 (honeypots), 2611.06585, 2611.06498, 2611.06138, 2611.06039. Nov 3-4 date-specific URLs returned 400; gap persists.
+- opened: arXiv cs.CL recent (Fri 6 Nov listing, 50 of 94) — on-axis: 2611.08281 (Multimodal-SEA: AI agent multimodal social engineering benchmark, 7.1–34.5% ASR), 2611.07586 (stress testing CoT monitoring), 2611.07554 (Memory Trap).
+- opened: Microsoft Security Blog index + 2 new posts: "ARTEX abuse expands as cybercriminals target financial sector" (Nov 6, Storm-3358, cited), "Threat actors use agentic AI tooling to find and abuse exposed secrets" (Nov 5, ARTEX GitHub secret scanning, cited). Also opened: "Inside a malicious Claude Code-branded extension" (Oct 30, cited in ai-supplychain-001).
+- opened: CrowdStrike blog — "CrowdStrike Uncovers New Agentic AI Campaigns" (Oct 21, 4 actors with Claude Code/PentestGPT harnesses, cited).
+- opened: Wiz blog index — 2 new Nov posts (Green Agent ROI Nov 3, Red/Blue Agents Nov 2; product-focused, not evidence).
+- opened: Sysdig blog index — 1 new post (555 Benchmark Nov 5; product/benchmark, not evidence).
+- opened: Trail of Bits blog — 2 new posts (Nov 3, Nov 6; neither AI-security).
+- opened: Anthropic research index — 4 new posts (Nov 4-6; none on-axis for security/safety/red-teaming).
+- opened: DeepMind blog — no new AI-security posts.
+- opened: Lakera blog — no dated posts in range.
+- opened: Elastic Security Labs — quarterly threat report (Nov 4, not explicitly AI); "Modernising threat hunting: semantic search for AI agent behavior" visible but undated.
+- opened: GHSA pip reviewed high/critical listing — rendered "No results"; used per-project queries instead.
+- opened: MITRE ATLAS navigator data commits — "Project Deprecated" Jun 24 2026 is the latest commit.
+- web search (triage): Microsoft ARTEX Storm-0940; CrowdStrike agentic AI campaigns; NVD AI ML CVEs Nov 2026; huntr AI ML Nov 2026; MCP server security new tools Nov 2026; LLM red team prompt injection new tools 2026; HN LLM security Nov 2026.
+- not opened this run: OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), NVD direct, huntr direct, arXiv cs.CR Nov 3-4, arXiv cs.CL entries 51-94, r/LocalLLaMA (degraded 7+ runs), awesome-lists.
+- degraded: arXiv cs.CR Nov 3-4 date-specific URLs — HTTP 400.
+- degraded: GHSA pip high/critical listing — "No results" rendering issue.
+- degraded: Redian PyPI page — did not load content.
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
