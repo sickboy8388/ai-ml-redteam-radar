@@ -148,4 +148,21 @@ logs/source_rotation.md
 ## 2026-11-08 (weekly)
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
+
+## 2026-11-08 (daily, 2nd pass)
+- opened: tool repos & releases — llama.cpp/releases (b12192–b12201 Nov 7-8, b12199 UTF-8 sanitization in PEG tool-call args, b12195 SYCL VRAM bounds check), Ollama/releases (still v0.40.15), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.6), Unsloth/releases (v0.1.916-beta Nov 6, safetensors-only NVFP4, CUDA graph decoding), transformers/releases (v5.22.2 Nov 6, Jinja sandbox hardening), PyRIT/releases (still v1.1.0).
+- opened: NVD API keyword sweeps (ollama, vllm, llama.cpp, sglang, lmdeploy, langflow, LocalAI, transformers+jinja; pubStartDate 2026-10-31) — 0 new CVEs across all keywords.
+- opened: GHSA listings — ollama (no new since Oct 25), vllm (no new since Oct 28), langflow (no new since Oct 29), pip reviewed high/critical (no AI/ML items).
+- opened: arXiv cs.CR recent (latest listing Fri Nov 6, already covered in prior daily; 2611.07370 SimBreak abstract opened), arXiv cs.CL recent (Fri Nov 6 listing: 2611.08281 Multimodal-SEA abstract opened, 2611.07586 TraceMRT abstract opened).
+- opened: Wiz blog index — no new posts since Nov 3.
+- opened: Sysdig blog index + "Refreshing the 555 Benchmark" (Nov 5, JADEPUFFER agentic ransomware, HF breach confirmed as OpenAI eval; cited).
+- opened: Anthropic research index — 4 new posts Nov 4-6 (vault particles, AI for science, scientific models, agent memory) — none security-focused.
+- opened: Trail of Bits blog — 2 posts Nov 3-6 (crypto wallet security, e-voting cryptography) — none AI-security.
+- opened: DeepMind blog — no new AI-security posts.
+- opened: OWASP GenAI LLM Top 10 2026 landing page (genai.owasp.org) — published Aug 3; full document download not completed.
+- opened: transformers PR #50431 (Jinja sandbox hardening details).
+- web search (triage): MCP server security audit tools; LLM red team new tools Nov 2026; consumer GPU local LLM benchmarks Nov 2026; MITRE ATLAS / OWASP LLM Top 10 2026; awesome-llm-security lists.
+- not opened this run: OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Microsoft AI Red Team (404 last run), ATLAS repo (403 session scope), r/LocalLLaMA (degraded 7+ runs), Hacker News, awesome-lists (no new Nov items found).
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
+- degraded: OpenAI, Protect AI, HiddenLayer — persistently unreachable, not retried.
 - week coverage: only daily 2026-11-06 ran (1/7).
