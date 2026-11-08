@@ -12,11 +12,11 @@ Research / vendor security & AI-safety blogs (open the blog index, read new post
 - OpenAI — safety/security posts — https://openai.com/safety/ (mirror: none verified yet)
 - Protect AI / huntr — https://protectai.com/blog and https://huntr.com/ (mirror: none verified yet)
 - HiddenLayer blog — https://hiddenlayer.com/blog/ (mirror: none verified yet)
-- Lakera blog — https://www.lakera.ai/blog (mirror: none verified yet)
+- Lakera blog — https://www.lakera.ai/blog [index opens 2026-11-08] (mostly undated posts; low yield)
 - Trail of Bits blog — https://blog.trailofbits.com/ [verified 2026-10-25] (index opens)
 - Wiz blog (AI/cloud security research) — https://www.wiz.io/blog [verified 2026-10-25] (index opens; Wiz produced the LiteLLM-compromise evidence)
 - Sysdig Threat Research blog — https://www.sysdig.com/blog [verified 2026-11-01] (index opens; produced LMDeploy exploitation and ML-pickle-defense-bypass evidence)
-- Elastic Security Labs (AI-assisted threats) — https://www.elastic.co/security-labs (mirror: none verified yet)
+- Elastic Security Labs (AI-assisted threats) — https://www.elastic.co/security-labs [index opens 2026-11-08] (no AI evidence yet)
 
 Tool repos & releases (check `<repo>/releases`):
 - llama.cpp — https://github.com/ggml-org/llama.cpp
@@ -32,9 +32,9 @@ Tool repos & releases (check `<repo>/releases`):
 - MITRE ATLAS — https://github.com/mitre-atlas/atlas-navigator-data
 
 ## CVE / advisory watch — swept every run
-- NVD recent — https://services.nvd.nist.gov/rest/json/cves/2.0
+- NVD recent — https://services.nvd.nist.gov/rest/json/cves/2.0 [verified 2026-11-08] (curl works; use `keywordSearch=<ollama|llama.cpp|vllm|lmdeploy|"LM Studio">` with `pubStartDate/pubEndDate`; sleep ~6s between calls; produced LMDeploy/LM Studio/ggml-rpc evidence)
 - GitHub Security Advisories — https://github.com/advisories
-- huntr.com (AI/ML bug bounty & advisories) — https://huntr.com/
+- huntr.com (AI/ML bug bounty & advisories) — https://huntr.com/ [index opens 2026-11-08; no citable dated items extracted yet]
 - GHSA keyword queries for the app layer (`?query=open-webui`, `ollama`, `langflow`, `litellm`, `portkey`) [verified 2026-10-25] — produced the llm-frontend-001 cluster
 - Vendor PSIRTs as they become relevant (NVIDIA, Hugging Face, Microsoft, Ollama)
 
@@ -60,3 +60,4 @@ Tool repos & releases (check `<repo>/releases`):
 ## Discovered-source candidates
 <!-- auto-staged tally: domain — times seen — last artifact+date — first-seen date -->
 - 2026-11-01 weekly: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr unopened all week — heal-or-remove proposed (see weekly W44).
+- 2026-11-08 weekly: NVD/huntr/Lakera/Elastic healed (all open via curl); ATLAS repo blocked in this sandbox (GitHub scope) — try atlas.mitre.org instead. No staged candidates met the promotion bar.

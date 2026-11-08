@@ -144,3 +144,8 @@ logs/source_rotation.md
 - degraded: arXiv cs.CR Nov 3-4 listings — HTTP 429 (rate limited).
 - degraded: Sysdig "What one organization revealed about AI agent risk" (Nov 4) — HTTP 404.
 - degraded: r/LocalLLaMA — not attempted (degraded 6+ consecutive runs).
+
+## 2026-11-08 (weekly)
+- opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
+- degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
+- week coverage: only daily 2026-11-06 ran (1/7).

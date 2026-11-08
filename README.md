@@ -2,22 +2,19 @@
 
 ![trends](https://img.shields.io/badge/trends-5-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-2-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-7-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--06-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-6-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--08-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-11-06, daily)
+## Since last scan (2026-11-08, weekly)
 
-- **NEW: agentic-offensive-ops-001** (seed): Wiz documents "Black October" — 9+ AI dev platforms breached, LLMjacking at scale (1.7M API calls); "Rise of Agentic Attacks" documents ARTEX, Hermes, CrowdStrike actors across ≥6 orgs.
-- **llm-frontend-001** (seed, dormancy averted): massive Langflow advisory batch — 25 GHSAs including 6 Critical (CVSS 9.8) RCE/auth-bypass; evidence now 8/10.
-- **agentic-injection-001** (accelerating, held): ≥14 new on-axis arXiv papers Nov 5-6; task-tampering benchmark shows PI defenses overestimate protection.
-- **local-inference-001** (accelerating, held): llama.cpp b12137 crash fix; vLLM v0.33.0; Ollama v0.40.15. No new CVEs.
-- **ai-supplychain-001** (emerging, held).
-- **Queue**: 7 live items; 6 resolved (3 promoted to new trend).
+- **local-inference-001** (accelerating, held): first NVD sweep finds new late-Oct CVEs — LMDeploy unauth pickle RCE (9.3), LM Studio downloader path traversal (8.7), llama.cpp ggml-rpc (9.2 / 8.7). Demotion caveat cleared; nothing new since Oct 30.
+- **agentic-injection-001** (accelerating, held), **ai-supplychain-001** (emerging, held), **llm-frontend-001** (seed, held; 10 days since Langflow batch), **agentic-offensive-ops-001** (seed, held; needs a second-org primary).
+- **Queue**: 6 live; LLVMhammer dropped. Anchoring warning (6th week) recorded.
 
 ## Trends
 
@@ -25,7 +22,7 @@ seed 2 · emerging 1 · accelerating 2 · mainstreaming 0 · dormant 0
 
 | Trend | Stage | Latest signal |
 |---|---|---|
-| [Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)](TRENDS.md#trends) | accelerating | [2026-10-28](https://github.com/advisories/GHSA-6757-hggm-hp2w) — vLLM High: forged SHM handle reaches pickle.loads; Oct 27-28 batch incl. code_revision RCE |
+| [Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)](TRENDS.md#trends) | accelerating | [2026-10-30](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-119706) — NVD: LMDeploy unauth pickle RCE (CVSS 9.3) + LM Studio path traversal (8.7); with vLLM Oct 27-28 batch incl. code_revision RCE |
 | [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)](TRENDS.md#trends) | accelerating | [2026-11-05](https://arxiv.org/abs/2611.07640) — Task-tampering PI: observation/state-targeting attacks bypass defenses at 9.5–15.4% |
 | [AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)](TRENDS.md#trends) | emerging | [2026-10-27](https://www.sysdig.com/blog/in-a-pickle-why-every-pickle-defense-in-machine-learning-is-bypassed-the-same-way) — Sysdig: every ML pickle defense bypassed via parser differentials |
 | [Self-hosted LLM front-end, gateway & RAG-UI app-layer advisories](TRENDS.md#trends) | seed | [2026-10-29](https://github.com/advisories/GHSA-mm82-q33r-3rjw) — IBM Langflow OSS: 25 GHSAs incl. 6 Critical (CVSS 9.8) RCE/auth-bypass |
@@ -68,4 +65,4 @@ their significance. It tracks artifacts — it is not a runbook and stores no op
 payloads or jailbreak strings.
 
 ---
-[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-06.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
+[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-06.md) · [Latest weekly](reports/weekly/2026-W45.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
