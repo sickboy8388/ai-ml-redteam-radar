@@ -149,3 +149,20 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-09 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12199–b12211 Nov 8, no security fixes; MoE cache, radix Top-K determinism, UTF-8 sanitization in PEG tool call args). Ollama/vLLM/LocalAI release pages timed out (504); web search confirms Ollama still v0.40.15, vLLM still v0.33.0.
+- opened: NVD API keyword sweeps — ollama (0), llama.cpp (0), vllm (0), sglang (0), LocalAI (0), lmdeploy (1 = CVE-2026-119706 already cited), langflow (1 = CVE-2026-97677 from existing batch). All zero new since Oct 30.
+- opened: GHSA langflow (no new reviewed advisories after Oct 29).
+- opened: arXiv cs.CR recent (Sun 9 Nov listing, ≥13 on-axis papers) — abstracts opened: 2611.09721 (MemoryDojo, cited), 2611.09113 (Authorization Drift, cited), 2611.08811 (Thought Injection 50% ASR, cited), 2611.09734 (GuardrailAgent EMNLP 2026, 93.9% detection), 2611.09446 (Logit Laundering CCS 2026), 2611.09348 (Feedback-as-Backdoor), 2611.08516 (Aegis OS, cited in study_shelf), 2611.08845 (Jev guardrail), 2611.08752 (AttentionSwitch), 2611.08711 (RL-ATTACK), 2611.09658 (DP-GraphRAG), 2611.09607 (ReplayAudit).
+- opened: arXiv cs.CL recent (Mon 9 Nov listing) — 5 on-axis: 2611.08905 (subagent authorization from skills), 2611.08780 (guardrail erosion in fine-tuned LLMs), 2611.08711 (RL-ATTACK cross-listed), 2611.08639 (forcing letter suppresses refusal), 2611.09721 (MemoryDojo cross-listed).
+- opened: Wiz blog index — no new posts after Nov 3.
+- opened: Sysdig blog index + "What one organization revealed about AI agent risk" (Nov 4, correct URL: /blog/a-first-look-under-the-hood-of-ai-agents; queued).
+- opened: Trail of Bits blog — no AI-security posts after Nov 6.
+- opened: Anthropic research index — no new posts after Nov 2.
+- opened: huntr.com index — no new AI/ML disclosures in Nov 2026.
+- web search (triage): Ollama/vLLM latest releases Nov 2026; Sysdig agent risk post URL; GitHub new LLM red team / MCP security tools Nov 2026.
+- not opened this run: Microsoft AI Red Team (404), OpenAI (not attempted, persistently 403), Protect AI (not attempted, persistently 404), HiddenLayer (not attempted, persistently 404), Elastic, GHSA open-webui (504), GHSA vllm (504), arXiv cs.CR Nov 3-4 listings (not attempted), r/LocalLLaMA (degraded 7+ runs), awesome-lists, ATLAS.
+- degraded: Microsoft AI Red Team blog — HTTP 404 (2nd consecutive daily).
+- degraded: GHSA open-webui and vllm listings — HTTP 504 (GitHub timeout).
+- degraded: Sysdig "What one org revealed" at old URL (/blog/what-one-organization-revealed-about-ai-agent-risk) — HTTP 404; opened via correct slug found in web search.
