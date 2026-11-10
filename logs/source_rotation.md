@@ -149,3 +149,24 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-10 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12145–b12244, Nov 7-10, no security fixes, /v1/audio/speech endpoint, Gemma 4 audio), Ollama/releases (v0.40.16 Nov 9, no security fixes, Qwen3.8 Flash memory, CUDA 13.5 ARM), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.6), Unsloth/releases (v0.1.916-beta Nov 6, two-GPU image/video 2x, LTX-2.5 GGUF Q8_0 10% faster), transformers/releases (still v5.22.1), PyRIT/releases (still v1.1.0).
+- opened: NVD keyword sweeps (ollama, vllm, llama.cpp, sglang, LM Studio, text-generation-inference, LocalAI, lmdeploy; Nov 1-10 window) — 1 hit: LMDeploy CVE-2026-123818 (CVSS 7.5 SSRF, published Nov 9). All others returned 0.
+- opened: NVD CVE detail page for CVE-2026-123818 (full description, references, CVSS confirmed).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (no new since Oct 28), open-webui (no new since Oct 13), langflow (1 new: GHSA-54m9-hhxp-c88f CVE-2026-97677 High 8.1, Nov 8, path traversal), sglang (no new since Oct 19).
+- opened: GHSA advisory page GHSA-54m9-hhxp-c88f (full details).
+- opened: arXiv cs.CR recent (Mon 9 Nov listing, 35 entries + Fri 6 Nov partial) — ≥10 on-axis papers; abstracts opened: 2611.09734 (GuardrailAgent), 2611.09721 (MemoryDojo), 2611.09113 (Authorization Drift), 2611.08811 (Thought Injection), 2611.08745 (ModelShield), 2611.08768 (Conflux), 2611.08516 (Aegis OS), 2611.09348 (backdoor skill formation), 2611.09446 (Logit Laundering, CCS 2026), 2611.08711 (RL-ATTACK), 2611.09607 (ReplayAudit).
+- opened: arXiv cs.CL recent (Mon 9 Nov listing, first 50 of 78) — 5 on-axis papers identified: 2611.09721 (MemoryDojo, cross-listed), 2611.08905 (subagent authorization), 2611.08711 (RL-ATTACK), 2611.08639 (forcing letter suppresses refusal), 2611.08780 (guardrail erosion in fine-tuned LLMs).
+- opened: Wiz blog index — 1 new post: "Trusted by Default: Qubole Cross-Account Access" (Nov 9, not AI-specific).
+- opened: Sysdig blog index — no new posts since Nov 5.
+- opened: Trail of Bits blog — no new AI-security posts since Nov 6.
+- opened: Anthropic research index — 1 new post: "Testing Claude on real-world electronics design" (Nov 9, not security).
+- opened: DeepMind blog — no new AI-security posts.
+- opened: huntr.com index — no new Nov 2026 advisories visible.
+- web search (triage): GitHub "llm red team" / "mcp security" / "agent security" tool 2026; HN LLM security November 2026; awesome-llm-security / awesome-ai-security.
+- tool discovery: agent-audit (HeadyZhang/agent-audit, 245 stars, MIT, OWASP Agentic Top 10 mapping) — repo page opened, queued.
+- not opened this run: Microsoft AI Red Team (persistently 404), OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera (low yield), Elastic (no AI evidence), ATLAS (blocked by session scope), arXiv cs.CR Nov 3-4 listings (not re-attempted), awesome-lists (no confirmed Nov updates).
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
+- degraded: Microsoft AI Red Team blog — not re-attempted (404 since Nov 6).
+- community pulse: HN — no on-axis threads found for Nov 7-10; r/LocalLLaMA degraded.
