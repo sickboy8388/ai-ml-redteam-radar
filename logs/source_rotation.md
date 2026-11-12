@@ -149,3 +149,21 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-12 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12302–b12317 Nov 12, b12307 Metal OOB read fix SOLVE_TRI kernel), Ollama/releases (v0.40.14–v0.40.17-rc0 Nov 3-12, no security fixes), vLLM/releases (still v0.33.0 Nov 2), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.6 Oct 31), Unsloth/releases (v0.1.915–0.1.917-beta Nov 4-11: FP8 LoRA, 2-8x faster generate on consumer GPUs, .safetensors-only NVFP4 loading), transformers/releases (v5.22.2 Nov 6: Jinja sandbox hardening), PyRIT/releases (still v1.1.0).
+- opened: NVD keyword sweeps — ollama (0), vllm (0), llama.cpp (0), lmdeploy (1: CVE-2026-123818 SSRF, CVSS 7.5), sglang (0). CVE-2026-123818 detail page opened + GHSA-39wr-7q6h-cf68 opened.
+- opened: GHSA search listings — ollama (no new since Oct 23), vllm (no new since Oct 28), langflow (1 new: GHSA-54m9-hhxp-c88f Nov 8 CVSS 8.1 path traversal), open-webui (no new since Oct 13), sglang (no new since Oct 19).
+- opened: arXiv cs.CR recent (Wed 11 Nov listing, 31 entries) — 7 on-axis papers; abstracts opened: 2611.13960 (ActiveSecHarness), 2611.14061 (RAG geometric access control), 2611.13684 (BypassGym EDR evasion), 2611.13367 (impossibility theorem agent gatekeeping), 2611.13577 (TERM jailbreak defense), 2611.14143 (GARD backdoor defense), 2611.13491 (federated learning backdoor detection).
+- opened: huntr.com index — no dated Nov 2026 advisories visible; active "Blind Trust" challenge.
+- opened: Wiz blog index — 4 posts since Nov 6: "Critical RCE in Apache HTTP Server" (Nov 11), "How to Evaluate AI Agent Cybersecurity Capabilities" (Nov 10, direct URL 404), "Trusted by Default: Qubole" (Nov 9), ISMAP (Nov 10, off-axis).
+- opened: Sysdig blog index — no new posts since Nov 5.
+- opened: Anthropic research index — no new AI security posts since Oct 27 (Nov 9 electronics design, Nov 6 scientific models, Nov 6 agent memory: not on-axis).
+- opened: Trail of Bits blog — no new AI-security posts (Nov 6 Binance signing: blockchain).
+- web search (triage): r/LocalLLaMA Nov 2026; MCP server security Nov 2026; LLM red team tool Nov 2026; consumer GPU inference ExLlamaV3 Nov 2026; awesome-llm-security updates.
+- not opened this run: Microsoft AI Red Team (404 degraded), OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera (no dated posts), Elastic (no AI evidence prior), ATLAS (repo blocked), arXiv cs.CL, arXiv cs.CR Nov 7-10 listings (400/404), r/LocalLLaMA (degraded 7+ runs), awesome-lists (checked via search only).
+- degraded: Microsoft AI Red Team blog — HTTP 404 (2nd consecutive run).
+- degraded: Wiz "How to Evaluate AI Agent Cybersecurity Capabilities" — direct URL 404.
+- degraded: arXiv cs.CR day-specific listing pages — HTTP 400 (tried /2026-11-10 and /2026-11-07).
+- degraded: arXiv cs.CR monthly page /2611 — HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs, no new access method).
