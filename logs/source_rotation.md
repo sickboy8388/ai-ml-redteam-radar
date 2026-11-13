@@ -149,3 +149,22 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-13 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12323–b12345 Nov 12-13; b12340 SSRF fix PR #32115 CORS proxy + media URLs; b12336 buffer overflow fix F64 tensor), Ollama/releases (v0.40.16 Nov 9, v0.40.17-rc0 Nov 10, no security fixes), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.6), Unsloth/releases (v0.1.917-beta Nov 11: INT8/FP8 on older NVIDIA, FLUX VRAM reduction, video fine-tune), transformers/releases (no new since v5.22.1), PyRIT/releases (still v1.1.0).
+- opened: NVD API keyword sweeps — ollama (0 results Nov), llama.cpp (0), vllm (0), sglang (0), lmdeploy (1: CVE-2026-123818 SSRF, CVSS 7.5), LM Studio (0), langflow (1: CVE-2026-97677, already in GHSA). NVD CVE detail page opened for CVE-2026-123818.
+- opened: GHSA listings — ollama (no new since Oct), vllm (no new since Oct 28), open-webui (no new since Oct 13), langflow (1 new: GHSA-54m9-hhxp-c88f Nov 8, CVE-2026-97677), litellm (3 new Oct 27, late capture: GHSA-g5ff-637f-6q2m, GHSA-7hp6-4w63-5g45, GHSA-hhww-mrg2-969h). Individual advisory pages opened: GHSA-54m9-hhxp-c88f, GHSA-39wr-7q6h-cf68.
+- opened: arXiv cs.CR recent (Nov 10-11 listings, ~124 entries visible of ~200+) — 9 on-axis papers; abstracts opened: 2611.12155 (StealthyPoison), 2611.13367 (finite rulebook impossibility), 2611.13960 (ActiveSecHarness), 2611.14061 (RAG geometric access control), 2611.12241 (SNAPRAG), 2611.12386 (Say Shibboleth), 2611.13684 (BypassGym), 2611.12807 (LoRA backdoor suppression), 2611.12604 (double-blind AI safety evals).
+- opened: arXiv cs.CL recent (Nov 13 listing, first 50 of 135) — 2 borderline on-axis: 2611.16183 (data-efficient safety alignment), 2611.17280 (synthesis smuggling).
+- opened: Microsoft Security Blog index — 3 new AI-security posts: "ARTEX abuse expands" (Nov 6, cited in agentic-offensive-ops-001), "Detecting sleeper agents" (Nov 10, study_shelf), "Trained to betray" (Nov 12, cited in ai-supplychain-001). All 3 individual posts opened.
+- opened: Wiz blog index — "How to Evaluate AI Agent Cybersecurity Capabilities" (Nov 10, listed but URL 404).
+- opened: Sysdig blog index — no new posts since Nov 5.
+- opened: Trail of Bits blog — no new AI-security posts since Nov 2.
+- opened: Anthropic research index — "Testing Claude on real-world electronics design" (Nov 9, not on-axis).
+- opened: huntr index — no new AI/ML disclosures visible.
+- opened: llama.cpp PR #32115 (SSRF fix details verified).
+- web search (triage): Microsoft ARTEX/Storm-3358 (secondaries confirmed Nov 5-6 Microsoft posts); HN LLM security Nov 2026 (no relevant results); GitHub agentic red-team tools 2026 (opfor, Decoy, AgentNull, mcp-armor found).
+- not opened this run: OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera, Elastic, ATLAS, arXiv cs.CR Nov 3-4/7-9/12-13 (rate limited/timeout), r/LocalLLaMA (degraded 7+ consecutive runs), awesome-lists, DeepMind.
+- degraded: arXiv cs.CR Nov 12 — HTTP 429; Nov 13 — timeout.
+- degraded: Wiz "How to Evaluate AI Agent Cybersecurity Capabilities" — HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
