@@ -149,3 +149,19 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-14 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12364-b12375 + v1.0.0, Nov 13-14; v1.0.0 security hardening: DNS rebinding, CORS SSRF, child instance access, HF_TOKEN, unauthenticated tools), Ollama/releases (v0.40.16 Nov 9, v0.40.17-rc0 Nov 10; no security fixes), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.7 Nov 13: split-device quant, pipelined prefill), Unsloth/releases (v0.1.916-917-beta Nov 6-11: Qwen3.8-27B Dynamic GGUFs, INT8/FP8 on older NVIDIA, FLUX VRAM reduction), PyRIT (still v1.1.0).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (6 new Nov 13: GHSA-gm8j-8578-p8q4, GHSA-h8w4-vgpr-474w, GHSA-8hqr-48h6-r93j, GHSA-cj94-896r-fxx6, GHSA-pjrq-r86m-9r53, GHSA-292g-3f4p-4ffc; 3 High), open-webui (no new since Oct 13), langflow (1 new: GHSA-54m9-hhxp-c88f Nov 8, High CVE-2026-97677 path traversal). Individual advisory pages opened: GHSA-gm8j-8578-p8q4, GHSA-h8w4-vgpr-474w, GHSA-54m9-hhxp-c88f.
+- opened: NVD API keyword sweeps — ollama (0), llama.cpp (0), vllm (6 new, CVE-2026-126394..126399), lmdeploy (1 new: CVE-2026-123818 SSRF CVSS 7.5, detail page opened), sglang (0), LM Studio (0).
+- opened: arXiv cs.CR recent (Fri 13 Nov listing, 70 entries; + Nov 10-12 via skip=70/120) — ≥30 on-axis papers identified; abstracts opened: 2611.14978 (QHijack-LoRA), 2611.15118 (Lazarus dormant neuron backdoor), 2611.17115 (CapLite SLM agent defense), 2611.14864 (abstention manipulation), 2611.14548 (SideTaskBench coding agents), 2611.16693 (MobileProbe, NDSS 2027), 2611.16122 (Intent-Aware Protection), 2611.11720 (ShadowBench-MCP), 2611.11104 (MCP vulnerability dataset), 2611.10843 (Agents of Chaos SoK), 2611.13367 (impossibility theorem), 2611.13960 (ActiveSecHarness), 2611.12155 (StealthyPoison).
+- opened: Wiz blog index (6 new posts Nov 9-13: Green Agent, ASPM pt3, Apache CVE, AI agent eval, ISMAP, Qubole cross-account); Wiz Cyber Model Arena benchmark page (Feb 2026, 257 challenges).
+- opened: Sysdig blog index (1 new: Apache CVE Nov 13, not AI-specific).
+- opened: Trail of Bits blog (no new AI posts since Nov 6).
+- opened: Anthropic research index (1 new: "Building strong safety evaluations" Nov 13).
+- opened: huntr.com index (no new AI disclosures Nov 7-14).
+- not opened this run: Microsoft AI Red Team (persistently 404), OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), DeepMind, Lakera, Elastic, ATLAS, arXiv cs.CL, transformers/releases, r/LocalLLaMA, awesome-lists.
+- degraded: Anthropic "Building strong safety evaluations" direct URL — HTTP 404 (title visible on index).
+- degraded: Wiz "How to Evaluate AI Agent Cybersecurity Capabilities" direct URL — HTTP 404 (found via search as different slug).
+- degraded: arXiv cs.CR date-specific listing URLs — HTTP 400 (used skip pagination instead).
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
