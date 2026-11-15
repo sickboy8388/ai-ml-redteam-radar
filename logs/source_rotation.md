@@ -149,3 +149,22 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-15 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12394–b12403 Nov 15, Vulkan FA optimizations, cooperative softmax, no security fixes), Ollama/releases (v0.40.16 Nov 9 Latest + v0.40.17-rc0 Nov 10, no security fixes), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.7 Nov 13: pipelined prefill, split-device quant fixes), Unsloth/releases (v0.1.916 Nov 6 + v0.1.917 Nov 11: Qwen3.8-27B GGUFs, Claude Code/Codex MLX, metadata host blocking), transformers/releases (v5.22.2 Nov 6 Jinja sandbox hardening + v5.23.0 Nov 13 Inkling2/LFM3), PyRIT/releases (v1.2.0 Nov 13: CoPyRIT GUI, GOAT, jailbreak techniques, GitHub Copilot target).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (7 new advisories Nov 13-15: 3 High CVE-2026-126397/126399/126398, 3 Moderate, 1 Low; individual pages opened for GHSA-gm8j-8578-p8q4 and GHSA-h8w4-vgpr-474w), langflow (1 new: GHSA-54m9-hhxp-c88f High Nov 8), open-webui (no new since Oct 13), llama.cpp (no new since Oct 29).
+- opened: NVD API — vllm keyword (7 CVEs Nov 13, matching GHSA batch), sglang (0 results). llama.cpp keyword: curl returned empty response. ollama keyword: timed out.
+- opened: arXiv cs.CR recent (Fri 13 Nov listing, first 50 of 70) — ≥13 on-axis papers identified; abstracts opened: 2611.14978 (QHijack-LoRA quantized adapter hijacking), 2611.14864 (abstention manipulation 86.3%), 2611.14808 (OverServe 93.88× resource amplification), 2611.15118 (Lazarus dormant-neuron backdoor 98.8%), 2611.14548 (SideTaskBench 40% unauthorized delivery), 2611.17115 (CapLite PI defense for SLMs), 2611.16158 (PolicySniff GPU side-channel 94.17%), 2611.16693 (MobileProbe), 2611.16122 (Intent-Aware Protection), 2611.15102 (fake news forecasting), 2611.14950 (sandbagging detection), 2611.15013 (LLM unlearning proxy threat), 2611.16048 (privacy leakage from recurrent state).
+- opened: arXiv cs.CL recent (Fri 13 Nov listing, first 50 of 135) — 2 borderline on-axis: 2611.17280 (Synthesis Smuggling), 2611.16183 (LLM safety alignment features).
+- opened: Wiz blog index + Cyber Model Arena benchmark methodology (Nov 10, cited in queue).
+- opened: Sysdig blog index + "A first look under the hood of AI agents" (Nov 4, cited in queue).
+- opened: Anthropic research index + "Building strong safety evaluations" (Nov 13, methodology recs).
+- opened: Trail of Bits blog — no new AI-security posts (backporting with Codex Nov 2 not on-axis).
+- opened: huntr index — no new AI/ML advisories in Nov 2026 window; "Blind Trust" challenge active.
+- web search (triage): r/LocalLLaMA Nov 2026 (Qwen open-source pledge, DeepSeek-V4.1 1-bit coder, Qwen4 model name leak); LLM red team / MCP security new tools 2026 (AgentSploit, MCPFang, AI-Infra-Guard, mcp-armor, The Red Council, T-MAP, AgentNull discovered — repos not opened).
+- not opened this run: Microsoft AI Red Team (404), OpenAI (not attempted, persistently 403), Protect AI (not attempted, persistently 404), HiddenLayer (not attempted, persistently 404), Lakera, Elastic, ATLAS, arXiv cs.CR Nov 10-12 and 14-15 listings (only Nov 13 rendered), arXiv cs.CR Nov 13 entries 51-70, r/LocalLLaMA (degraded 7+ runs), awesome-lists, NVD ollama/llama.cpp keywords.
+- degraded: Microsoft AI Red Team blog — HTTP 404 (3+ consecutive runs).
+- degraded: NVD API llama.cpp keyword — empty response; ollama keyword — timeout.
+- degraded: Wiz "How to Evaluate AI Agent Cybersecurity Capabilities" direct URL — 404 (correct URL found via search as cyber-model-arena-ai-benchmark).
+- degraded: Sysdig "What one organization revealed" direct URL — 404 (correct URL found as a-first-look-under-the-hood-of-ai-agents).
+- degraded: r/LocalLLaMA — not attempted (degraded 7+ consecutive runs).
