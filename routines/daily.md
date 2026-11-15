@@ -28,6 +28,14 @@ FULL CHECK; there is no "light pass". Separate CHECK from EXTRACT:
 - **CVE / advisory watch** — new CVEs & advisories (NVD recent, GHSA, huntr) affecting the
   AI/ML stack: inference servers, model formats/deserialization, vector DBs, agent
   frameworks, MCP tooling; note whether a public PoC exists (link only).
+  **NVD keyword sweep (amended W46):** run NVD API keyword searches for `ollama`, `llama.cpp`,
+  `vllm`, `lmdeploy`, `"LM Studio"`, `sglang` with `pubStartDate`/`pubEndDate` covering
+  last 14 days; sleep ~6s between calls to respect rate limits. NVD surfaced 5+ CVEs that
+  GHSA listings missed (W45 signal).
+- **1b engineering-stack check (amended W46):** check the release pages of ExLlamaV3,
+  Unsloth, and transformers for quantization/consumer-GPU news; note any release with VRAM
+  savings, new quant formats, or consumer-GPU-relevant performance changes. Route to
+  study_shelf or queue. Signal: zero 1b ledger coverage in 7+ weeks.
 - **Paper scan** — arXiv recent listings per SOURCES.md; open abstracts of on-axis papers
   (jailbreaks, prompt injection, agent security, model extraction/stealing, backdoors,
   local-model safety). A strong paper goes to `study_shelf`; clusters go to the ledger.
