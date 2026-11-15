@@ -149,3 +149,13 @@ logs/source_rotation.md
 - opened: NVD API (keyword sweeps ollama, llama.cpp, vllm, sglang, lmdeploy, text-generation-inference, LocalAI, LM Studio; 2 CVE detail pages cited), huntr index, Lakera blog index, Elastic Security Labs index.
 - degraded: MITRE ATLAS GitHub repo — 403 (session scope); StepSecurity — not opened.
 - week coverage: only daily 2026-11-06 ran (1/7).
+
+## 2026-11-15 (weekly)
+- opened: GHSA listings (ollama, vllm, open-webui, langflow, litellm, llama.cpp, sglang, lmdeploy); vLLM 7 new GHSAs Nov 13-15 (3 High), Langflow 1 new Nov 8 (High).
+- opened: tool repos — llama.cpp/releases (b12394-b12403, Nov 15), Ollama/releases (v0.40.16 Nov 9, v0.40.17-rc0 Nov 10), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (v1.6.7 Nov 13), Unsloth/releases (v0.1.916-0.1.917 Nov 6-11), transformers/releases (v5.22.2 Nov 6, v5.23.0 Nov 13), PyRIT/releases (v1.2.0 Nov 13).
+- opened: NVD API (vllm keyword: 7 CVEs Nov 2026; sglang: 0; ollama: 503 service unavailable on first attempt).
+- opened: arXiv cs.CR recent (Nov 13 listing, 50/70 entries loaded) — ≥7 on-axis papers, 6 abstracts opened (2611.14978, 2611.15118, 2611.14864, 2611.14808, 2611.14548, 2611.16693) + 2 more (2611.16565, 2611.15102, 2611.16122).
+- opened: Wiz blog (6 new posts Nov 7-13; Cyber Model Arena benchmark Nov 10 opened and cited), Sysdig blog (no new AI posts since Nov 6), Anthropic research (1 new: "Building strong safety evaluations" Nov 13), Trail of Bits blog (no new AI posts since Nov 6).
+- degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
+- not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
+- week coverage: 0/7 dailies ran; weekly opened ~22 sources.
