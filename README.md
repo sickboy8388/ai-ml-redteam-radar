@@ -16,12 +16,12 @@ standards — curated for a red team operator working with local models. Derived
 - **local-inference-001** (accelerating, held): vLLM Nov 13 batch — 7 new GHSAs incl. 3 High (max_patches DoS 8.7, GPUModelRunner crash 8.2, video exhaustion 7.1); W45 demotion caveat averted.
 - **ai-supplychain-001** (emerging, held): QHijack-LoRA (adapter hijacks quantized deployments) + Lazarus (dormant-neuron backdoor, 98.8% ASR) — two new supply-chain attack vectors.
 - **agentic-injection-001** (accelerating, held): OverServe MCP amplification 93.88x, abstention manipulation 86.3%, SideTaskBench unauthorized side-tasks 40%. Paper velocity ≥10/week for 4th week.
-- **agentic-offensive-ops-001** (seed, held): Wiz Cyber Model Arena benchmarks 59 offensive AI agents (77.2% top solve rate); still needs second-org primary.
-- **Queue**: 8 live; anchoring warning partially cleared (50% off-axis).
+- **agentic-offensive-ops-001** PROMOTED seed→emerging: Elastic Security Labs published deep analysis of 5 AI attack frameworks (ARTEX, CyberStrikeAI, Cairn, PentAGI, HexStrike) and first documented CyberStrikeAI AWS campaign; ≥4 independent orgs.
+- **Queue**: 8 live; anchoring warning partially cleared (57% off-axis).
 
 ## Trends
 
-seed 1 · emerging 2 · accelerating 2 · mainstreaming 0 · dormant 0
+seed 0 · emerging 3 · accelerating 2 · mainstreaming 0 · dormant 0
 
 | Trend | Stage | Latest signal |
 |---|---|---|
@@ -29,7 +29,7 @@ seed 1 · emerging 2 · accelerating 2 · mainstreaming 0 · dormant 0
 | [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)](TRENDS.md#trends) | accelerating | [2026-11-13](https://arxiv.org/abs/2611.14808) — OverServe: MCP tool-prompt co-design amplifies SaaS agent API requests up to 93.88x |
 | [AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)](TRENDS.md#trends) | emerging | [2026-11-13](https://arxiv.org/abs/2611.14978) — QHijack-LoRA: disguised adapter dormant at full precision, activates under quantization; consumer-GPU relevant |
 | [Self-hosted LLM front-end, gateway & RAG-UI app-layer advisories](TRENDS.md#trends) | emerging | [2026-11-08](https://github.com/advisories/GHSA-54m9-hhxp-c88f) — IBM Langflow CVE-2026-97677 (High 8.1): path traversal → arbitrary file read/write |
-| [Autonomous AI-agent offensive operations & LLMjacking campaigns](TRENDS.md#trends) | seed | [2026-11-10](https://www.wiz.io/blog/cyber-model-arena-ai-benchmark) — Wiz Cyber Model Arena v3.9: 59 agents, top 77.2% solve rate on 327 offensive tasks |
+| [Autonomous AI-agent offensive operations & LLMjacking campaigns (ARTEX, CyberStrikeAI)](TRENDS.md#trends) | emerging | [2026-11-13](https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex) — Elastic Security Labs: 5 AI attack frameworks analyzed; ARTEX attributed to Storm-0940; GTIG+Mandiant confirmed in IR |
 
 ## Tools & releases
 
