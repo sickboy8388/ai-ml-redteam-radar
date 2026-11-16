@@ -2,22 +2,22 @@
 
 ![trends](https://img.shields.io/badge/trends-5-3266ad?style=flat-square)
 ![accelerating](https://img.shields.io/badge/accelerating-2-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--15-2f9e44?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-16-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--16-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-11-15, weekly)
+## Since last scan (2026-11-16, daily)
 
-- **llm-frontend-001** PROMOTED seed→emerging: Langflow CVE-2026-97677 (High, path traversal) adds to 25-GHSA Oct 29 batch; ≥6 projects, ≥3 orgs, trend bar met.
-- **local-inference-001** (accelerating, held): vLLM Nov 13 batch — 7 new GHSAs incl. 3 High (max_patches DoS 8.7, GPUModelRunner crash 8.2, video exhaustion 7.1); W45 demotion caveat averted.
-- **ai-supplychain-001** (emerging, held): QHijack-LoRA (adapter hijacks quantized deployments) + Lazarus (dormant-neuron backdoor, 98.8% ASR) — two new supply-chain attack vectors.
-- **agentic-injection-001** (accelerating, held): OverServe MCP amplification 93.88x, abstention manipulation 86.3%, SideTaskBench unauthorized side-tasks 40%. Paper velocity ≥10/week for 4th week.
-- **agentic-offensive-ops-001** PROMOTED seed→emerging: Elastic Security Labs published deep analysis of 5 AI attack frameworks (ARTEX, CyberStrikeAI, Cairn, PentAGI, HexStrike) and first documented CyberStrikeAI AWS campaign; ≥4 independent orgs.
-- **Queue**: 8 live; anchoring warning partially cleared (57% off-axis).
+- **All 5 trends held** — no stage changes today. Quiet day across vendor blogs and advisory feeds.
+- **arXiv cs.CR Nov 16**: 5 on-axis papers from independent groups — LinEra agent memory erasure (0/71 secrets recovered), SecMAS multi-agent defense, DGA jailbreak >95% ASR, GPU hidden state forensics, LLM weight-space backdoors.
+- **vLLM** CVE-2026-129356 (Low, CVSS4 1.3, race condition in KV-cache manager) — not significant.
+- **llama.cpp** b12404-b12430: no security fixes; b12427 skips MCP discovery for router children.
+- **NVD degraded**: HTTP 503 across all keyword searches this run.
+- **Queue**: 16 live (+3); study_shelf: +2 picks.
 
 ## Trends
 
@@ -33,9 +33,9 @@ seed 0 · emerging 3 · accelerating 2 · mainstreaming 0 · dormant 0
 
 ## Tools & releases
 
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — b12403 (2026-11-15); Vulkan FA optimizations, Hexagon HVX kernels; security floor: ≥b9061 (CVE-2026-43631 UAF); note: 5 of 10 Cyera-disclosed bugs still unpatched
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — b12430 (2026-11-16); MoE HIP regression fix, MCP discovery skip for router children; security floor: ≥b9061 (CVE-2026-43631 UAF); note: 5 of 10 Cyera-disclosed bugs still unpatched
 - **[Ollama](https://github.com/ollama/ollama)** — v0.40.16 (2026-11-09, Qwen3.8 Flash memory savings, CUDA 13.5 ARM); security floor: ≥0.35.0 (CVE-2026-103663 path traversal)
-- **[vLLM](https://github.com/vllm-project/vllm)** — v0.33.0 (2026-11-02); 7 new GHSAs Nov 13 (3 High); security floor: ≥0.31.0 (CVE-2026-114053 code injection)
+- **[vLLM](https://github.com/vllm-project/vllm)** — v0.33.0 (2026-11-02); 7 new GHSAs Nov 13 (3 High) + 1 Low Nov 15; security floor: ≥0.31.0 (CVE-2026-114053 code injection)
 - **[LocalAI](https://github.com/mudler/LocalAI)** — v4.12.1 (2026-10-23, security-only: SSRF hardening, redirect hop validation)
 - **[garak](https://github.com/NVIDIA/garak)** — v0.17.1 (2026-10-16)
 - **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.125.1 (2026-10-25); note: acquired by OpenAI (Mar 2026), open-source maintained
@@ -46,6 +46,8 @@ seed 0 · emerging 3 · accelerating 2 · mainstreaming 0 · dormant 0
 
 ## Worth studying
 
+- [Forget the Lineage: LinEra Cryptographic Erasure for LLM-Agent Memory](https://arxiv.org/abs/2611.18133) — arXiv (2026-11-13): one key puncture erases entire derivation lineage; 0/71 secrets recovered vs 70/71 with ordinary deletion. Essential for securing LLM agent memory stores.
+- [Can LLMs Write Backdoors? Weight-Space Programming Security](https://arxiv.org/abs/2611.17395) — arXiv (2026-11-12): LLMs inject backdoors via NL-instructed weight edits — 6 params for MLP, 0.02% for Qwen2.5-0.5B. New capability threat for model supply chains.
 - [Look Here, Then Decide: Small Decision Models Find Memory-Safety Vulns at Scale on Commodity GPUs](https://arxiv.org/abs/2611.16565) — arXiv (2026-11-13): Intern-Decision-4B on GB10/RTX 4090 searched 4,000+ projects, confirmed 187 findings (12 critical); 9.8 decisions/sec on consumer GPU.
 - [SideTaskBench: Measuring Unauthorized Side-Task Delivery in Coding Agents](https://arxiv.org/abs/2611.14548) — arXiv (2026-11-13): coding agents deliver unauthorized work ~40% of the time; rises to 57% when mechanisms overlap. Test for agent authorization boundaries.
 - [Analysis of Local Open-Weight LLM Agents on Vulnerability-Reproduction Tasks](https://arxiv.org/abs/2611.06257) — arXiv (2026-11-04): 12 local configs (4B–27B) on CyberGym vuln-reproduction tasks; quantization doesn't change solvability, MoE faster. Directly relevant for red-teaming with consumer GPUs.
@@ -68,4 +70,4 @@ their significance. It tracks artifacts — it is not a runbook and stores no op
 payloads or jailbreak strings.
 
 ---
-[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-06.md) · [Latest weekly](reports/weekly/2026-W46.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
+[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-16.md) · [Latest weekly](reports/weekly/2026-W46.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)

@@ -159,3 +159,14 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-16 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12404-b12430, Nov 15-16, no security fixes; b12427 MCP discovery skip, b12430 MoE HIP regression fix), Ollama/releases (still v0.40.16), vLLM/releases (still v0.33.0), LocalAI/releases (still v4.12.1, dev-master Nov 15), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), PyRIT/releases (still v1.2.0), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (still v0.1.917), transformers/releases (still v5.23.0).
+- opened: GHSA search listings — vllm (1 new: GHSA-fj8v-85jv-jwpv Low CVSS4 1.3, Nov 15), ollama (no new), langflow (no new since Nov 8), llama.cpp (no new), open-webui (no new), sglang (no new), lmdeploy (no new), litellm (no new).
+- opened: arXiv cs.CR recent (Mon 16 Nov listing, 31 entries) — 5 on-axis papers; abstracts opened: 2611.18272 (GPU hidden state forensics), 2611.18133 (LinEra agent memory erasure), 2611.17883 (SecMAS multi-agent defense), 2611.17818 (DGA jailbreak), 2611.17395 (LLM weight-space backdoors).
+- opened: Wiz blog (no new since Nov 13), Elastic Security Labs (no new since Nov 13), Sysdig blog (no new since Nov 13), Anthropic research (no new since Nov 13), Trail of Bits blog (no new since Nov 6).
+- opened: huntr.com (no new AI/ML disclosures), OWASP genai.owasp.org ("Securing Agentic Applications V2" Nov 2026 noted).
+- opened: awesome-ai-security-tools list (5 tools updated Nov 2026: cfgaudit, Pipelock, Cognipeer Console, mu, Sage — all MCP/agent security; dates unverifiable).
+- degraded: NVD API — HTTP 503 across all 5 keyword searches (ollama, vllm, llama.cpp, sglang, lmdeploy). Microsoft AI Red Team blog — HTTP 404.
+- degraded: r/LocalLLaMA — not attempted (degraded 8+ consecutive runs). OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). MITRE ATLAS — not attempted (session scope).
+- not opened this run: DeepMind, Lakera, arXiv cs.CL listing.
