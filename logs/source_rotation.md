@@ -159,3 +159,15 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-17 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12404–b12464, Nov 17, OpenCL A7 kernels, multimodal additions, web UI renamed; no security fixes), Ollama/releases (v0.40.17-rc1 Nov 10, pre-release; no security fixes), vLLM/releases (v0.34.0 Nov 16: extensible KV cache default, security fixes: ReDoS, chat template gating, audio bounding), LocalAI/releases (dev-master Nov 15, no security), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-beta Nov 16: MiniMax-H3-Image GGUF for smaller GPUs), transformers/releases (still v5.23.0), PyRIT/releases (still v1.2.0).
+- opened: GHSA listings (ollama, vllm, langflow, llama.cpp, open-webui, sglang) — 1 new Low vLLM advisory CVE-2026-129356 (Nov 15); no other new advisories since Nov 15.
+- opened: NVD API keyword sweeps (vllm, ollama, llama.cpp, lmdeploy, sglang, LM Studio; 14-day window) — no new CVEs beyond Nov 15 batch.
+- opened: arXiv cs.CR recent (Mon Nov 16 listing, 31 entries) — 6 on-axis papers, 5 abstracts opened: 2611.17818 (DGA jailbreak >95% ASR, 11 models), 2611.17395 (LLMs write backdoors via WSP, <0.02% weights), 2611.17883 (SecMAS multi-agent defense), 2611.18133 (LinEra agent memory erasure, 0/71 secrets recovered), 2611.16158 (PolicySniff GPU side-channel 94.2% accuracy). Also opened: 2611.18272 (GPU hidden state forensics, byte-exact recovery, 0.88 AUROC refusal detection).
+- opened: arXiv cs.CL recent (Mon Nov 16 listing, first 50/62) — no strongly on-axis papers.
+- opened: Wiz blog (1 new: "Introducing Wiz AI Security Agent" Nov 16, product announcement, no threat intel → queued), Sysdig blog (no new AI posts since Nov 13), Elastic Security Labs (no new posts since Nov 13), Trail of Bits blog (no new posts since Nov 6), Anthropic research index (1 new: CVD policy update Nov 16, direct URL 404 → queued).
+- opened: huntr index — no new AI/ML items since Oct 15.
+- web search (discovery): "MCP server security scanner tool November 2026"; "LLM red team tool new release November 2026"; "quantization GGUF consumer GPU 12GB VRAM benchmark November 2026" — no new November-dated tools or benchmarks found.
+- degraded: Anthropic CVD policy post — HTTP 404 on direct URL. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 8+ runs). MITRE ATLAS — not attempted (session scope).
+- not opened this run: Microsoft AI Red Team, DeepMind, Lakera, awesome-lists.
