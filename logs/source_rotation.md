@@ -159,3 +159,18 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-18 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12490-b12500 Nov 18, no security fixes), Ollama/releases (still v0.40.17-rc1), vLLM/releases (v0.34.0 Nov 16, ReDoS fix + chat template trust hardening + input bounds), LocalAI/releases (dev build only), garak/releases (still v0.17.1), promptfoo/releases (still 0.125.1), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-919 Nov 16-17, DeepSeek-V4.1 LoRA/QLoRA, Gemma 4 12B speedup, MiniMax-H3-Image GGUF), transformers/releases (still v5.23.0), PyRIT/releases (still v1.2.0).
+- opened: GHSA search listings — vllm (1 new Low Nov 15: GHSA-fj8v-85jv-jwpv CVE-2026-129356), ollama (none new), langflow (none new since Nov 8), open-webui (none new since Oct 13), sglang (none new), lmdeploy (none new).
+- opened: NVD API keyword sweeps — vllm: 7 CVEs (all Nov 13, already tracked); ollama: 0; llama.cpp: 3 NEW today (CVE-2026-126974/126975/126976, all High ZDI); sglang: 0; lmdeploy: 1 (Nov 9, already tracked); LM Studio: 0. NVD detail pages opened for all 3 llama.cpp CVEs.
+- opened: llama.cpp fix PR #31336 (merged Oct 28, confirms control-vector layer OOB + M-RoPE position loop fixes).
+- opened: arXiv cs.CR recent (Wed 18 Nov + partial Tue 17 Nov listing) — ≥16 on-axis papers; abstracts opened: 2611.22971 (SEAM CUA cross-screen harm 92%), 2611.22888 (long-horizon exploitation SCoRe 67%), 2611.21956 (Nevan system-prompt leakage 82%), 2611.21577 (MCP provider misbinding), 2611.22583 (evolved safety harnesses ASR 50.4%→3.0%), 2611.22186 (4-bit quantization safety), 2611.22292 (visual trust bias MLLM jailbreak), 2611.22243 (KV cache bit flips), 2611.22589 (LLM honeypots vs LLM attackers).
+- opened: Wiz blog index (3 new posts Nov 16-17) + "Microsoft agent-framework Compromised" post (Nov 17, cited: .pth credential stealer, ~200k downloads/month, quarantined).
+- opened: Elastic Security Labs index (no new posts since Nov 13).
+- opened: Sysdig blog index (no new AI posts since Nov 6).
+- opened: Anthropic research index (1 new: disclosure policy update Nov 16, 90→30 days for high/critical).
+- opened: Trail of Bits blog (no new AI posts since Nov 6).
+- web search (triage): "agent-framework" PyPI compromise Nov 2026; LLM red team / MCP security new tools 2026.
+- not opened this run: Microsoft AI Red Team, DeepMind, OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera, huntr, arXiv cs.CL, ATLAS, r/LocalLLaMA (degraded 8+ runs), awesome-lists.
+- degraded: Wiz "Introducing the Wiz AI Security Agent" (Nov 16) — HTTP 404 on direct URL. r/LocalLLaMA — not attempted (degraded 8+ runs). OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded).
