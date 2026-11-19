@@ -159,3 +159,16 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-19 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12500-b12532 Nov 18-19, b12527 security fix GGUF OOB), Ollama/releases (still v0.40.16), vLLM/releases (v0.34.0 Nov 16), LocalAI/releases (v5.0.0 Nov 18, sandboxed bash tool), garak/releases (still v0.17.1), promptfoo/releases (0.126.0 Nov 18), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-v0.1.919 Nov 16-17), transformers/releases (still v5.23.0), PyRIT/releases (v1.2.1 Nov 18).
+- opened: GHSA search listings — llama.cpp (3 new High Nov 18: CVE-2026-126974/126975/126976 ZDI GGUF RCE), vllm (3 new Nov 18: CVE-2026-130684/130685/130686), sglang (1 new High Nov 18: CVE-2026-127222 unauth LoRA injection), ollama (no new), langflow (no new), open-webui (no new), lmdeploy (no new).
+- opened: NVD API keyword sweeps — llama.cpp (3 new CVEs Nov 18), vllm (3 new Nov 15-18), sglang (1 new Nov 18), ollama (0), lmdeploy (0), "LM Studio" (0). ~6s sleep between calls.
+- opened: arXiv cs.CR recent (Nov 15-19 listings, ~40+ on-axis papers) — 28 abstracts opened including 2611.24362 (PIPETTE), 2611.24313 (AutoPI), 2611.24185 (SkillCFI), 2611.24025 (Intent Contracts), 2611.22583 (Evolution Under Fire), 2611.21577 (MCP misbinding), 2611.19764 (compositional exploits), 2611.22971 (SEAM), 2611.22888 (SCoRe), 2611.24276 (KV-cache token recovery), 2611.20291 (cross-tenant cache), 2611.22243 (bit-flip KV), 2611.22186 (4-bit quantization safety), 2611.20045 (deep research agent security), 2611.19886 (risky fallback).
+- opened: arXiv cs.CL recent — 2611.24936 (JDPI jailbreak detector), 2611.24475 (concealment in AI teams).
+- opened: Wiz blog (agent-framework compromise Nov 17 — cited in ai-supplychain-001), Sysdig blog (MCP Server for monitoring Nov 18 — not on-axis), Trail of Bits blog (no new AI posts), Anthropic research (CVD policy timelines Nov 16 — 404 on direct URL, queued), Elastic Security Labs (semantic search for risky AI agent behavior Nov 12 — opened, queued), DeepMind blog (no AI-security posts in Nov).
+- opened: huntr.com index — no new AI/ML advisories.
+- opened: awesome-ai-security-tools list — found Pipelock, Sage, Cognipeer, Ramparts, SkillSpector, Norviq (not individually verified, queued).
+- opened: individual GHSA pages: GHSA-m386-99gj-pq7p (SGLang), GHSA-935v-h6wh-q726 (llama.cpp ZDI), GHSA-6q2w-jx57-7qrg (llama.cpp ZDI).
+- degraded: OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 8+ runs). MITRE ATLAS — not attempted (session scope).
+- not opened: Lakera, arXiv cs.CR Nov 7-12 listings (gap persists), individual GHSA pages for all 3 vLLM Nov 18 CVEs (NVD data used).
