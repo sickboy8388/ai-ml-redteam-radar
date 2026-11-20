@@ -159,3 +159,20 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-20 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12404-b12559, Nov 15-20; b12556 HRM integer overflow security fix), Ollama/releases (v0.40.17-rc2 pre-release Nov 10, v0.40.16 still latest), vLLM/releases (v0.34.0 Nov 16: checkpoint/restore, dep floors), LocalAI/releases (v5.0.0 Nov 18: sandboxed exec, add-ons, default-off perms), garak/releases (still v0.17.1), promptfoo/releases (0.126.0 Nov 18: GPT-6.2/Claude Fable/Gemini 4 models, security hardening), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-920 Nov 16-19: AMD NPU, QLoRA 25% faster, diffusion LoRA 42% faster, MiniMax-H3-Image 8GB), transformers/releases (still v5.23.0), PyRIT/releases (v1.2.1 Nov 18 packaging fix).
+- opened: GHSA search listings — vllm (4 new Nov 15-18: CVE-2026-130684/5/6 + CVE-2026-129356), ollama (no new since Oct), langflow (no new since Nov 8), open-webui (no new since Oct 13), llama.cpp (3 new Nov 18: CVE-2026-126974/5/6 ZDI batch), sglang (1 new Nov 18: CVE-2026-127222).
+- opened: individual GHSA advisories — GHSA-935v-h6wh-q726, GHSA-6q2w-jx57-7qrg, GHSA-mgp8-8cpj-8cjj, GHSA-rqcj-6434-qfch, GHSA-cf32-wrp7-cjrw, GHSA-9f95-xfwr-j77p, GHSA-m386-99gj-pq7p.
+- opened: NVD API keyword sweeps — ollama (0 new), llama.cpp (3 new: CVE-2026-126974/5/6), vllm (10 total Nov window incl. CVE-2026-126394/5/6/7/8/9, CVE-2026-129356, CVE-2026-130684/5/6), sglang (1 new: CVE-2026-127222), lmdeploy (0 new beyond existing CVE-2026-123818). Rate-limited sleeps respected.
+- opened: arXiv cs.CR recent (Nov 20 listing, 50 entries) — 15+ on-axis papers identified; abstracts opened: 2611.25945 (BlockJack KV cache fault attacks), 2611.25470 (ToolPulse side-channel), 2611.25086 (Living off the Local Model), 2611.26553 (ROGUE-AI), 2611.25929 (Question Then Affirm), 2611.25809 (ALIoTh IoT pentesting), 2611.26601 (SoK LLM vulnerability research).
+- opened: Wiz blog index + agent-framework compromise post (Nov 17, cited).
+- opened: Anthropic research index — 2 new: CVD policy update (Nov 16, queued), black hole physics (Nov 17, not on-axis).
+- opened: Trail of Bits blog — no new AI-security posts since Nov 6.
+- opened: Sysdig blog index — 4 new posts Nov 18-19 (MCP Server for Monitoring, Java4Shell, NGINX2Root, EKS Auto Mode); no AI-specific security posts.
+- opened: Elastic Security Labs index — 2 new AI posts (Nov 18 "Inside the loop" and Nov 19 agent-framework; direct URLs 404 on guessed slugs).
+- web search (triage): Wiz agent-framework compromise, Elastic agent-framework, LLM security new tools Nov 2026, r/LocalLLaMA.
+- not opened this run: Microsoft AI Red Team (404), DeepMind, OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera, huntr, ATLAS, arXiv cs.CL, arXiv cs.CR Nov 17-18 listings (only Nov 20 loaded), r/LocalLLaMA (degraded 8+ runs), awesome-lists.
+- degraded: Elastic Security Labs — 2 AI-relevant posts visible on index but direct URLs 404 on guessed slugs (Nov 18 + Nov 19).
+- degraded: Microsoft AI Red Team blog — not attempted (persistently 404 since W44).
+- degraded: r/LocalLLaMA — not attempted (degraded 8+ consecutive runs).
