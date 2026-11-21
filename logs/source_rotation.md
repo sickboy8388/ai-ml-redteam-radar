@@ -159,3 +159,18 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-21 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12584–b12602 Nov 20-21, no security fixes, GGML major version bump b12591, Inkling 2 Mini b12600), Ollama/releases (still v0.40.17 Nov 10), vLLM/releases (v0.34.0 Nov 16, extensible KV cache default, Blackwell perf), LocalAI/releases (v5.0.0 Nov 18 major + v5.0.1 Nov 20), garak/releases (still v0.17.1), promptfoo/releases (0.126.0 Nov 18), ExLlamaV3/releases (still v1.6.7 Nov 13), Unsloth/releases (v0.1.918–0.1.922 Nov 16-20, QLoRA 25% faster, GGUF image 52-66% less RAM, Inkling 2 Mini), transformers/releases (still v5.23.0 Nov 13), PyRIT/releases (v1.2.1 Nov 18 packaging fix).
+- opened: GHSA search listings — ollama (no new since Oct 23), vllm (3 new Nov 18: CVE-2026-130684/130685/130686, 2 High + 1 Moderate; all fixed 0.33.0), llama.cpp (4 new Nov 18-20: CVE-2026-126974/126975/126976 ZDI GGUF RCE batch + CVE-2026-133710 hrm_text int overflow 8.5), langflow (no new since Nov 8), sglang (1 new Nov 18: CVE-2026-127222 High 8.7 missing auth), open-webui (no new).
+- opened: individual GHSA pages — GHSA-92hv-w2fh-9w89, GHSA-935v-h6wh-q726, GHSA-6q2w-jx57-7qrg, GHSA-mgp8-8cpj-8cjj (llama.cpp ZDI batch), GHSA-rqcj-6434-qfch (vLLM media budget), GHSA-m386-99gj-pq7p (SGLang).
+- opened: NVD API keyword sweeps — llama.cpp (4 CVEs Nov 18-20), vllm (10 CVEs Nov 13-18), sglang (1 CVE Nov 18), ollama (0 Ollama-specific; 2 adjacent: FlowIntel, one-hub), lmdeploy (1 CVE Nov 9, already tracked).
+- opened: arXiv cs.CR recent (Nov 20 listing) — ≥14 on-axis papers; abstracts opened: 2611.25470 (ToolPulse side-channel), 2611.25086 (Living off the Local Model), 2611.26553 (ROGUE-AI), 2611.25599 (Tether), 2611.25809 (ALIoTh IoT pentesting), 2611.26601 (SoK LLM vuln research), 2611.25929 (DSC jailbreak bypass).
+- opened: Wiz blog index + "Malicious version of Microsoft's agent-framework published to PyPI" (Nov 17, cited in ai-supplychain-001).
+- opened: Sysdig blog index + "ARTEX, and the offensive tool powered by LLMjacking five months earlier" (Nov 20, cited in agentic-offensive-ops-001).
+- opened: Elastic Security Labs index (3 posts Nov 18-20 visible; "agent-framework PyPI compromise" Nov 19 post URL returned 404).
+- opened: Anthropic research index — 1 new: "Updating our coordinated vulnerability disclosure policy timelines" (Nov 16, Frontier Red Team; queued).
+- opened: Trail of Bits blog — no new AI-security posts since Nov 6.
+- web search (triage): Wiz agent-framework compromise, Elastic agent-framework detection, GitHub tool discovery (MCP security / LLM red team / agent security), HN community pulse.
+- degraded: Elastic "agent-framework PyPI compromise" blog post — HTTP 404.
+- not opened this run: DeepMind, Lakera, huntr, arXiv cs.CL, arXiv cs.CR Nov 17-19 listings (only Nov 20 loaded), r/LocalLLaMA (degraded 8+ runs), awesome-lists, MITRE ATLAS.
