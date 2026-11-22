@@ -159,3 +159,20 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-22 (weekly)
+- opened: NVD API (keyword sweeps: llama.cpp 5 CVEs Nov 2026, vllm 3 CVEs, sglang 1 CVE incl. CVE-2026-127222 unauth LoRA 8.7, ollama 0 new, lmdeploy 0 new).
+- opened: GHSA listings (llama.cpp, vllm, sglang — confirmed NVD findings).
+- opened: arXiv cs.CR recent (Nov 16-17 listing) — BlockJack KV cache fault injection (2611.25945), Living off Local Model (2611.25086), ToolPulse side-channel (2611.25362), Tether verified policy engine (2611.25599), ROGUE-AI incident replay (2611.25241), multi-agent attacks (2611.25150).
+- opened: CrowdStrike blog — VAPOR PANDA (Oct 29 post, agentic-offensive-ops-001 evidence).
+- opened: Unit 42 / Palo Alto Networks blog — CAIRN agent framework report (Nov 12, agentic-offensive-ops-001 evidence).
+- opened: GTIG / Google Cloud Threat Intelligence blog — CAIRN, PentAGI, exploit_agent (Nov 16, agentic-offensive-ops-001 evidence).
+- opened: Sysdig blog — FBI FLASH on ARTEX/LLMjacking, 1600+ exposed consoles (Nov 20, agentic-offensive-ops-001 evidence).
+- opened: Elastic Security Labs blog — MITRE ATLAS detection rules in Elastic 9.6, agent-framework PyPI compromise analysis (Nov 19-20).
+- opened: Wiz blog — agent-framework 1.26.1/1.26.2 PyPI compromise (Nov 17, ai-supplychain-001 evidence).
+- opened: tool repos — llama.cpp/releases (b12628), vLLM/releases (v0.34.0), LocalAI/releases (v5.0.0), Unsloth/releases (v0.1.918-922), transformers/releases (v5.24.0), promptfoo/releases (0.126.0).
+- opened: NVD API (CVE-2026-40217 LiteLLM CISA KEV detail — llm-frontend-001 evidence).
+- degraded: OpenAI — not attempted (persistently 403). r/LocalLLaMA — not attempted (degraded 8+ runs). MITRE ATLAS — not attempted (session scope).
+- monthly retry: Protect AI, HiddenLayer — deprioritized to monthly per W47 amendment (last daily attempt: never produced evidence in 8+ weeks).
+- not opened this run: DeepMind, Lakera, huntr, arXiv cs.CL, arXiv cs.CR Nov 18-21 listings.
+- week coverage: 0/7 dailies ran; weekly opened ~25 sources (3 new: CrowdStrike, Unit 42, GTIG).
