@@ -26,6 +26,7 @@ Tool repos & releases (check `<repo>/releases`):
 - NVIDIA garak (LLM vuln scanner) — https://github.com/NVIDIA/garak
 - Microsoft PyRIT — https://github.com/microsoft/PyRIT [verified 2026-10-11] (Azure/PyRIT archived 2026-03-27; moved)
 - promptfoo — https://github.com/promptfoo/promptfoo
+- SGLang — https://github.com/sgl-project/sglang [verified 2026-11-22] (45 GHSAs incl. 2 Critical; CVE-2026-127222 unauth LoRA 8.7)
 - ExLlamaV3 — https://github.com/turboderp-org/exllamav3 [verified 2026-10-11]
 - Unsloth — https://github.com/unslothai/unsloth/releases [verified 2026-10-18] (axis 1b; releases every 1–3 days)
 - Hugging Face transformers — https://github.com/huggingface/transformers
@@ -61,3 +62,4 @@ Tool repos & releases (check `<repo>/releases`):
 <!-- auto-staged tally: domain — times seen — last artifact+date — first-seen date -->
 - 2026-11-01 weekly: Lakera, Elastic, PyRIT, ATLAS, NVD, huntr unopened all week — heal-or-remove proposed (see weekly W44).
 - 2026-11-08 weekly: NVD/huntr/Lakera/Elastic healed (all open via curl); ATLAS repo blocked in this sandbox (GitHub scope) — try atlas.mitre.org instead. No staged candidates met the promotion bar.
+- 2026-11-22 weekly: GTIG blog (cloud.google.com/blog/topics/threat-intelligence) — 1 evidence (agentic-offensive-ops-001 W47); first run opened. CrowdStrike blog (crowdstrike.com/blog) — 1 evidence (agentic-offensive-ops-001 W47); first run opened. Unit 42 blog (unit42.paloaltonetworks.com) — 1 evidence (agentic-offensive-ops-001 W47); first run opened. All 3 produced primary evidence on first open; propose promotion to swept list if signal persists W48.
