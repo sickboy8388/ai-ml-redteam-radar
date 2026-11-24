@@ -159,3 +159,25 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-24 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12655-b12671 Nov 23-24, b12658 crash-prevention hardening), Ollama/releases (v0.40.17 Nov 21, v0.40.18-rc0 Nov 24 pre-release), vLLM/releases (v0.34.0 Nov 16), LocalAI/releases (v5.0.0 Nov 18, v5.0.1 Nov 20 — major version bump), garak/releases (still v0.17.1), promptfoo/releases (0.126.0 Nov 18), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-0.1.923 Nov 16-23), transformers/releases (v5.24.0 Nov 21), PyRIT/releases (v1.2.1 Nov 18).
+- opened: GHSA search listings — ollama (no new after Nov 15, FlowIntel/one-hub not Ollama), vllm (3 new Nov 18: GHSA-9f95/GHSA-rqcj/GHSA-cf32), sglang (1 new Nov 18: GHSA-m386-99gj-pq7p), langflow (no new after Nov 8), open-webui (no new, AdminNeo false positive), lmdeploy (no new after Oct 30), litellm (1 new Nov 23: GHSA-4j8w-79j4-g2cp).
+- opened: NVD API keyword sweeps — vllm (10 CVEs Nov 10-24, confirmed), sglang (1 CVE: CVE-2026-127222), ollama (2 results but FlowIntel/one-hub not Ollama itself), llama.cpp (5 CVEs Nov 18-21: CVE-2026-126974/126975/126976 ZDI GGUF RCE + CVE-2026-133710 HRM integer overflow + CVE-2026-134540 sampling flaw).
+- opened: NVD individual CVE detail pages — CVE-2026-126974 (ZDI-CAN-34553, GGUF integer overflow RCE, CVSS 7.8), CVE-2026-126975 (ZDI-CAN-34558, GGUF heap overflow RCE, CVSS 7.8).
+- opened: individual GHSA advisory pages — GHSA-rqcj-6434-qfch (vLLM media budget DoS 8.7), GHSA-cf32-wrp7-cjrw (vLLM EngineCore crash 8.7), GHSA-m386-99gj-pq7p (SGLang missing auth LoRA 8.7), GHSA-4j8w-79j4-g2cp (LiteLLM callback injection 5.3).
+- opened: arXiv cs.CR recent (Nov 23 listing, ≥11 on-axis papers; Nov 20 listing, ≥7 on-axis papers) — abstracts opened: 2611.27041 (GRAFT MCP metadata poisoning), 2611.27920 (Autonomous Parameter Surgery LLM backdooring), 2611.27425 (TrojanMaxxing VLM backdoors), 2611.27112 (Markdown Is Not a Firewall coding agents), 2611.27216 (Correct Precedents on-device policy violations), 2611.27426 (Cleave guardrail severing), 2611.26553 (ROGUE-AI agent incident replication), 2611.27095 (Epistemic Guard MCP defense).
+- opened: Wiz blog index (6 posts Nov 16-23 visible; "agent-framework Compromised" Nov 17 fully opened at correct URL, "Agentic Attacks: In The Wild" Nov 23 seen but direct URL 404).
+- opened: Wiz agent-framework compromise post (https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi) — full details verified: v1.26.1/1.26.2 .pth credential stealer, Cairn attribution, IoCs extracted.
+- opened: Elastic Security Labs index (7 posts Nov 15-23 visible incl. "143 detection rules for AI agents" Nov 23, "Thinking fast about prompt injection" Nov 23, "MITRE ATLAS comes to Elastic" Nov 23; direct URLs all 404).
+- opened: Sysdig blog index (3 posts Nov 18-20 visible incl. "ARTEX/LLMjacking" Nov 20; direct URL 404). Also opened Sysdig "LLMjacking Evolved: VAPT" (June 2026, correct URL) — offensive tool on stolen Ollama compute.
+- opened: Anthropic research index (1 new: CVD policy update Nov 16, "Working with AI" Nov 23 not on-axis).
+- opened: Trail of Bits blog index (no new AI posts after Nov 6).
+- opened: DeepMind blog — no new AI-security posts.
+- web search (triage): Wiz agent-framework compromise, Elastic 143 detection rules, Sysdig ARTEX LLMjacking, r/LocalLLaMA llama.cpp CVE November 2026, MCP server security tools 2026.
+- not opened this run: OpenAI (persistently 403), Protect AI (persistently 404), HiddenLayer (persistently 404), Lakera, huntr, MITRE ATLAS (session scope), arXiv cs.CL, arXiv cs.CR Nov 14-19 listings (gap), r/LocalLLaMA (degraded 8+ runs), awesome-lists.
+- degraded: Wiz "Agentic Attacks: In The Wild" (Nov 23) — direct URL 404 (slug mismatch); title confirmed on blog index.
+- degraded: Elastic 4 Nov 23 posts — all direct URLs 404; titles confirmed on labs index.
+- degraded: Sysdig "ARTEX/LLMjacking" (Nov 20) — direct URL 404; title confirmed on blog index.
+- degraded: r/LocalLLaMA — not attempted (degraded 8+ consecutive runs).
+- degraded: NVD CVE-2026-126976 detail fetch — timed out (rate limiting).
