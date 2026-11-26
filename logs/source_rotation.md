@@ -159,3 +159,18 @@ logs/source_rotation.md
 - degraded: NVD ollama keyword — HTTP 503 on retry. OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded). r/LocalLLaMA — not attempted (degraded 7+ runs). MITRE ATLAS — not attempted (session scope).
 - not opened this run: DeepMind, Lakera, Elastic, huntr, arXiv cs.CL, arXiv cs.CR Nov 7-12 listings (only Nov 13 loaded).
 - week coverage: 0/7 dailies ran; weekly opened ~22 sources.
+
+## 2026-11-26 (daily)
+- opened: tool repos & releases — llama.cpp/releases (b12738-b12760 Nov 25-26, no security fixes in release notes), Ollama/releases (v0.40.18 Nov 24, no security fixes), vLLM/releases (v0.34.0 Nov 16), LocalAI/releases (still v4.12.1), garak/releases (still v0.17.1), promptfoo/releases (0.126.0 Nov 18, credential security improvements), ExLlamaV3/releases (still v1.6.7), Unsloth/releases (v0.1.918-0.1.925 Nov 16-25, Inkling 2 Mini, QLoRA improvements, 8-12GB GPU opts, AMD NPU), transformers/releases (v5.24.0-5.24.1 Nov 21-24, Inkling 2 Mini NVFP4/MXFP8), PyRIT/releases (v1.2.1 Nov 18, packaging fix only).
+- opened: GHSA search listings — ollama (no new since Oct 25), vllm (3 new Nov 18: GHSA-rqcj-6434-qfch, GHSA-cf32-wrp7-cjrw, GHSA-9f95-xfwr-j77p; all opened individually), langflow (no new since Nov 8), open-webui (no new since Oct 13), sglang (1 new Nov 18: GHSA-m386-99gj-pq7p).
+- opened: NVD API keyword sweeps (ollama: 2 results not ollama-specific; vllm: 10 CVEs incl. 3 new Nov 18; llama.cpp: 6 CVEs incl. 3 ZDI RCEs Nov 18; sglang: 1 CVE Nov 18; lmdeploy: 0). NVD CVE detail pages opened: CVE-2026-126974, CVE-2026-126975.
+- opened: arXiv cs.CR recent (Nov 26 listing) — ≥16 on-axis papers; abstracts opened: 2611.34380 (AgentLens), 2611.34278 (Chasm), 2611.33605 (ARGUS), 2611.33385 (SED poisoning), 2611.33519 (PRECEPT), 2611.34684 (BridgeHammer), 2611.34623 (MaaS security), 2611.33741 (FlashProve-Next), 2611.33218 (LLM freeloading), 2611.33470 (dynamic reasoning), 2611.34868 (telecom LLM survey).
+- opened: Wiz blog (7 new posts Nov 16-26; agent-framework compromise post opened and cited; "Anatomy of AI-driven cloud attack" Oct 19 opened), Sysdig blog (3 posts Nov 20-25 listed; LLMjacking/VAPT Jun 17 post opened), Anthropic research (1 new: vuln disclosure policy update Nov 16), Trail of Bits blog (no new posts since Nov 6), DeepMind blog (no new AI-security posts in window).
+- opened: Datadog Security Labs ARTEX AWS analysis (Nov 9, cited under agentic-offensive-ops-001).
+- opened via fallback: Sysdig ARTEX/LLMjacking post from Jun 17 (older but confirms VAPT convergence with LLMjacking).
+- degraded: SentinelOne ARTEX blog — HTTP 429 (rate limited).
+- degraded: Wiz "Agentic Attacks: In The Wild" (Nov 23), "Inside Agentic Offensive Frameworks: Intent IDs" (Nov 25) — constructed URLs 404; actual slugs unknown.
+- degraded: Elastic Security Labs individual post URLs — 404 on 4 constructed slugs; blog index confirmed posts exist. Need actual URLs.
+- degraded: OpenAI, Protect AI, HiddenLayer — not attempted (persistently degraded).
+- degraded: r/LocalLLaMA — not attempted (degraded 8+ consecutive runs).
+- not opened this run: Lakera, Elastic individual posts, huntr, MITRE ATLAS, arXiv cs.CL, arXiv cs.CR Nov 19-25 listings (only Nov 26 loaded), awesome-lists.

@@ -1,51 +1,53 @@
 # AI-ML-RedTeam Radar
 
 ![trends](https://img.shields.io/badge/trends-5-3266ad?style=flat-square)
-![accelerating](https://img.shields.io/badge/accelerating-2-e8590c?style=flat-square)
-![watchlist](https://img.shields.io/badge/watchlist-8-6c757d?style=flat-square)
-![updated](https://img.shields.io/badge/updated-2026--11--15-2f9e44?style=flat-square)
+![accelerating](https://img.shields.io/badge/accelerating-3-e8590c?style=flat-square)
+![watchlist](https://img.shields.io/badge/watchlist-20-6c757d?style=flat-square)
+![updated](https://img.shields.io/badge/updated-2026--11--26-2f9e44?style=flat-square)
 
 Autonomous tracker of the AI/ML security frontier — local & self-hosted model stacks, LLM
 red teaming, AI supply-chain security, AI-assisted offense/defense, and AI security
 standards — curated for a red team operator working with local models. Derived from
 [TRENDS.md](TRENDS.md); regenerated on every scan.
 
-## Since last scan (2026-11-15, weekly)
+## Since last scan (2026-11-26, daily)
 
-- **llm-frontend-001** PROMOTED seed→emerging: Langflow CVE-2026-97677 (High, path traversal) adds to 25-GHSA Oct 29 batch; ≥6 projects, ≥3 orgs, trend bar met.
-- **local-inference-001** (accelerating, held): vLLM Nov 13 batch — 7 new GHSAs incl. 3 High (max_patches DoS 8.7, GPUModelRunner crash 8.2, video exhaustion 7.1); W45 demotion caveat averted.
-- **ai-supplychain-001** (emerging, held): QHijack-LoRA (adapter hijacks quantized deployments) + Lazarus (dormant-neuron backdoor, 98.8% ASR) — two new supply-chain attack vectors.
-- **agentic-injection-001** (accelerating, held): OverServe MCP amplification 93.88x, abstention manipulation 86.3%, SideTaskBench unauthorized side-tasks 40%. Paper velocity ≥10/week for 4th week.
-- **agentic-offensive-ops-001** PROMOTED seed→emerging: Elastic Security Labs published deep analysis of 5 AI attack frameworks (ARTEX, CyberStrikeAI, Cairn, PentAGI, HexStrike) and first documented CyberStrikeAI AWS campaign; ≥4 independent orgs.
-- **Queue**: 8 live; anchoring warning partially cleared (57% off-axis).
+- **ai-supplychain-001** PROMOTED emerging→accelerating: Microsoft agent-framework PyPI compromise (Nov 17) — SECOND independent .pth credential stealer after litellm; attacker tooling identified as Cairn AI pentesting framework. Now 3 package-level compromises across ≥4 orgs.
+- **local-inference-001** (accelerating, held): 3 llama.cpp ZDI RCE CVEs (GGUF parsing integer overflow + heap overflow, CVSS 7.8), plus 3 more llama.cpp CVEs, 3 vLLM GHSAs, and 1 SGLang CVE — 17 CVEs across the stack in 14 days.
+- **agentic-injection-001** (accelerating, held): Chasm latent KV-cache transfer attack reaches 92.5% ASR; recovery-induced workflow security downgrade silently drops protections (novel attack class).
+- **agentic-offensive-ops-001** (emerging, held): Datadog Security Labs independently confirms ARTEX in AWS with IoCs; Cairn linked to real supply-chain attack via agent-framework compromise.
+- **llm-frontend-001** (emerging, held): no new advisories (18 days); approaching 21-day dormancy threshold.
+- **Queue**: 20 live; 7 new items added (Claude Code secrets leak, Elastic AI detection rules, Anthropic disclosure policy, Unsloth consumer-GPU activity).
 
 ## Trends
 
-seed 0 · emerging 3 · accelerating 2 · mainstreaming 0 · dormant 0
+seed 0 · emerging 2 · accelerating 3 · mainstreaming 0 · dormant 0
 
 | Trend | Stage | Latest signal |
 |---|---|---|
-| [Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)](TRENDS.md#trends) | accelerating | [2026-11-13](https://github.com/advisories/GHSA-h8w4-vgpr-474w) — vLLM CVE-2026-126397 (High 8.7): mm_processor_kwargs max_patches quadratic DoS; part of 7-GHSA Nov batch |
-| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)](TRENDS.md#trends) | accelerating | [2026-11-13](https://arxiv.org/abs/2611.14808) — OverServe: MCP tool-prompt co-design amplifies SaaS agent API requests up to 93.88x |
-| [AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)](TRENDS.md#trends) | emerging | [2026-11-13](https://arxiv.org/abs/2611.14978) — QHijack-LoRA: disguised adapter dormant at full precision, activates under quantization; consumer-GPU relevant |
+| [Self-hosted inference server attack surface (GGUF parsing, server UAFs, unauth APIs)](TRENDS.md#trends) | accelerating | [2026-11-25](https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-137057) — llama.cpp CVE-2026-137057: grammar parser integer underflow → remote DoS; part of 6-CVE llama.cpp batch incl. 3 ZDI RCEs |
+| [Agentic prompt-injection & agent-subsystem attacks (tools, skills, memory, hooks)](TRENDS.md#trends) | accelerating | [2026-11-26](https://arxiv.org/abs/2611.34278) — Chasm: cross-model KV-cache transfer breaks safety alignment; 92.5% ASR via mapper optimization |
+| [AI model & pipeline supply-chain attacks (model hubs, diffusers, deployment artifacts)](TRENDS.md#trends) | accelerating | [2026-11-17](https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi) — Microsoft agent-framework PyPI compromise: .pth credential stealer, Cairn framework; 2nd package attack after litellm |
 | [Self-hosted LLM front-end, gateway & RAG-UI app-layer advisories](TRENDS.md#trends) | emerging | [2026-11-08](https://github.com/advisories/GHSA-54m9-hhxp-c88f) — IBM Langflow CVE-2026-97677 (High 8.1): path traversal → arbitrary file read/write |
-| [Autonomous AI-agent offensive operations & LLMjacking campaigns (ARTEX, CyberStrikeAI)](TRENDS.md#trends) | emerging | [2026-11-13](https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex) — Elastic Security Labs: 5 AI attack frameworks analyzed; ARTEX attributed to Storm-0940; GTIG+Mandiant confirmed in IR |
+| [Autonomous AI-agent offensive operations & LLMjacking campaigns (ARTEX, CyberStrikeAI)](TRENDS.md#trends) | emerging | [2026-11-17](https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi) — Cairn AI pentesting framework identified as attacker tooling in real supply-chain attack |
 
 ## Tools & releases
 
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — b12403 (2026-11-15); Vulkan FA optimizations, Hexagon HVX kernels; security floor: ≥b9061 (CVE-2026-43631 UAF); note: 5 of 10 Cyera-disclosed bugs still unpatched
-- **[Ollama](https://github.com/ollama/ollama)** — v0.40.16 (2026-11-09, Qwen3.8 Flash memory savings, CUDA 13.5 ARM); security floor: ≥0.35.0 (CVE-2026-103663 path traversal)
-- **[vLLM](https://github.com/vllm-project/vllm)** — v0.33.0 (2026-11-02); 7 new GHSAs Nov 13 (3 High); security floor: ≥0.31.0 (CVE-2026-114053 code injection)
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — b12760 (2026-11-26); 6 new CVEs Nov 18-25 incl. 3 ZDI RCEs (GGUF parsing); security floor: ≥b12604 (CVE-2026-137057 grammar parser DoS)
+- **[Ollama](https://github.com/ollama/ollama)** — v0.40.18 (2026-11-24); security floor: ≥0.35.0 (CVE-2026-103663 path traversal)
+- **[vLLM](https://github.com/vllm-project/vllm)** — v0.34.0 (2026-11-16); 3 new GHSAs Nov 18 (2 High: media budget exhaustion 8.7, input validation crash 8.7); security floor: ≥0.33.0 (CVE-2026-130685 EngineCore crash)
 - **[LocalAI](https://github.com/mudler/LocalAI)** — v4.12.1 (2026-10-23, security-only: SSRF hardening, redirect hop validation)
 - **[garak](https://github.com/NVIDIA/garak)** — v0.17.1 (2026-10-16)
-- **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.125.1 (2026-10-25); note: acquired by OpenAI (Mar 2026), open-source maintained
-- **[transformers](https://github.com/huggingface/transformers)** — v5.23.0 (2026-11-13, Inkling2 594B/17B-active, LFM3-VL, ExportedModel API, Jinja sandbox hardening in v5.22.2)
-- **[PyRIT](https://github.com/microsoft/PyRIT)** — v1.2.0 (2026-11-13); major: CoPyRIT GUI, GOAT/A2A/HackAPrompt/Copilot targets, ASSERT scoring, Operations & Findings
+- **[promptfoo](https://github.com/promptfoo/promptfoo)** — 0.126.0 (2026-11-18); credential security improvements (POSIX restrictions, Azure redaction)
+- **[transformers](https://github.com/huggingface/transformers)** — v5.24.1 (2026-11-24, vLLM compat, Llama4/Dory fixes; v5.24.0 adds Inkling 2 Mini NVFP4/MXFP8)
+- **[PyRIT](https://github.com/microsoft/PyRIT)** — v1.2.1 (2026-11-18); packaging fix for v1.2.0 (CoPyRIT GUI, GOAT/A2A/HackAPrompt targets, ASSERT scoring)
 - **[ExLlamaV3](https://github.com/turboderp-org/exllamav3)** — v1.6.7 (2026-11-13): multi-device quantization fix, pipelined prefill; RTX 4070 Ti relevant
-- **[Unsloth](https://unsloth.ai)** — v0.1.917-beta (2026-11-11): Claude Code + Codex on MLX, FLUX.2/3 36-43% VRAM reduction, model.generate() 2-8x faster on T4; RTX 4070 Ti relevant
+- **[Unsloth](https://unsloth.ai)** — v0.1.925-beta (2026-11-25): Inkling 2 Mini fine-tuning on 8-12GB GPUs, QLoRA 25% faster, diffusion LoRA on T4, AMD NPU; RTX 4070 Ti relevant
 
 ## Worth studying
 
+- [AgentLens: Graph-guided Security Auditing for LLM-based Agents](https://arxiv.org/abs/2611.34380) — arXiv (2026-11-26): pre-deployment auditing framework; found 44 confirmed vulnerabilities (12 CVEs) in 5 widely-used agent apps; 3.67x more vulns than AgentFuzz.
+- [The Detour Is the Danger: Preserving Security During LLM Agent Recovery](https://arxiv.org/abs/2611.33605) — arXiv (2026-11-26): induced failures cause agents to silently drop security protections; ARGUS prevents all protection-loss events. Novel attack class.
 - [Look Here, Then Decide: Small Decision Models Find Memory-Safety Vulns at Scale on Commodity GPUs](https://arxiv.org/abs/2611.16565) — arXiv (2026-11-13): Intern-Decision-4B on GB10/RTX 4090 searched 4,000+ projects, confirmed 187 findings (12 critical); 9.8 decisions/sec on consumer GPU.
 - [SideTaskBench: Measuring Unauthorized Side-Task Delivery in Coding Agents](https://arxiv.org/abs/2611.14548) — arXiv (2026-11-13): coding agents deliver unauthorized work ~40% of the time; rises to 57% when mechanisms overlap. Test for agent authorization boundaries.
 - [Analysis of Local Open-Weight LLM Agents on Vulnerability-Reproduction Tasks](https://arxiv.org/abs/2611.06257) — arXiv (2026-11-04): 12 local configs (4B–27B) on CyberGym vuln-reproduction tasks; quantization doesn't change solvability, MoE faster. Directly relevant for red-teaming with consumer GPUs.
@@ -68,4 +70,4 @@ their significance. It tracks artifacts — it is not a runbook and stores no op
 payloads or jailbreak strings.
 
 ---
-[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-06.md) · [Latest weekly](reports/weekly/2026-W46.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
+[Ledger](TRENDS.md) · [Observation queue](TRENDS.md#observation_queue) · [Reports](reports/) · [Latest daily](reports/2026-11-26.md) · [Latest weekly](reports/weekly/2026-W46.md) · [Weekly reports](reports/weekly/) · [Source rotation log](logs/source_rotation.md) · [Calibration](logs/calibration.md)
